@@ -1,0 +1,130 @@
+{
+  "id": "algebra-expressions",
+  "title": "Expressions",
+  "description": "Write, simplify, and evaluate algebraic expressions.",
+  "lessons": [
+    {
+      "id": "variables",
+      "title": "What is a Variable?",
+      "objectives": ["Understand variables as symbols for unknown values", "Translate phrases into algebraic expressions"],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "A variable is a placeholder",
+          "content": "Think of a variable as a box that can hold any number."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "A variable is a letter that represents an unknown or changing quantity. If $x$ stands for the number of apples, then $x + 5$ means 5 more apples."
+        },
+        {
+          "type": "math",
+          "latex": "x + 5"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "translate-sum",
+          "type": "expression",
+          "question": "Write an expression for 'a number $n$ increased by 7'.",
+          "hints": ["'Increased by' means addition."],
+          "answer": "n+7",
+          "validation": "expression",
+          "maxAttempts": 3,
+          "solution": "$n + 7$."
+        },
+        {
+          "id": "translate-product",
+          "type": "expression",
+          "question": "Write an expression for 'the product of 4 and a number $x$'.",
+          "hints": ["'Product' means multiplication."],
+          "answer": "4x",
+          "validation": "expression",
+          "maxAttempts": 3,
+          "solution": "$4x$ or $4 \\times x$."
+        }
+      ]
+    },
+    {
+      "id": "simplify-expressions",
+      "title": "Simplifying Expressions",
+      "objectives": ["Combine like terms", "Use the distributive property"],
+      "pedagogy": [
+        {
+          "type": "strategy",
+          "title": "Combine like terms",
+          "content": "Terms with the same variable part can be combined by adding their coefficients."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Like terms have the same variable raised to the same power. $3x$ and $5x$ are like terms; $3x$ and $3x^2$ are not."
+        },
+        {
+          "type": "math",
+          "latex": "3x + 5x = 8x"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "combine-like-terms",
+          "type": "expression",
+          "question": "Simplify $2x + 3y + 5x - y$.",
+          "hints": ["Combine the $x$ terms.", "Combine the $y$ terms."],
+          "answer": "7x+2y",
+          "validation": "expression",
+          "maxAttempts": 3,
+          "solution": "$2x + 5x = 7x$ and $3y - y = 2y$, so the simplified expression is $7x + 2y$."
+        },
+        {
+          "id": "distribute",
+          "type": "expression",
+          "question": "Simplify $3(x + 4)$.",
+          "hints": ["Multiply 3 by each term inside the parentheses."],
+          "answer": "3x+12",
+          "validation": "expression",
+          "maxAttempts": 3,
+          "solution": "$3(x + 4) = 3x + 12$."
+        }
+      ]
+    },
+    {
+      "id": "evaluate-expressions",
+      "title": "Evaluating Expressions",
+      "objectives": ["Substitute values into expressions and simplify"],
+      "pedagogy": [
+        {
+          "type": "trick",
+          "title": "Use parentheses",
+          "content": "When substituting a negative number or a fraction, use parentheses to avoid sign errors."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "To evaluate an expression, replace each variable with its given value and simplify."
+        },
+        {
+          "type": "math",
+          "latex": "\\text{If } x = 4, \\text{ then } 2x + 3 = 2(4) + 3 = 11"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "evaluate-linear",
+          "type": "numeric",
+          "question": "Evaluate $2x + 5$ when $x = 3$.",
+          "hints": ["Substitute 3 for $x$.", "Calculate $2(3) + 5$."],
+          "answer": 11,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$2(3) + 5 = 6 + 5 = 11$."
+        }
+      ]
+    }
+  ]
+}
+

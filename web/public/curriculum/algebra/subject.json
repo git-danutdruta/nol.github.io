@@ -1,0 +1,11 @@
+{
+  "id": "algebra",
+  "title": "Algebra",
+  "description": "Learn to use variables, solve equations, and reason with symbols.",
+  "chapters": [
+    "chapters/01-expressions/chapter.json",
+    "chapters/02-equations/chapter.json",
+    "chapters/03-functions-graphing/chapter.json"
+  ]
+}
+

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useCurriculum } from '@/hooks/useCurriculum';
 import { NotFoundPage } from '@/pages/NotFoundPage';
+import { LessonRenderer } from '@/components/LessonRenderer';
 
 export function LessonPage() {
   const { lessonId } = useParams<{ lessonId: string }>();
@@ -10,7 +11,7 @@ export function LessonPage() {
 
   if (loading) {
     return (
-      <div className="mx-auto max-w-7xl px-4 py-16">
+      <div className="mx-auto max-w-3xl px-4 py-16">
         <div className="h-8 w-64 animate-pulse rounded bg-slate-200 dark:bg-slate-800" />
       </div>
     );
@@ -19,13 +20,8 @@ export function LessonPage() {
   if (!lesson) return <NotFoundPage />;
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16">
-      <h1 className="mb-6 text-3xl font-bold text-slate-900 dark:text-white">{lesson.title}</h1>
-      <div className="prose dark:prose-invert max-w-none">
-        <p className="text-slate-600 dark:text-slate-400">
-          Lesson content will be rendered here by the LessonRenderer component (FE-005).
-        </p>
-      </div>
-    </article>
+    <div className="px-4 py-16">
+      <LessonRenderer lesson={lesson} />
+    </div>
   );
 }

@@ -1,0 +1,11 @@
+{
+  "id": "arithmetic",
+  "title": "Arithmetic",
+  "description": "Build a solid foundation with numbers, operations, fractions, decimals, and percentages.",
+  "chapters": [
+    "chapters/01-number-sense/chapter.json",
+    "chapters/02-addition-subtraction/chapter.json",
+    "chapters/03-multiplication-division/chapter.json"
+  ]
+}
+

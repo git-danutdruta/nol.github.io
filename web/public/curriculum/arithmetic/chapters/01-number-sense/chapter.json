@@ -1,0 +1,183 @@
+{
+  "id": "arithmetic-number-sense",
+  "title": "Number Sense",
+  "description": "Understand counting, place value, and the structure of whole numbers.",
+  "lessons": [
+    {
+      "id": "counting-place-value",
+      "title": "Counting and Place Value",
+      "objectives": ["Read and write multi-digit whole numbers", "Understand place value positions"],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Place value columns",
+          "content": "From right to left: ones, tens, hundreds, thousands, ten-thousands."
+        },
+        {
+          "type": "mnemonic",
+          "title": "Remember the order",
+          "content": "Ones, Tens, Hundreds: O-T-H sounds like 'oath'—make a promise to always start from the right."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Every digit in a number has a value based on its position. In 4,573, the digit 5 is in the hundreds place, so it represents 500."
+        },
+        {
+          "type": "math",
+          "latex": "4573 = 4000 + 500 + 70 + 3"
+        },
+        {
+          "type": "example",
+          "content": "In 28,406, the digit 8 is in the thousands place and represents 8,000."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "place-value-identify",
+          "type": "multiple-choice",
+          "question": "In the number 6,249, what value does the digit 4 represent?",
+          "hints": ["Start from the right: ones, tens, hundreds, thousands.", "The 4 is two places from the right."],
+          "options": ["4", "40", "400", "4000"],
+          "correctOptionIndex": 2,
+          "maxAttempts": 3,
+          "solution": "The digit 4 is in the hundreds place, so it represents 400."
+        },
+        {
+          "id": "place-value-expanded",
+          "type": "numeric",
+          "question": "What is $3000 + 200 + 50 + 7$?",
+          "hints": ["Add the thousands, hundreds, tens, and ones separately."],
+          "answer": 3257,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$3000 + 200 + 50 + 7 = 3257$."
+        },
+        {
+          "id": "place-value-drawing",
+          "type": "drawing",
+          "question": "Draw a place-value chart for 5,318 and label each digit.",
+          "hints": ["Use columns for thousands, hundreds, tens, and ones."],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "A chart with 5 in thousands, 3 in hundreds, 1 in tens, and 8 in ones."
+        }
+      ]
+    },
+    {
+      "id": "comparing-ordering",
+      "title": "Comparing and Ordering Numbers",
+      "objectives": ["Compare whole numbers using >, <, and =", "Order numbers from least to greatest"],
+      "pedagogy": [
+        {
+          "type": "strategy",
+          "title": "Line up digits",
+          "content": "When comparing two numbers, align them by place value and compare from the leftmost digit."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Use the symbols > (greater than), < (less than), and = (equal to) to compare numbers. The open side of the symbol always faces the larger number."
+        },
+        {
+          "type": "math",
+          "latex": "345 < 354"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "compare-numbers",
+          "type": "multiple-choice",
+          "question": "Which statement is true?",
+          "hints": ["Compare the hundreds first, then tens, then ones."],
+          "options": ["472 > 481", "472 < 481", "472 = 481"],
+          "correctOptionIndex": 1,
+          "maxAttempts": 3,
+          "solution": "Both numbers have 4 hundreds. 481 has 8 tens while 472 has 7 tens, so 472 < 481."
+        }
+      ]
+    },
+    {
+      "id": "rounding",
+      "title": "Rounding Whole Numbers",
+      "objectives": ["Round whole numbers to a given place value"],
+      "pedagogy": [
+        {
+          "type": "trick",
+          "title": "5 or more, raise the score",
+          "content": "Look at the digit to the right of the target place. If it is 5 or greater, round up. Otherwise, round down."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Rounding makes numbers easier to work with by replacing them with nearby multiples of 10, 100, or 1000."
+        },
+        {
+          "type": "example",
+          "content": "Round 738 to the nearest hundred. The tens digit is 3, which is less than 5, so 738 rounds to 700."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "round-hundreds",
+          "type": "numeric",
+          "question": "Round 856 to the nearest hundred.",
+          "hints": ["Look at the tens digit.", "The tens digit is 5, so round up."],
+          "answer": 900,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "The tens digit is 5, so 856 rounds up to 900."
+        }
+      ]
+    },
+    {
+      "id": "intro-fractions",
+      "title": "Introduction to Fractions",
+      "objectives": ["Understand fractions as parts of a whole", "Identify numerator and denominator"],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Numerator and denominator",
+          "content": "The denominator tells how many equal parts the whole is divided into. The numerator tells how many parts you have."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "A fraction represents a part of a whole. If a pizza is cut into 8 equal slices and you eat 3, you ate 3/8 of the pizza."
+        },
+        {
+          "type": "math",
+          "latex": "\\frac{3}{8}"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "fraction-shade",
+          "type": "drawing",
+          "question": "A rectangle is divided into 6 equal parts. Shade 2/6 of the rectangle.",
+          "hints": ["Divide the rectangle into 6 equal parts if needed.", "Shade 2 of the 6 parts."],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Two out of six equal parts should be shaded."
+        },
+        {
+          "id": "fraction-parts",
+          "type": "multiple-choice",
+          "question": "In the fraction $\\frac{5}{9}$, what does the 9 represent?",
+          "hints": ["The bottom number is the denominator."],
+          "options": ["The number of parts you have", "The total number of equal parts", "The number of parts left"],
+          "correctOptionIndex": 1,
+          "maxAttempts": 3,
+          "solution": "The denominator 9 means the whole is divided into 9 equal parts."
+        }
+      ]
+    }
+  ]
+}
+

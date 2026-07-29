@@ -1,0 +1,62 @@
+{
+  "id": "sample-basics",
+  "title": "Basics",
+  "description": "A sample chapter with one lesson and one exercise of each type.",
+  "lessons": [
+    {
+      "id": "sample-introduction",
+      "title": "Introduction",
+      "objectives": ["Understand the exercise types supported by NOL Math."],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Read carefully",
+          "content": "Always read the full question before choosing an answer."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "This sample lesson demonstrates the supported content and exercise blocks."
+        },
+        {
+          "type": "math",
+          "latex": "a^2 + b^2 = c^2"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "sample-mc",
+          "type": "multiple-choice",
+          "question": "What is 2 + 2?",
+          "hints": ["Count on your fingers."],
+          "options": ["3", "4", "5"],
+          "correctOptionIndex": 1,
+          "maxAttempts": 3,
+          "solution": "2 + 2 = 4."
+        },
+        {
+          "id": "sample-numeric",
+          "type": "numeric",
+          "question": "What is 5 × 6?",
+          "hints": ["Think of 5 groups of 6."],
+          "answer": 30,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "5 × 6 = 30."
+        },
+        {
+          "id": "sample-expression",
+          "type": "expression",
+          "question": "Simplify $2x + 3x$.",
+          "hints": ["Combine like terms."],
+          "answer": "5x",
+          "validation": "expression",
+          "maxAttempts": 3,
+          "solution": "$2x + 3x = 5x$."
+        }
+      ]
+    }
+  ]
+}
+

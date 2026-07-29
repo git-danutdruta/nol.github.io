@@ -1,0 +1,130 @@
+{
+  "id": "arithmetic-multiplication-division",
+  "title": "Multiplication and Division",
+  "description": "Multiply and divide whole numbers and understand the relationship between the operations.",
+  "lessons": [
+    {
+      "id": "multiplication-basics",
+      "title": "Multiplication Basics",
+      "objectives": ["Multiply multi-digit whole numbers", "Understand multiplication as repeated addition"],
+      "pedagogy": [
+        {
+          "type": "mnemonic",
+          "title": "Times tables",
+          "content": "5, 6, 7, 8: 56 is 7 times 8."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Multiplication is repeated addition. $4 \\times 3$ means 4 groups of 3, or $3 + 3 + 3 + 3 = 12$."
+        },
+        {
+          "type": "math",
+          "latex": "4 \\times 3 = 12"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "multiply-single",
+          "type": "numeric",
+          "question": "What is $7 \\times 8$?",
+          "hints": ["Remember: 56 is 7 times 8."],
+          "answer": 56,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$7 \\times 8 = 56$."
+        },
+        {
+          "id": "multiply-two-digit",
+          "type": "numeric",
+          "question": "What is $14 \\times 6$?",
+          "hints": ["Break it into $10 \\times 6$ and $4 \\times 6$."],
+          "answer": 84,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$14 \\times 6 = (10 \\times 6) + (4 \\times 6) = 60 + 24 = 84$."
+        }
+      ]
+    },
+    {
+      "id": "division-basics",
+      "title": "Division Basics",
+      "objectives": ["Divide whole numbers with and without remainders", "Relate division to multiplication"],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Think backwards",
+          "content": "Division asks: how many groups of a size fit into a total? Use multiplication facts to check your answer."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Division splits a total into equal groups. $20 \\div 5 = 4$ because 4 groups of 5 make 20."
+        },
+        {
+          "type": "math",
+          "latex": "20 \\div 5 = 4 \\quad \\text{because} \\quad 4 \\times 5 = 20"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "divide-no-remainder",
+          "type": "numeric",
+          "question": "What is $48 \\div 6$?",
+          "hints": ["Ask: what times 6 equals 48?"],
+          "answer": 8,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$48 \\div 6 = 8$ because $8 \\times 6 = 48$."
+        },
+        {
+          "id": "divide-remainder",
+          "type": "free-response",
+          "question": "What is $23 \\div 4$? Write your answer as a quotient and remainder (for example, 5 R 3).",
+          "hints": ["Find the largest multiple of 4 that is less than or equal to 23.", "$4 \\times 5 = 20$, so the remainder is 3."],
+          "answer": "5 R 3",
+          "validation": "exact",
+          "maxAttempts": 3,
+          "solution": "$23 \\div 4 = 5$ remainder $3$ because $4 \\times 5 = 20$ and $23 - 20 = 3$."
+        }
+      ]
+    },
+    {
+      "id": "area-model-multiplication",
+      "title": "Area Model for Multiplication",
+      "objectives": ["Multiply using the area model"],
+      "pedagogy": [
+        {
+          "type": "strategy",
+          "title": "Break it into rectangles",
+          "content": "Split each factor into tens and ones, then find the area of each smaller rectangle and add them."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "The area model represents multiplication as the area of a rectangle. For $13 \\times 12$, split 13 into 10 and 3, and 12 into 10 and 2."
+        },
+        {
+          "type": "math",
+          "latex": "13 \\times 12 = (10 + 3)(10 + 2) = 100 + 20 + 30 + 6 = 156"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "area-model-draw",
+          "type": "drawing",
+          "question": "Draw an area model for $14 \\times 11$ and label the four partial products.",
+          "hints": ["Split 14 into 10 and 4.", "Split 11 into 10 and 1.", "The four areas are 100, 10, 40, and 4."],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "A rectangle split into 10x10=100, 10x1=10, 4x10=40, and 4x1=4. Total 154."
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,29 +1,29 @@
 import { useEffect, useState } from 'react';
+import { loadCurriculum } from '@/lib/curriculumLoader';
+import type { Subject, Chapter, Lesson } from '@/types/curriculum';
 
-export interface Lesson {
+export interface LessonRef {
   id: string;
   title: string;
 }
 
-export interface Chapter {
+export interface ChapterRef {
   id: string;
   title: string;
-  lessons: Lesson[];
+  lessons: LessonRef[];
 }
 
-export interface Subject {
+export interface SubjectRef {
   id: string;
   title: string;
   description: string;
-  chapters: Chapter[];
-}
-
-interface CurriculumData {
-  subjects: Subject[];
+  chapters: ChapterRef[];
 }
 
 export function useCurriculum() {
-  const [data, setData] = useState<CurriculumData>({ subjects: [] });
+  const [subjects, setSubjects] = useState<Subject[]>([]);
+  const [chapters, setChapters] = useState<Chapter[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,11 +32,11 @@ export function useCurriculum() {
 
     async function load() {
       try {
-        const response = await fetch('/curriculum/index.json');
-        if (!response.ok) throw new Error(`Failed to load curriculum: ${response.status}`);
-        const json = (await response.json()) as CurriculumData;
+        const data = await loadCurriculum();
         if (!cancelled) {
-          setData(json);
+          setSubjects(data.subjects);
+          setChapters(data.chapters);
+          setLessons(data.lessons);
           setError(null);
         }
       } catch (err) {
@@ -54,8 +54,5 @@ export function useCurriculum() {
     };
   }, []);
 
-  const chapters = data.subjects.flatMap((subject) => subject.chapters);
-  const lessons = chapters.flatMap((chapter) => chapter.lessons);
-
-  return { subjects: data.subjects, chapters, lessons, loading, error };
+  return { subjects, chapters, lessons, loading, error };
 }

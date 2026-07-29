@@ -2,9 +2,10 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
 import { useCurriculum } from '@/hooks/useCurriculum';
+import { getLocalizedString } from '@/lib/i18n';
 
 export function SubjectsPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { subjects, loading, error } = useCurriculum();
 
   if (loading) {
@@ -53,9 +54,11 @@ export function SubjectsPage() {
               className="h-8 w-8 text-primary-600 dark:text-primary-400"
             />
             <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
-              {subject.title}
+              {getLocalizedString(subject.title, i18n.language)}
             </h2>
-            <p className="text-slate-600 dark:text-slate-400">{subject.description}</p>
+            <p className="text-slate-600 dark:text-slate-400">
+              {getLocalizedString(subject.description, i18n.language)}
+            </p>
           </Link>
         ))}
       </div>

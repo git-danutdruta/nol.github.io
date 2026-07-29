@@ -1,0 +1,130 @@
+{
+  "id": "arithmetic-addition-subtraction",
+  "title": "Addition and Subtraction",
+  "description": "Add and subtract whole numbers, fractions, and decimals with confidence.",
+  "lessons": [
+    {
+      "id": "addition-basics",
+      "title": "Addition Basics",
+      "objectives": ["Add multi-digit whole numbers", "Use carrying correctly"],
+      "pedagogy": [
+        {
+          "type": "trick",
+          "title": "Carry the one",
+          "content": "When a column sums to 10 or more, write the ones digit and carry the tens digit to the next column."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Addition combines quantities. Align numbers by place value and add each column from right to left."
+        },
+        {
+          "type": "math",
+          "latex": "\\begin{array}{r} 247 \\\\ + 385 \\\\ \\hline 632 \\end{array}"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "add-two-digit",
+          "type": "numeric",
+          "question": "What is $47 + 58$?",
+          "hints": ["Add the ones: 7 + 8 = 15. Carry the 1.", "Add the tens: 4 + 5 + 1 = 10."],
+          "answer": 105,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$47 + 58 = 105$."
+        },
+        {
+          "id": "add-three-digit",
+          "type": "numeric",
+          "question": "What is $256 + 478$?",
+          "hints": ["Carry from the ones column.", "Carry from the tens column."],
+          "answer": 734,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$256 + 478 = 734$."
+        }
+      ]
+    },
+    {
+      "id": "subtraction-basics",
+      "title": "Subtraction Basics",
+      "objectives": ["Subtract multi-digit whole numbers", "Use borrowing correctly"],
+      "pedagogy": [
+        {
+          "type": "strategy",
+          "title": "Borrow when needed",
+          "content": "If the top digit in a column is smaller than the bottom digit, borrow 1 from the next column to the left."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Subtraction finds the difference between two numbers. Borrow when the digit on top is too small."
+        },
+        {
+          "type": "math",
+          "latex": "\\begin{array}{r} 503 \\\\ - 267 \\\\ \\hline 236 \\end{array}"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "subtract-borrow",
+          "type": "numeric",
+          "question": "What is $503 - 267$?",
+          "hints": ["You need to borrow from the hundreds.", "503 becomes 4 hundreds, 9 tens, and 13 ones."],
+          "answer": 236,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "$503 - 267 = 236$."
+        }
+      ]
+    },
+    {
+      "id": "add-subtract-fractions",
+      "title": "Adding and Subtracting Fractions",
+      "objectives": ["Add and subtract fractions with like denominators"],
+      "pedagogy": [
+        {
+          "type": "pitfall",
+          "title": "Do not add denominators",
+          "content": "When adding fractions with the same denominator, only add the numerators. The denominator stays the same."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Fractions with the same denominator can be added or subtracted by combining the numerators."
+        },
+        {
+          "type": "math",
+          "latex": "\\frac{2}{7} + \\frac{3}{7} = \\frac{5}{7}"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "add-fractions-like",
+          "type": "expression",
+          "question": "Simplify $\\frac{3}{8} + \\frac{2}{8}$.",
+          "hints": ["Add the numerators.", "Keep the denominator 8."],
+          "answer": "5/8",
+          "validation": "expression",
+          "maxAttempts": 3,
+          "solution": "$\\frac{3}{8} + \\frac{2}{8} = \\frac{5}{8}$."
+        },
+        {
+          "id": "subtract-fractions-like",
+          "type": "expression",
+          "question": "Simplify $\\frac{5}{6} - \\frac{1}{6}$.",
+          "hints": ["Subtract the numerators.", "Keep the denominator 6."],
+          "answer": "4/6",
+          "validation": "expression",
+          "maxAttempts": 3,
+          "solution": "$\\frac{5}{6} - \\frac{1}{6} = \\frac{4}{6} = \\frac{2}{3}$."
+        }
+      ]
+    }
+  ]
+}
+

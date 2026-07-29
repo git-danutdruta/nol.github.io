@@ -1,0 +1,36 @@
+name: Validate Curriculum Content
+
+on:
+  pull_request:
+    paths:
+      - 'curriculum/**'
+      - 'schemas/**'
+  push:
+    branches: [main]
+    paths:
+      - 'curriculum/**'
+      - 'schemas/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: cd web && pnpm install --frozen-lockfile
+
+      - name: Validate curriculum
+        run: cd web && pnpm validate-content
+

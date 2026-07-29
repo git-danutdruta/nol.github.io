@@ -1,0 +1,7 @@
+{
+  "id": "sample",
+  "title": "Sample Subject",
+  "description": "A minimal example subject demonstrating the curriculum schema.",
+  "chapters": ["chapters/01-basics/chapter.json"]
+}
+

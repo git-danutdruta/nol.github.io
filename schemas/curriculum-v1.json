@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nol.github.io/schemas/curriculum-v1.json",
+  "title": "NOL Curriculum v1",
+  "description": "Schema for NOL Math curriculum subjects, chapters, lessons, and exercises.",
+  "definitions": {
+    "localizedString": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "properties": {
+            "en": { "type": "string" },
+            "fr": { "type": "string" }
+          },
+          "additionalProperties": { "type": "string" }
+        }
+      ]
+    },
+    "pedagogyBlock": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["tip", "trick", "mnemonic", "strategy", "pitfall", "why"]
+        },
+        "title": { "$ref": "#/definitions/localizedString" },
+        "content": { "$ref": "#/definitions/localizedString" }
+      },
+      "required": ["type", "content"]
+    },
+    "contentBlock": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["paragraph", "heading", "list", "callout", "example", "math", "image", "drawing"]
+        },
+        "content": { "$ref": "#/definitions/localizedString" },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/localizedString" }
+        },
+        "latex": { "type": "string" },
+        "src": { "type": "string" },
+        "alt": { "$ref": "#/definitions/localizedString" },
+        "prompt": { "$ref": "#/definitions/localizedString" },
+        "mode": { "type": "string", "enum": ["freehand", "graph", "geometry"] }
+      },
+      "required": ["type"]
+    },
+    "exercise": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["multiple-choice", "numeric", "free-response", "expression", "drawing"]
+        },
+        "question": { "$ref": "#/definitions/localizedString" },
+        "hints": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/localizedString" }
+        },
+        "options": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/localizedString" }
+        },
+        "correctOptionIndex": { "type": "integer", "minimum": 0 },
+        "answer": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "array", "items": { "type": "number" } }
+          ]
+        },
+        "tolerance": { "type": "number", "default": 0 },
+        "validation": {
+          "type": "string",
+          "enum": ["exact", "numeric", "expression", "manual"]
+        },
+        "maxAttempts": { "type": "integer", "minimum": 1, "default": 3 },
+        "solution": { "$ref": "#/definitions/localizedString" },
+        "drawingMode": { "type": "string", "enum": ["freehand", "graph", "geometry"] }
+      },
+      "required": ["id", "type", "question"]
+    },
+    "lesson": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "$ref": "#/definitions/localizedString" },
+        "objectives": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/localizedString" }
+        },
+        "pedagogy": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/pedagogyBlock" }
+        },
+        "content": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/contentBlock" }
+        },
+        "exercises": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/exercise" }
+        }
+      },
+      "required": ["id", "title", "content", "exercises"]
+    },
+    "chapter": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "$ref": "#/definitions/localizedString" },
+        "description": { "$ref": "#/definitions/localizedString" },
+        "lessons": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/lesson" }
+        }
+      },
+      "required": ["id", "title", "lessons"]
+    },
+    "subject": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "$ref": "#/definitions/localizedString" },
+        "description": { "$ref": "#/definitions/localizedString" },
+        "chapters": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "$ref": "#/definitions/chapter" },
+              { "type": "string" }
+            ]
+          }
+        }
+      },
+      "required": ["id", "title", "description", "chapters"]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "subject": { "$ref": "#/definitions/subject" }
+  },
+  "required": ["subject"]
+}
