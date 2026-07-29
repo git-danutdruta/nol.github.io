@@ -1,0 +1,36 @@
+{
+  "subjects": [
+    {
+      "id": "arithmetic",
+      "title": "Arithmetic",
+      "description": "Build a solid foundation with numbers, operations, fractions, decimals, and percentages.",
+      "chapters": [
+        {
+          "id": "arithmetic-basics",
+          "title": "Number Basics",
+          "lessons": [
+            { "id": "counting", "title": "Counting and Place Value" },
+            { "id": "addition", "title": "Addition" },
+            { "id": "subtraction", "title": "Subtraction" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algebra",
+      "title": "Algebra",
+      "description": "Learn to use variables, solve equations, and reason with symbols.",
+      "chapters": [
+        {
+          "id": "algebra-basics",
+          "title": "Introduction to Algebra",
+          "lessons": [
+            { "id": "variables", "title": "What is a Variable?" },
+            { "id": "expressions", "title": "Writing Expressions" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

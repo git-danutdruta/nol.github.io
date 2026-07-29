@@ -1,0 +1,42 @@
+{
+  "app": {
+    "name": "NOL Math",
+    "tagline": "Apprenez les mathématiques de haut en bas"
+  },
+  "nav": {
+    "home": "Accueil",
+    "subjects": "Matières",
+    "progress": "Progrès",
+    "settings": "Paramètres",
+    "menu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation"
+  },
+  "home": {
+    "welcome": "Bienvenue sur NOL Math",
+    "subtitle": "Une plateforme d'apprentissage des mathématiques gratuite et hors ligne.",
+    "startLearning": "Commencer à apprendre",
+    "noSubjects": "Aucune matière disponible pour le moment. Revenez bientôt !"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "theme": "Thème",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "themeSystem": "Système"
+  },
+  "progress": {
+    "title": "Votre progression",
+    "empty": "Aucun progrès pour le moment. Terminez une leçon pour le voir ici."
+  },
+  "errors": {
+    "generic": "Quelque chose s'est mal passé.",
+    "retry": "Réessayer",
+    "notFound": "Page non trouvée",
+    "goHome": "Retour à l'accueil"
+  },
+  "accessibility": {
+    "skipToContent": "Passer au contenu principal"
+  }
+}
+

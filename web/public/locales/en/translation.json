@@ -1,0 +1,42 @@
+{
+  "app": {
+    "name": "NOL Math",
+    "tagline": "Learn math from top to bottom"
+  },
+  "nav": {
+    "home": "Home",
+    "subjects": "Subjects",
+    "progress": "Progress",
+    "settings": "Settings",
+    "menu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "home": {
+    "welcome": "Welcome to NOL Math",
+    "subtitle": "A free, offline-capable math learning platform.",
+    "startLearning": "Start learning",
+    "noSubjects": "No subjects available yet. Check back soon!"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System"
+  },
+  "progress": {
+    "title": "Your progress",
+    "empty": "No progress yet. Complete a lesson to see it here."
+  },
+  "errors": {
+    "generic": "Something went wrong.",
+    "retry": "Try again",
+    "notFound": "Page not found",
+    "goHome": "Go home"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content"
+  }
+}
+
