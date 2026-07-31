@@ -2,22 +2,22 @@
   "name": "NOL Math",
   "short_name": "NOL Math",
   "description": "Learn math from top to bottom. A free, offline-capable math learning PWA.",
-  "start_url": "/",
+  "start_url": "/nol.github.io/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "scope": "/nol.github.io/",
   "lang": "en",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/nol.github.io/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/nol.github.io/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
