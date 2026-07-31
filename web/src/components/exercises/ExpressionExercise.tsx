@@ -7,9 +7,10 @@ import { MathInput } from '@/components/MathInput';
 
 interface ExpressionExerciseProps {
   exercise: Exercise;
+  onEvaluated?: (correct: boolean) => void;
 }
 
-export function ExpressionExercise({ exercise }: ExpressionExerciseProps) {
+export function ExpressionExercise({ exercise, onEvaluated }: ExpressionExerciseProps) {
   const { i18n } = useTranslation();
   const [answer, setAnswer] = useState('');
   const [result, setResult] = useState<{ correct: boolean; message: string } | null>(null);
@@ -21,6 +22,7 @@ export function ExpressionExercise({ exercise }: ExpressionExerciseProps) {
   function handleSubmit() {
     const validation = validateAnswer(exercise, answer);
     setResult(validation);
+    onEvaluated?.(validation.correct);
     setAttempts((a) => a + 1);
     if (!validation.correct && attempts + 1 >= maxAttempts) {
       setShowSolution(true);

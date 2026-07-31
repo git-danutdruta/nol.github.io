@@ -6,9 +6,10 @@ import { useTranslation } from 'react-i18next';
 
 interface FreeResponseExerciseProps {
   exercise: Exercise;
+  onEvaluated?: (correct: boolean) => void;
 }
 
-export function FreeResponseExercise({ exercise }: FreeResponseExerciseProps) {
+export function FreeResponseExercise({ exercise, onEvaluated }: FreeResponseExerciseProps) {
   const { i18n } = useTranslation();
   const [answer, setAnswer] = useState('');
   const [result, setResult] = useState<{ correct: boolean; message: string } | null>(null);
@@ -20,6 +21,7 @@ export function FreeResponseExercise({ exercise }: FreeResponseExerciseProps) {
   function handleSubmit() {
     const validation = validateAnswer(exercise, answer);
     setResult(validation);
+    onEvaluated?.(validation.correct);
     setAttempts((a) => a + 1);
     if (!validation.correct && attempts + 1 >= maxAttempts) {
       setShowSolution(true);

@@ -23,11 +23,46 @@
     "theme": "Thème",
     "themeLight": "Clair",
     "themeDark": "Sombre",
-    "themeSystem": "Système"
+    "themeSystem": "Système",
+    "progress": {
+      "title": "Données de progression",
+      "description": "Exportez votre progression locale au format JSON, importez une sauvegarde, ou réinitialisez toute la progression.",
+      "export": "Exporter la progression",
+      "import": "Importer la progression",
+      "reset": "Réinitialiser la progression",
+      "exportConfirm": "Exporter votre progression locale vers un fichier JSON ?",
+      "importConfirm": "L'importation remplacera la progression locale actuelle. Continuer ?",
+      "resetConfirm": "Cette action effacera définitivement la progression locale sur cet appareil. Continuer ?",
+      "exportSuccess": "Progression exportée.",
+      "importSuccess": "Progression importée.",
+      "importError": "Impossible d'importer le fichier de progression.",
+      "resetSuccess": "Réinitialisation terminée."
+    }
   },
   "progress": {
     "title": "Votre progression",
-    "empty": "Aucun progrès pour le moment. Terminez une leçon pour le voir ici."
+    "empty": "Aucun progrès pour le moment. Terminez une leçon pour le voir ici.",
+    "cards": {
+      "xp": "XP",
+      "streak": "Série actuelle",
+      "completed": "Leçons terminées",
+      "mastery": "Maîtrise moyenne"
+    },
+    "review": {
+      "title": "Révision espacée",
+      "noneDue": "Aucune leçon n'est à réviser pour le moment."
+    },
+    "badges": {
+      "title": "Badges",
+      "first_steps": "Premiers pas",
+      "lesson_finisher": "Finisseur de leçon",
+      "streak_3": "Série de 3 jours",
+      "mastery_5": "Maîtrise x5"
+    },
+    "lessonBreakdown": "Détail par leçon",
+    "attemptsLabel": "{{count}} tentatives",
+    "nextReview": "Prochaine révision : {{date}}",
+    "totalAttempts": "Tentatives enregistrées : {{count}}"
   },
   "errors": {
     "generic": "Quelque chose s'est mal passé.",

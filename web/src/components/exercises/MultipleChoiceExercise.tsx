@@ -6,9 +6,10 @@ import { useTranslation } from 'react-i18next';
 
 interface MultipleChoiceExerciseProps {
   exercise: Exercise;
+  onEvaluated?: (correct: boolean) => void;
 }
 
-export function MultipleChoiceExercise({ exercise }: MultipleChoiceExerciseProps) {
+export function MultipleChoiceExercise({ exercise, onEvaluated }: MultipleChoiceExerciseProps) {
   const { i18n } = useTranslation();
   const [selected, setSelected] = useState<number | null>(null);
   const [result, setResult] = useState<{ correct: boolean; message: string } | null>(null);
@@ -21,6 +22,7 @@ export function MultipleChoiceExercise({ exercise }: MultipleChoiceExerciseProps
     if (selected === null) return;
     const validation = validateAnswer(exercise, String(selected));
     setResult(validation);
+    onEvaluated?.(validation.correct);
     setAttempts((a) => a + 1);
     if (!validation.correct && attempts + 1 >= maxAttempts) {
       setShowSolution(true);

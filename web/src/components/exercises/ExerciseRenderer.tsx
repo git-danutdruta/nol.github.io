@@ -7,20 +7,25 @@ import { DrawingExercise } from '@/components/exercises/DrawingExercise';
 
 interface ExerciseRendererProps {
   exercise: Exercise;
+  onEvaluated?: (result: { exerciseId: string; correct: boolean }) => void;
 }
 
-export function ExerciseRenderer({ exercise }: ExerciseRendererProps) {
+export function ExerciseRenderer({ exercise, onEvaluated }: ExerciseRendererProps) {
+  const handleEvaluated = (correct: boolean) => {
+    onEvaluated?.({ exerciseId: exercise.id, correct });
+  };
+
   switch (exercise.type) {
     case 'multiple-choice':
-      return <MultipleChoiceExercise exercise={exercise} />;
+      return <MultipleChoiceExercise exercise={exercise} onEvaluated={handleEvaluated} />;
     case 'numeric':
-      return <NumericExercise exercise={exercise} />;
+      return <NumericExercise exercise={exercise} onEvaluated={handleEvaluated} />;
     case 'free-response':
-      return <FreeResponseExercise exercise={exercise} />;
+      return <FreeResponseExercise exercise={exercise} onEvaluated={handleEvaluated} />;
     case 'expression':
-      return <ExpressionExercise exercise={exercise} />;
+      return <ExpressionExercise exercise={exercise} onEvaluated={handleEvaluated} />;
     case 'drawing':
-      return <DrawingExercise exercise={exercise} />;
+      return <DrawingExercise exercise={exercise} onEvaluated={handleEvaluated} />;
     default:
       return <p>Unsupported exercise type.</p>;
   }

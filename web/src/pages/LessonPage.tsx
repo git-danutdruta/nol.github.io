@@ -1,13 +1,22 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCurriculum } from '@/hooks/useCurriculum';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { LessonRenderer } from '@/components/LessonRenderer';
+import { useProgressStore } from '@/stores/progressStore';
 
 export function LessonPage() {
   const { lessonId } = useParams<{ lessonId: string }>();
   const { lessons, loading } = useCurriculum();
+  const recordLessonVisit = useProgressStore((state) => state.recordLessonVisit);
 
   const lesson = lessons.find((l) => l.id === lessonId);
+
+  useEffect(() => {
+    if (lesson) {
+      recordLessonVisit(lesson.id);
+    }
+  }, [lesson, recordLessonVisit]);
 
   if (loading) {
     return (

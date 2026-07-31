@@ -1,9 +1,11 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Lesson } from '@/types/curriculum';
 import { getLocalizedString } from '@/lib/i18n';
 import { ContentBlock } from '@/components/lesson/ContentBlock';
 import { PedagogyBlock } from '@/components/lesson/PedagogyBlock';
 import { ExerciseRenderer } from '@/components/exercises/ExerciseRenderer';
+import { useProgressStore } from '@/stores/progressStore';
 
 interface LessonRendererProps {
   lesson: Lesson;
@@ -11,6 +13,12 @@ interface LessonRendererProps {
 
 export function LessonRenderer({ lesson }: LessonRendererProps) {
   const { i18n } = useTranslation();
+  const syncLessonStructure = useProgressStore((state) => state.syncLessonStructure);
+  const recordExerciseResult = useProgressStore((state) => state.recordExerciseResult);
+
+  useEffect(() => {
+    syncLessonStructure(lesson.id, lesson.exercises.length);
+  }, [lesson.id, lesson.exercises.length, syncLessonStructure]);
 
   return (
     <article className="mx-auto max-w-3xl">
@@ -51,7 +59,12 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
             {lesson.exercises.map((exercise, index) => (
               <div key={exercise.id}>
                 <p className="mb-2 text-sm font-medium text-slate-500">Exercise {index + 1}</p>
-                <ExerciseRenderer exercise={exercise} />
+                <ExerciseRenderer
+                  exercise={exercise}
+                  onEvaluated={({ exerciseId, correct }) =>
+                    recordExerciseResult(lesson.id, exerciseId, correct)
+                  }
+                />
               </div>
             ))}
           </div>

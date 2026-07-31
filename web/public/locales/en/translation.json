@@ -23,11 +23,46 @@
     "theme": "Theme",
     "themeLight": "Light",
     "themeDark": "Dark",
-    "themeSystem": "System"
+    "themeSystem": "System",
+    "progress": {
+      "title": "Progress data",
+      "description": "Export your local progress to a JSON backup, import a previous backup, or reset all progress.",
+      "export": "Export progress",
+      "import": "Import progress",
+      "reset": "Reset progress",
+      "exportConfirm": "Export your local progress to a JSON file?",
+      "importConfirm": "Importing will replace your current local progress. Continue?",
+      "resetConfirm": "This will permanently clear local progress on this device. Continue?",
+      "exportSuccess": "Progress exported.",
+      "importSuccess": "Progress imported.",
+      "importError": "Could not import progress file.",
+      "resetSuccess": "Progress reset complete."
+    }
   },
   "progress": {
     "title": "Your progress",
-    "empty": "No progress yet. Complete a lesson to see it here."
+    "empty": "No progress yet. Complete a lesson to see it here.",
+    "cards": {
+      "xp": "XP",
+      "streak": "Current streak",
+      "completed": "Completed lessons",
+      "mastery": "Average mastery"
+    },
+    "review": {
+      "title": "Spaced review",
+      "noneDue": "No lessons are due for review right now."
+    },
+    "badges": {
+      "title": "Badges",
+      "first_steps": "First Steps",
+      "lesson_finisher": "Lesson Finisher",
+      "streak_3": "3-Day Streak",
+      "mastery_5": "Mastery x5"
+    },
+    "lessonBreakdown": "Lesson breakdown",
+    "attemptsLabel": "{{count}} attempts",
+    "nextReview": "Next review: {{date}}",
+    "totalAttempts": "Total attempts recorded: {{count}}"
   },
   "errors": {
     "generic": "Something went wrong.",
