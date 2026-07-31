@@ -38,7 +38,7 @@ export function SubjectPage() {
           <Link
             key={chapter.id}
             to={`/chapters/${chapter.id}`}
-            className="rounded-lg border border-slate-200 bg-white p-5 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
+            className="motion-card rounded-lg border border-slate-200 bg-white p-5 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
           >
             <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
               {getLocalizedString(chapter.title, i18n.language)}

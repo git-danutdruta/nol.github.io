@@ -31,7 +31,7 @@ export function ChapterPage() {
           <Link
             key={lesson.id}
             to={`/lessons/${lesson.id}`}
-            className="block rounded-lg border border-slate-200 bg-white p-4 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
+            className="motion-card block rounded-lg border border-slate-200 bg-white p-4 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
           >
             <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
               {getLocalizedString(lesson.title, i18n.language)}

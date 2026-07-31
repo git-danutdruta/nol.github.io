@@ -47,7 +47,7 @@ export function SubjectsPage() {
           <Link
             key={subject.id}
             to={`/subjects/${subject.id}`}
-            className="flex flex-col gap-3 rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+            className="motion-card flex flex-col gap-3 rounded-lg border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
           >
             <BookOpen
               aria-hidden="true"

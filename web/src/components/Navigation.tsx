@@ -25,7 +25,7 @@ export function Navigation() {
       >
         <Link
           to="/"
-          className="flex items-center gap-2 text-lg font-bold text-primary-700 dark:text-primary-400"
+          className="motion-link flex items-center gap-2 text-lg font-bold text-primary-700 dark:text-primary-400"
         >
           <BookOpen aria-hidden="true" className="h-6 w-6" />
           <span>{t('app.name')}</span>
@@ -55,7 +55,7 @@ export function Navigation() {
                 <Link
                   to={item.to}
                   className={cn(
-                    'flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+                    'motion-link flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium',
                     active
                       ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
                       : 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'
@@ -87,7 +87,7 @@ export function Navigation() {
                       to={item.to}
                       onClick={() => setMobileOpen(false)}
                       className={cn(
-                        'flex items-center gap-3 rounded-md px-3 py-3 text-sm font-medium transition-colors',
+                        'motion-link flex items-center gap-3 rounded-md px-3 py-3 text-sm font-medium',
                         active
                           ? 'bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300'
                           : 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'

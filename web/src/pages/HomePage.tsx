@@ -16,10 +16,10 @@ export function HomePage() {
         </p>
         <Link
           to="/subjects"
-          className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-6 py-3 text-lg font-semibold text-white hover:bg-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+          className="motion-cta inline-flex items-center gap-2 rounded-lg bg-primary-600 px-6 py-3 text-lg font-semibold text-white hover:bg-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
         >
           {t('home.startLearning')}
-          <ArrowRight aria-hidden="true" className="h-5 w-5" />
+          <ArrowRight aria-hidden="true" className="motion-icon-slide h-5 w-5" />
         </Link>
       </div>
     </section>
