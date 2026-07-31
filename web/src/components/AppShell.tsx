@@ -1,6 +1,7 @@
 import { type ReactNode } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { SkipLink } from '@/components/SkipLink';
+import { ServiceWorkerUpdatePrompt } from '@/components/ServiceWorkerUpdatePrompt';
 
 interface AppShellProps {
   children: ReactNode;
@@ -19,6 +20,7 @@ export function AppShell({ children }: AppShellProps) {
           © {new Date().getFullYear()} NOL Math. Open source under MIT License.
         </div>
       </footer>
+      <ServiceWorkerUpdatePrompt />
     </div>
   );
 }

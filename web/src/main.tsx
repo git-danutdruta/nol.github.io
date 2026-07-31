@@ -5,7 +5,12 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n/config';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { AppRoutes } from '@/routes';
+import { registerServiceWorker } from '@/lib/pwa/registerServiceWorker';
 import '@/styles/index.css';
+
+if (import.meta.env.PROD) {
+  registerServiceWorker();
+}
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

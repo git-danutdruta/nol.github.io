@@ -72,6 +72,11 @@
   },
   "accessibility": {
     "skipToContent": "Skip to main content"
+  },
+  "pwa": {
+    "updateAvailable": "A new version is available. Refresh to update.",
+    "refreshToUpdate": "Refresh now",
+    "dismiss": "Later"
   }
 }
 
