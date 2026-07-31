@@ -1,5 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
+import { recordClientError } from '@/lib/observability/clientLogger';
 
 interface Props {
   children: ReactNode;
@@ -21,6 +22,11 @@ class ErrorBoundaryBase extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
+    recordClientError(error, {
+      source: 'ErrorBoundary',
+      componentStack: info.componentStack ?? '',
+      pathname: window.location.pathname,
+    });
     console.error('ErrorBoundary caught an error:', error, info);
   }
 
