@@ -82,7 +82,7 @@ jobs:
         id: detect
         shell: bash
         run: |
-          if find . -type f \( -name '*.spec.ts' -o -name '*.spec.tsx' \) | grep -q .; then
+          if find . -type f \( -name '*.spec.ts' -o -name '*.spec.tsx' \) -not -path '*/node_modules/*' | grep -q .; then
             echo "has_e2e=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_e2e=false" >> "$GITHUB_OUTPUT"
