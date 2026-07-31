@@ -1,6 +1,6 @@
 import type { Subject, Chapter, Lesson } from '@/types/curriculum';
 
-const CURRICULUM_BASE = '/curriculum';
+const CURRICULUM_BASE = `${import.meta.env.BASE_URL}curriculum`;
 
 export interface LoadedCurriculum {
   subjects: Subject[];
@@ -31,7 +31,9 @@ export async function loadCurriculum(): Promise<LoadedCurriculum> {
     const loadedChapters: Chapter[] = [];
     for (const chapterRef of subjectData.chapters) {
       const chapterPath = typeof chapterRef === 'string' ? chapterRef : '';
-      const chapterResponse = await fetch(`${CURRICULUM_BASE}/${subjectMeta.id}/${chapterPath}`);
+      const chapterResponse = await fetch(
+        `${CURRICULUM_BASE}/${subjectMeta.id}/${chapterPath.replace(/^\/+/, '')}`
+      );
       if (!chapterResponse.ok) {
         throw new Error(`Failed to load chapter ${chapterPath}: ${chapterResponse.status}`);
       }
