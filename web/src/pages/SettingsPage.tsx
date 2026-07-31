@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { SettingsErrorLogPanel } from '@/components/SettingsErrorLogPanel';
 import { downloadProgressBackup, parseImportedProgress } from '@/lib/exportImport';
 import { useProgressStore } from '@/stores/progressStore';
 
@@ -92,6 +93,8 @@ export function SettingsPage() {
 
           {message && <p className="text-sm text-slate-700 dark:text-slate-300">{message}</p>}
         </div>
+
+        <SettingsErrorLogPanel />
       </div>
     </section>
   );

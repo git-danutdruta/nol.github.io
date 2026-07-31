@@ -37,6 +37,13 @@
       "importSuccess": "Progression importée.",
       "importError": "Impossible d'importer le fichier de progression.",
       "resetSuccess": "Réinitialisation terminée."
+    },
+    "errors": {
+      "title": "Diagnostic des erreurs",
+      "description": "Consultez les erreurs client récentes stockées sur cet appareil et exportez-les pour le débogage.",
+      "refresh": "Rafraichir la liste",
+      "export": "Exporter le journal d'erreurs",
+      "empty": "Aucune erreur client enregistree pour le moment."
     }
   },
   "progress": {

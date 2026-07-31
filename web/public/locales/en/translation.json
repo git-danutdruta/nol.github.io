@@ -37,6 +37,13 @@
       "importSuccess": "Progress imported.",
       "importError": "Could not import progress file.",
       "resetSuccess": "Progress reset complete."
+    },
+    "errors": {
+      "title": "Error diagnostics",
+      "description": "Review recent client-side errors stored on this device and export them for debugging.",
+      "refresh": "Refresh list",
+      "export": "Export error log",
+      "empty": "No client-side errors recorded yet."
     }
   },
   "progress": {
