@@ -44,6 +44,15 @@
       "refresh": "Rafraichir la liste",
       "export": "Exporter le journal d'erreurs",
       "empty": "Aucune erreur client enregistree pour le moment."
+    },
+    "media": {
+      "title": "Export image et PDF",
+      "description": "Exportez un canevas de dessin en PNG ou ouvrez la boite d'impression pour sauvegarder un PDF.",
+      "exportImage": "Exporter PNG",
+      "exportPdf": "Exporter PDF",
+      "exportImageSuccess": "Image du canevas exportee.",
+      "exportImageNoCanvas": "Aucun canevas trouve a exporter.",
+      "exportPdfHint": "Boite d'impression ouverte. Choisissez Enregistrer en PDF dans votre navigateur."
     }
   },
   "progress": {

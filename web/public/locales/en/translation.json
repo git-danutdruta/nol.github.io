@@ -44,6 +44,15 @@
       "refresh": "Refresh list",
       "export": "Export error log",
       "empty": "No client-side errors recorded yet."
+    },
+    "media": {
+      "title": "Image and PDF export",
+      "description": "Export a drawing canvas as PNG or open the browser print dialog to save a PDF.",
+      "exportImage": "Export PNG",
+      "exportPdf": "Export PDF",
+      "exportImageSuccess": "Canvas image exported.",
+      "exportImageNoCanvas": "No canvas found to export.",
+      "exportPdfHint": "Print dialog opened. Choose Save as PDF in your browser."
     }
   },
   "progress": {

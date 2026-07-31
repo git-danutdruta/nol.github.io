@@ -4,6 +4,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { SettingsErrorLogPanel } from '@/components/SettingsErrorLogPanel';
 import { downloadProgressBackup, parseImportedProgress } from '@/lib/exportImport';
+import { exportFirstCanvasAsPng, triggerPrintPdf } from '@/lib/exportMedia';
 import { useProgressStore } from '@/stores/progressStore';
 
 export function SettingsPage() {
@@ -42,6 +43,18 @@ export function SettingsPage() {
     if (!window.confirm(t('settings.progress.resetConfirm'))) return;
     resetProgress();
     setMessage(t('settings.progress.resetSuccess'));
+  };
+
+  const handleExportCanvas = () => {
+    const exported = exportFirstCanvasAsPng();
+    setMessage(
+      exported ? t('settings.media.exportImageSuccess') : t('settings.media.exportImageNoCanvas')
+    );
+  };
+
+  const handleExportPdf = () => {
+    triggerPrintPdf();
+    setMessage(t('settings.media.exportPdfHint'));
   };
 
   return (
@@ -92,6 +105,31 @@ export function SettingsPage() {
           </div>
 
           {message && <p className="text-sm text-slate-700 dark:text-slate-300">{message}</p>}
+        </div>
+
+        <div className="space-y-3 border-t border-slate-200 pt-6 dark:border-slate-700">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            {t('settings.media.title')}
+          </h2>
+          <p className="text-sm text-slate-600 dark:text-slate-400">
+            {t('settings.media.description')}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={handleExportCanvas}
+              className="rounded-md border border-primary-200 bg-primary-50 px-3 py-2 text-sm font-medium text-primary-800 hover:bg-primary-100 dark:border-primary-800 dark:bg-primary-900/20 dark:text-primary-300"
+            >
+              {t('settings.media.exportImage')}
+            </button>
+            <button
+              type="button"
+              onClick={handleExportPdf}
+              className="rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+            >
+              {t('settings.media.exportPdf')}
+            </button>
+          </div>
         </div>
 
         <SettingsErrorLogPanel />
