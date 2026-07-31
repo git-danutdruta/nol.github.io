@@ -1,5 +1,8 @@
 allowBuilds:
   esbuild: false
 
+overrides:
+  brace-expansion: 1.1.17
+
 onlyBuiltDependencies:
   - esbuild
