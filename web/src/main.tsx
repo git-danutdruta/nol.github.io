@@ -12,10 +12,18 @@ if (import.meta.env.PROD) {
   registerServiceWorker();
 }
 
+/**
+ * Derive React Router basename from Vite's BASE_URL so that GitHub Pages
+ * (deployed under `/nol.github.io/`) and local dev (`/`) both produce
+ * correctly prefixed links. Without this, <Link to="/subjects"> renders
+ * `/subjects` and drops the `/nol.github.io` path segment on click.
+ */
+const routerBasename = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <I18nextProvider i18n={i18n}>
-      <BrowserRouter>
+      <BrowserRouter basename={routerBasename}>
         <ThemeProvider>
           <AppRoutes />
         </ThemeProvider>
