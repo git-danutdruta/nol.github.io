@@ -35,7 +35,17 @@ pnpm test
 # Run linting and formatting checks
 pnpm lint
 pnpm format:check
+
+# Check bundle performance budgets (run after build)
+pnpm check-budgets
 ```
+
+## Performance Budgets
+
+- A CI budget check runs after build and fails if bundle limits are exceeded.
+- Current limits are defined in `scripts/check-budgets.cjs`:
+  - largest JS chunk <= 700 KiB
+  - initial JS payload (index/vendor/i18n/state chunks) <= 320 KiB
 
 ## Project Structure
 

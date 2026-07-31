@@ -14,6 +14,7 @@
     "lint:fix": "eslint . --ext ts,tsx --fix",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\" \"*.json\" \"*.ts\"",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\" \"*.json\" \"*.ts\"",
+    "check-budgets": "node scripts/check-budgets.cjs",
     "validate-content": "node scripts/validate-curriculum.cjs",
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui"
