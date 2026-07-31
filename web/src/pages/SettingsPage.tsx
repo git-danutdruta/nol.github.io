@@ -56,7 +56,9 @@ export function SettingsPage() {
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
             {t('settings.progress.title')}
           </h2>
-          <p className="text-sm text-slate-600 dark:text-slate-400">{t('settings.progress.description')}</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">
+            {t('settings.progress.description')}
+          </p>
           <div className="flex flex-wrap gap-2">
             <button
               type="button"

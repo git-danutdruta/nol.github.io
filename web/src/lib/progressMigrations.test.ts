@@ -31,4 +31,3 @@ describe('progress migrations', () => {
     expect(result.lessons.lesson_a.mastery).toBe(0.5);
   });
 });
-

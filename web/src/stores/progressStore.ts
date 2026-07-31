@@ -42,7 +42,10 @@ function computeCurrentStreak(activity: Record<string, number>): number {
 
 function updateBadges(state: ProgressPersistedState): BadgeId[] {
   const completedLessons = Object.values(state.lessons).filter((lesson) => lesson.completed).length;
-  const totalAttempts = Object.values(state.lessons).reduce((sum, lesson) => sum + lesson.attempts, 0);
+  const totalAttempts = Object.values(state.lessons).reduce(
+    (sum, lesson) => sum + lesson.attempts,
+    0
+  );
   const streak = computeCurrentStreak(state.dailyActivity);
 
   const badges = new Set<BadgeId>();
@@ -54,7 +57,10 @@ function updateBadges(state: ProgressPersistedState): BadgeId[] {
   return Array.from(badges);
 }
 
-function getOrCreateLesson(lessons: Record<string, LessonProgress>, lessonId: string): LessonProgress {
+function getOrCreateLesson(
+  lessons: Record<string, LessonProgress>,
+  lessonId: string
+): LessonProgress {
   return (
     lessons[lessonId] ?? {
       lessonId,
@@ -172,7 +178,7 @@ export const useProgressStore = create<ProgressStore>()(
             correctAttempts: lesson.correctAttempts + (correct ? 1 : 0),
             mastery,
             completed: isCompleted,
-            completedAt: isCompleted ? lesson.completedAt ?? now : lesson.completedAt,
+            completedAt: isCompleted ? (lesson.completedAt ?? now) : lesson.completedAt,
             lastReviewedAt: now,
             reviewLevel,
             nextReviewAt,
@@ -197,7 +203,10 @@ export const useProgressStore = create<ProgressStore>()(
 
       getDueLessonIds: (now = Date.now()) => {
         return Object.values(get().lessons)
-          .filter((lesson) => lesson.completed && lesson.nextReviewAt !== undefined && lesson.nextReviewAt <= now)
+          .filter(
+            (lesson) =>
+              lesson.completed && lesson.nextReviewAt !== undefined && lesson.nextReviewAt <= now
+          )
           .map((lesson) => lesson.lessonId);
       },
 
@@ -234,4 +243,3 @@ export const useProgressStore = create<ProgressStore>()(
 export function getCurrentStreak(): number {
   return computeCurrentStreak(useProgressStore.getState().dailyActivity);
 }
-

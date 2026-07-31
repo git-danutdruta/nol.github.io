@@ -23,7 +23,9 @@ export function ProgressPage() {
     allLessonProgress.length === 0
       ? 0
       : Math.round(
-          allLessonProgress.reduce((sum, lesson) => sum + lesson.mastery, 0) / allLessonProgress.length * 100
+          (allLessonProgress.reduce((sum, lesson) => sum + lesson.mastery, 0) /
+            allLessonProgress.length) *
+            100
         );
   const streak = getCurrentStreak();
   const dueLessonIds = getDueLessonIds();
@@ -48,12 +50,20 @@ export function ProgressPage() {
           <p className="mt-1 text-2xl font-bold text-slate-900 dark:text-white">{streak}</p>
         </div>
         <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-          <p className="text-sm text-slate-500 dark:text-slate-400">{t('progress.cards.completed')}</p>
-          <p className="mt-1 text-2xl font-bold text-slate-900 dark:text-white">{completedLessons}</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            {t('progress.cards.completed')}
+          </p>
+          <p className="mt-1 text-2xl font-bold text-slate-900 dark:text-white">
+            {completedLessons}
+          </p>
         </div>
         <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-          <p className="text-sm text-slate-500 dark:text-slate-400">{t('progress.cards.mastery')}</p>
-          <p className="mt-1 text-2xl font-bold text-slate-900 dark:text-white">{masteryPercent}%</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            {t('progress.cards.mastery')}
+          </p>
+          <p className="mt-1 text-2xl font-bold text-slate-900 dark:text-white">
+            {masteryPercent}%
+          </p>
         </div>
       </div>
 

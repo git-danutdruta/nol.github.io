@@ -31,9 +31,12 @@ export function registerServiceWorker() {
           });
         });
 
-        window.setInterval(() => {
-          void registration.update();
-        }, 60 * 60 * 1000);
+        window.setInterval(
+          () => {
+            void registration.update();
+          },
+          60 * 60 * 1000
+        );
       })
       .catch((error: unknown) => {
         console.error('Service worker registration failed:', error);
@@ -42,4 +45,3 @@ export function registerServiceWorker() {
 }
 
 export { UPDATE_EVENT as SERVICE_WORKER_UPDATE_EVENT };
-

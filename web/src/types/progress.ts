@@ -32,4 +32,3 @@ export interface ProgressExportPayload {
   exportedAt: string;
   data: ProgressPersistedState;
 }
-

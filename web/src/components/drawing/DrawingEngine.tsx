@@ -60,7 +60,11 @@ function getPointer(canvas: HTMLCanvasElement, event: PointerEvent<HTMLCanvasEle
   };
 }
 
-export function DrawingEngine({ drawingKey, initialMode = 'freehand', onSave }: DrawingEngineProps) {
+export function DrawingEngine({
+  drawingKey,
+  initialMode = 'freehand',
+  onSave,
+}: DrawingEngineProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const saveDrawing = useDrawingStore((store) => store.saveDrawing);
   const getDrawing = useDrawingStore((store) => store.getDrawing);
@@ -157,18 +161,29 @@ export function DrawingEngine({ drawingKey, initialMode = 'freehand', onSave }: 
     };
 
     setState((prev) => {
-      const graphing: GraphingState = prev.graphing ?? { functions: [], viewport: DEFAULT_VIEWPORT };
+      const graphing: GraphingState = prev.graphing ?? {
+        functions: [],
+        viewport: DEFAULT_VIEWPORT,
+      };
       return { ...prev, graphing: { ...graphing, functions: [...graphing.functions, fn] } };
     });
   };
 
   return (
     <div className="space-y-3">
-      <MobileToolbar mode={state.mode} onModeChange={setMode} onSave={saveCurrent} onClear={clearCurrentMode} />
+      <MobileToolbar
+        mode={state.mode}
+        onModeChange={setMode}
+        onSave={saveCurrent}
+        onClear={clearCurrentMode}
+      />
 
       {state.mode === 'graph' && (
         <div className="flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-          <label htmlFor={`graph-expression-${drawingKey}`} className="text-sm font-medium text-slate-700 dark:text-slate-300">
+          <label
+            htmlFor={`graph-expression-${drawingKey}`}
+            className="text-sm font-medium text-slate-700 dark:text-slate-300"
+          >
             f(x)
           </label>
           <input
@@ -201,5 +216,3 @@ export function DrawingEngine({ drawingKey, initialMode = 'freehand', onSave }: 
     </div>
   );
 }
-
-

@@ -16,7 +16,9 @@ const EMPTY_STATE: ProgressPersistedState = {
 function sanitizeBadges(value: unknown): BadgeId[] {
   if (!Array.isArray(value)) return [];
   const allowed: BadgeId[] = ['first_steps', 'lesson_finisher', 'streak_3', 'mastery_5'];
-  return value.filter((entry): entry is BadgeId => typeof entry === 'string' && allowed.includes(entry as BadgeId));
+  return value.filter(
+    (entry): entry is BadgeId => typeof entry === 'string' && allowed.includes(entry as BadgeId)
+  );
 }
 
 function sanitizeLessonProgress(lessonId: string, value: unknown): LessonProgress | null {
@@ -30,7 +32,9 @@ function sanitizeLessonProgress(lessonId: string, value: unknown): LessonProgres
     ? lesson.correctExerciseIds.filter((id): id is string => typeof id === 'string')
     : [];
 
-  const totalExercises = Number.isFinite(lesson.totalExercises) ? Math.max(0, Number(lesson.totalExercises)) : 0;
+  const totalExercises = Number.isFinite(lesson.totalExercises)
+    ? Math.max(0, Number(lesson.totalExercises))
+    : 0;
   const attempts = Number.isFinite(lesson.attempts) ? Math.max(0, Number(lesson.attempts)) : 0;
   const correctAttempts = Number.isFinite(lesson.correctAttempts)
     ? Math.max(0, Number(lesson.correctAttempts))
@@ -47,7 +51,9 @@ function sanitizeLessonProgress(lessonId: string, value: unknown): LessonProgres
     mastery,
     completed: mastery >= 1,
     completedAt: Number.isFinite(lesson.completedAt) ? Number(lesson.completedAt) : undefined,
-    lastReviewedAt: Number.isFinite(lesson.lastReviewedAt) ? Number(lesson.lastReviewedAt) : undefined,
+    lastReviewedAt: Number.isFinite(lesson.lastReviewedAt)
+      ? Number(lesson.lastReviewedAt)
+      : undefined,
     nextReviewAt: Number.isFinite(lesson.nextReviewAt) ? Number(lesson.nextReviewAt) : undefined,
     reviewLevel: Number.isFinite(lesson.reviewLevel) ? Math.max(0, Number(lesson.reviewLevel)) : 0,
   };
@@ -84,7 +90,10 @@ export function sanitizeProgressState(input: unknown): ProgressPersistedState {
   };
 }
 
-export function migrateProgressState(input: unknown, version: number | undefined): ProgressPersistedState {
+export function migrateProgressState(
+  input: unknown,
+  version: number | undefined
+): ProgressPersistedState {
   // v1 data did not have schemaVersion or review scheduling fields.
   if (version === 1 || version === undefined) {
     return sanitizeProgressState(input);
@@ -92,4 +101,3 @@ export function migrateProgressState(input: unknown, version: number | undefined
 
   return sanitizeProgressState(input);
 }
-

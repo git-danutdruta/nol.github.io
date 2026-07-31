@@ -54,4 +54,3 @@ export function MobileToolbar({ mode, onModeChange, onSave, onClear }: MobileToo
     </div>
   );
 }
-

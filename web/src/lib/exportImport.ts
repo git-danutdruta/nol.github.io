@@ -5,7 +5,9 @@ import { sanitizeProgressState } from '@/lib/progressMigrations';
 function isProgressExportPayload(value: unknown): value is ProgressExportPayload {
   if (!value || typeof value !== 'object') return false;
   const payload = value as Partial<ProgressExportPayload>;
-  return payload.app === 'nol-math' && payload.type === 'progress-export' && payload.data !== undefined;
+  return (
+    payload.app === 'nol-math' && payload.type === 'progress-export' && payload.data !== undefined
+  );
 }
 
 export function createProgressExportPayload(data: ProgressPersistedState): ProgressExportPayload {
@@ -47,4 +49,3 @@ export function downloadProgressBackup(data: ProgressPersistedState): void {
   anchor.click();
   URL.revokeObjectURL(url);
 }
-

@@ -27,7 +27,8 @@ export function ServiceWorkerUpdatePrompt() {
     };
 
     navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
-    return () => navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
+    return () =>
+      navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
   }, [registration]);
 
   if (!registration || dismissed) return null;
@@ -56,4 +57,3 @@ export function ServiceWorkerUpdatePrompt() {
     </div>
   );
 }
-

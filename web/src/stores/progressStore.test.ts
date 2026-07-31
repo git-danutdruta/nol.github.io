@@ -50,4 +50,3 @@ describe('progressStore', () => {
     expect(Object.keys(useProgressStore.getState().lessons)).toHaveLength(0);
   });
 });
-
