@@ -9,6 +9,11 @@
       "id": "algebra",
       "title": "Algebra",
       "description": "Learn to use variables, solve equations, and reason with symbols."
+    },
+    {
+      "id": "geometry",
+      "title": "Geometry",
+      "description": "Explore shapes, angles, perimeter, area, and geometric reasoning with self-check exercises."
     }
   ]
 }

@@ -1,0 +1,155 @@
+{
+  "id": "geometry-shapes-angles",
+  "title": "Shapes and Angles",
+  "description": "Understand polygons, classify angles, and apply perimeter and area with visual self-check tasks.",
+  "lessons": [
+    {
+      "id": "classifying-shapes",
+      "title": "Classifying Basic Shapes",
+      "objectives": [
+        "Identify common polygons by number of sides",
+        "Use properties to classify shapes"
+      ],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Count carefully",
+          "content": "When classifying a polygon, count sides and corners first, then check if sides are equal."
+        },
+        {
+          "type": "strategy",
+          "title": "Use elimination",
+          "content": "If a shape has 4 sides, it cannot be a triangle or pentagon. Narrow options quickly."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "A polygon is a closed shape made of straight line segments. Triangles have 3 sides, quadrilaterals have 4, pentagons have 5, and hexagons have 6."
+        },
+        {
+          "type": "example",
+          "content": "A square is a quadrilateral because it has 4 sides, and all sides are equal."
+        },
+        {
+          "type": "drawing",
+          "prompt": "Sketch one triangle, one quadrilateral, and one pentagon. Label each shape.",
+          "mode": "freehand"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "shape-classification-mcq",
+          "type": "multiple-choice",
+          "question": "Which shape has exactly 5 sides?",
+          "hints": [
+            "Recall the names by side count: 3 triangle, 4 quadrilateral, 5 pentagon.",
+            "Eliminate options with 3 or 4 sides first."
+          ],
+          "options": [
+            "Triangle",
+            "Quadrilateral",
+            "Pentagon",
+            "Hexagon"
+          ],
+          "correctOptionIndex": 2,
+          "maxAttempts": 3,
+          "solution": "A pentagon has exactly 5 sides."
+        },
+        {
+          "id": "shape-self-check-drawing",
+          "type": "drawing",
+          "question": "Draw a rectangle and a square. Under each, write one property that makes it different from the other.",
+          "hints": [
+            "Both are quadrilaterals with 4 right angles.",
+            "A square has all sides equal; a rectangle has opposite sides equal."
+          ],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: rectangle and square are both 4-sided with right angles. A square has 4 equal sides; a rectangle has equal opposite sides."
+        }
+      ]
+    },
+    {
+      "id": "angles-perimeter-area",
+      "title": "Angles, Perimeter, and Area",
+      "objectives": [
+        "Classify acute, right, and obtuse angles",
+        "Compute perimeter and area of rectangles"
+      ],
+      "pedagogy": [
+        {
+          "type": "mnemonic",
+          "title": "Angle quick check",
+          "content": "Acute is small (<90), right is exact (90), obtuse is wide (>90 and <180)."
+        },
+        {
+          "type": "pitfall",
+          "title": "Perimeter vs area",
+          "content": "Perimeter adds side lengths around the outside; area measures inside space."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Angles describe turns between two rays. Perimeter measures boundary length, while area measures surface inside a shape."
+        },
+        {
+          "type": "math",
+          "latex": "P_{rectangle} = 2(l + w), \quad A_{rectangle} = l \times w"
+        },
+        {
+          "type": "example",
+          "content": "If a rectangle has length 8 and width 3, then perimeter is 2(8+3)=22 and area is 8×3=24."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "angle-type-mcq",
+          "type": "multiple-choice",
+          "question": "An angle measures 120°. What type is it?",
+          "hints": [
+            "Compare 120° to 90° and 180°.",
+            "It is more than a right angle but less than a straight angle."
+          ],
+          "options": [
+            "Acute",
+            "Right",
+            "Obtuse",
+            "Straight"
+          ],
+          "correctOptionIndex": 2,
+          "maxAttempts": 3,
+          "solution": "120° is obtuse because it is greater than 90° and less than 180°."
+        },
+        {
+          "id": "perimeter-rectangle-numeric",
+          "type": "numeric",
+          "question": "Find the perimeter of a rectangle with length 12 and width 5.",
+          "hints": [
+            "Use P = 2(l + w).",
+            "Substitute l=12 and w=5, then multiply by 2."
+          ],
+          "answer": 34,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "P = 2(12 + 5) = 2 × 17 = 34."
+        },
+        {
+          "id": "area-self-check-manual",
+          "type": "free-response",
+          "question": "A classroom floor is a rectangle 9 m by 7 m. Write your area calculation and final answer with units.",
+          "hints": [
+            "Area of rectangle = length × width.",
+            "Include square units in your final answer."
+          ],
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: A = 9 × 7 = 63 m^2. Your response should show multiplication and include m^2."
+        }
+      ]
+    }
+  ]
+}
+

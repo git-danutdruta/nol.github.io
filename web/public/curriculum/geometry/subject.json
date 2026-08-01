@@ -1,0 +1,9 @@
+{
+  "id": "geometry",
+  "title": "Geometry",
+  "description": "Explore shapes, angles, perimeter, area, and geometric reasoning with self-check exercises.",
+  "chapters": [
+    "chapters/01-shapes-angles/chapter.json"
+  ]
+}
+
