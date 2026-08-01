@@ -1,0 +1,131 @@
+{
+  "id": "calculus-limits-derivatives",
+  "title": "Limits and Derivatives",
+  "description": "Build intuition for approaching values and interpreting derivatives as rates of change.",
+  "lessons": [
+    {
+      "id": "intro-to-limits",
+      "title": "Introduction to Limits",
+      "objectives": [
+        "Understand a limit as an approaching value",
+        "Evaluate simple limits from tables and expressions"
+      ],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Approach, do not plug too fast",
+          "content": "For limits, first ask what values x approaches and what f(x) approaches, not only f(a)."
+        },
+        {
+          "type": "strategy",
+          "title": "Use nearby values",
+          "content": "If direct substitution is unclear, test x-values just below and above the target."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "A limit describes the value a function gets close to as x gets close to a number."
+        },
+        {
+          "type": "math",
+          "latex": "\\lim_{x \\to 2}(x^2+1)=5"
+        },
+        {
+          "type": "example",
+          "content": "As x approaches 3, the values of x+4 approach 7, so the limit is 7."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "limit-basic-numeric",
+          "type": "numeric",
+          "question": "Compute \\lim_{x \\to 4}(2x-1).",
+          "hints": [
+            "This is a polynomial expression, so direct substitution works.",
+            "Substitute x=4 into 2x-1."
+          ],
+          "answer": 7,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "2(4)-1=8-1=7."
+        },
+        {
+          "id": "limit-self-check-free-response",
+          "type": "free-response",
+          "question": "Explain in your own words what \\lim_{x \\to 5} f(x)=2 means.",
+          "hints": [
+            "Use the phrase 'x gets close to 5'.",
+            "Describe what f(x) values do near x=5."
+          ],
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: as x gets close to 5 (from either side), f(x) gets close to 2."
+        }
+      ]
+    },
+    {
+      "id": "derivative-as-rate",
+      "title": "Derivative as Rate of Change",
+      "objectives": [
+        "Interpret derivatives as slopes/tangent rates",
+        "Estimate rate of change from simple expressions"
+      ],
+      "pedagogy": [
+        {
+          "type": "mnemonic",
+          "title": "Derivative means how fast",
+          "content": "If position changes with time, the derivative tells how fast position changes now."
+        },
+        {
+          "type": "pitfall",
+          "title": "Average vs instantaneous",
+          "content": "Average rate uses two points. Derivative is the instantaneous rate at one point."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "The derivative f'(x) gives the instantaneous rate of change of f with respect to x."
+        },
+        {
+          "type": "math",
+          "latex": "f'(x)=\\lim_{h \\to 0} \\frac{f(x+h)-f(x)}{h}"
+        },
+        {
+          "type": "example",
+          "content": "If f(x)=x^2, then f'(x)=2x. At x=3, the rate is 6."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "derivative-value-numeric",
+          "type": "numeric",
+          "question": "Given f(x)=x^2 and f'(x)=2x, what is f'(5)?",
+          "hints": [
+            "Use the derivative formula f'(x)=2x.",
+            "Substitute x=5."
+          ],
+          "answer": 10,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "f'(5)=2*5=10."
+        },
+        {
+          "id": "derivative-sketch-self-check",
+          "type": "drawing",
+          "question": "Sketch y=x^2 and draw a tangent line near x=2. Describe whether slope is positive or negative.",
+          "hints": [
+            "The parabola opens upward.",
+            "At x=2, the tangent should rise from left to right."
+          ],
+          "drawingMode": "graph",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: tangent near x=2 should have positive slope (about 4)."
+        }
+      ]
+    }
+  ]
+}
+

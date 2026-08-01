@@ -14,6 +14,11 @@
       "id": "geometry",
       "title": "Geometry",
       "description": "Explore shapes, angles, perimeter, area, and geometric reasoning with self-check exercises."
+    },
+    {
+      "id": "calculus",
+      "title": "Calculus",
+      "description": "Start with rates of change and basic derivatives through intuitive, visual exercises."
     }
   ]
 }
