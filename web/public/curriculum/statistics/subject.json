@@ -1,0 +1,9 @@
+{
+  "id": "statistics",
+  "title": "Statistics",
+  "description": "Learn to summarize data with mean, median, mode, and visualize distributions.",
+  "chapters": [
+    "chapters/01-describing-data/chapter.json"
+  ]
+}
+

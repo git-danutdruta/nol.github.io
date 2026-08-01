@@ -19,6 +19,11 @@
       "id": "calculus",
       "title": "Calculus",
       "description": "Start with rates of change and basic derivatives through intuitive, visual exercises."
+    },
+    {
+      "id": "statistics",
+      "title": "Statistics",
+      "description": "Learn to summarize data with mean, median, mode, and visualize distributions."
     }
   ]
 }

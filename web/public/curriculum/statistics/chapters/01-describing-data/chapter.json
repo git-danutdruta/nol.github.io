@@ -1,0 +1,132 @@
+{
+  "id": "statistics-describing-data",
+  "title": "Describing Data",
+  "description": "Summarize datasets using center and spread, then interpret simple charts.",
+  "lessons": [
+    {
+      "id": "mean-median-mode",
+      "title": "Mean, Median, and Mode",
+      "objectives": [
+        "Compute mean, median, and mode for small datasets",
+        "Choose an appropriate center measure for different data shapes"
+      ],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Sort first for median",
+          "content": "Always sort the numbers before finding the median."
+        },
+        {
+          "type": "strategy",
+          "title": "Check for outliers",
+          "content": "If one value is very extreme, median may represent the center better than mean."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "The mean is the average, the median is the middle value of sorted data, and the mode is the most frequent value."
+        },
+        {
+          "type": "math",
+          "latex": "\\text{mean} = \\frac{\\text{sum of values}}{\\text{number of values}}"
+        },
+        {
+          "type": "example",
+          "content": "For 2, 4, 4, 8: mean=4.5, median=4, mode=4."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "mean-calc-1",
+          "type": "numeric",
+          "question": "Find the mean of 3, 5, 7, 9.",
+          "hints": [
+            "Add all values first.",
+            "Divide by the number of values (4)."
+          ],
+          "answer": 6,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "(3+5+7+9)/4 = 24/4 = 6."
+        },
+        {
+          "id": "median-self-check",
+          "type": "free-response",
+          "question": "Compute the median of 12, 4, 8, 20, 16 and explain your steps.",
+          "hints": [
+            "Sort the values first.",
+            "Pick the middle value after sorting."
+          ],
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: sorted data is 4, 8, 12, 16, 20 so the median is 12."
+        }
+      ]
+    },
+    {
+      "id": "range-and-charts",
+      "title": "Range and Data Displays",
+      "objectives": [
+        "Compute range as a measure of spread",
+        "Interpret bar charts and simple frequency tables"
+      ],
+      "pedagogy": [
+        {
+          "type": "mnemonic",
+          "title": "Range = max minus min",
+          "content": "Range is the largest value minus the smallest value."
+        },
+        {
+          "type": "pitfall",
+          "title": "Axis labels matter",
+          "content": "Always check chart axes and category labels before drawing conclusions."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Spread shows how far data values vary. The range is a quick spread measure."
+        },
+        {
+          "type": "example",
+          "content": "For values 6, 10, 12, 15, range = 15 - 6 = 9."
+        },
+        {
+          "type": "drawing",
+          "prompt": "Sketch a bar chart for study hours: Mon=1, Tue=2, Wed=2, Thu=3, Fri=1.",
+          "mode": "freehand"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "range-calc",
+          "type": "numeric",
+          "question": "Find the range of 14, 9, 21, 11, 18.",
+          "hints": [
+            "Identify the largest and smallest values.",
+            "Subtract smallest from largest."
+          ],
+          "answer": 12,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "max=21, min=9, so range=21-9=12."
+        },
+        {
+          "id": "bar-chart-self-check",
+          "type": "drawing",
+          "question": "Draw a bar chart for pets owned by five students: 0, 1, 1, 2, 3. Label axes.",
+          "hints": [
+            "x-axis: number of pets categories.",
+            "y-axis: frequency (how many students)."
+          ],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: bars should show frequencies: 0->1, 1->2, 2->1, 3->1 with labeled axes."
+        }
+      ]
+    }
+  ]
+}
+
