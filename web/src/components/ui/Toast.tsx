@@ -15,7 +15,8 @@ const VARIANT_CLASS: Record<NonNullable<ToastProps['variant']>, string> = {
   info: 'border-slate-300 bg-white text-slate-800 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200',
   success:
     'border-green-300 bg-green-50 text-green-900 dark:border-green-800 dark:bg-green-950/40 dark:text-green-200',
-  error: 'border-red-300 bg-red-50 text-red-900 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200',
+  error:
+    'border-red-300 bg-red-50 text-red-900 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200',
 };
 
 export function Toast({
@@ -60,4 +61,3 @@ export function Toast({
     </div>
   );
 }
-

@@ -3,7 +3,9 @@
 }
 
 .motion-press {
-  transition: transform 140ms ease, filter 140ms ease;
+  transition:
+    transform 140ms ease,
+    filter 140ms ease;
 }
 
 .motion-press:active {
@@ -57,4 +59,3 @@
     filter: none;
   }
 }
-

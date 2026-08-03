@@ -55,7 +55,9 @@ export function SettingsPage() {
   const handleExportCanvas = () => {
     const exported = exportFirstCanvasAsPng();
     setToast({
-      message: exported ? t('settings.media.exportImageSuccess') : t('settings.media.exportImageNoCanvas'),
+      message: exported
+        ? t('settings.media.exportImageSuccess')
+        : t('settings.media.exportImageNoCanvas'),
       variant: exported ? 'success' : 'info',
     });
   };

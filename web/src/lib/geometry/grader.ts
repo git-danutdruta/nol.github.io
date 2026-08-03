@@ -82,12 +82,8 @@ function lineIntersection(a: LineSegment, b: LineSegment): Point | null {
   const denom = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
   if (Math.abs(denom) < 1e-6) return null;
 
-  const px =
-    ((x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)) /
-    denom;
-  const py =
-    ((x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)) /
-    denom;
+  const px = ((x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)) / denom;
+  const py = ((x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)) / denom;
 
   return { x: px, y: py };
 }
@@ -100,12 +96,9 @@ function getGeometryLineSegments(state: DrawingState): LineSegment[] {
     .sort((a, b) => b.length - a.length);
 }
 
-function inferTask(question: string):
-  | 'perpendicular-bisector'
-  | 'perpendicular'
-  | 'parallel'
-  | 'midpoint'
-  | 'unsupported' {
+function inferTask(
+  question: string
+): 'perpendicular-bisector' | 'perpendicular' | 'parallel' | 'midpoint' | 'unsupported' {
   if (question.includes('perpendicular bisector')) return 'perpendicular-bisector';
   if (question.includes('perpendicular')) return 'perpendicular';
   if (question.includes('parallel')) return 'parallel';
@@ -178,7 +171,8 @@ export function gradeGeometryDrawing(exercise: Exercise, state: DrawingState): G
       correct: false,
       status: 'needs-review',
       confidence: 0.66,
-      feedback: 'Auto-check could not confirm a right angle. Try refining the angle or use self-check.',
+      feedback:
+        'Auto-check could not confirm a right angle. Try refining the angle or use self-check.',
       rubric: rubricForTask(task),
     };
   }
@@ -202,7 +196,8 @@ export function gradeGeometryDrawing(exercise: Exercise, state: DrawingState): G
       correct: false,
       status: 'needs-review',
       confidence: 0.62,
-      feedback: 'Auto-check could not confirm parallel lines. Adjust slope alignment or use self-check.',
+      feedback:
+        'Auto-check could not confirm parallel lines. Adjust slope alignment or use self-check.',
       rubric: rubricForTask(task),
     };
   }
@@ -259,7 +254,8 @@ export function gradeGeometryDrawing(exercise: Exercise, state: DrawingState): G
       correct: false,
       status: 'needs-review',
       confidence: 0.55,
-      feedback: 'Auto-check could not detect a midpoint mark. You can still complete via self-check.',
+      feedback:
+        'Auto-check could not detect a midpoint mark. You can still complete via self-check.',
       rubric: rubricForTask(task),
     };
   }
@@ -272,4 +268,3 @@ export function gradeGeometryDrawing(exercise: Exercise, state: DrawingState): G
     rubric: rubricForTask(task),
   };
 }
-

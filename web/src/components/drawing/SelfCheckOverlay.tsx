@@ -46,7 +46,9 @@ export function SelfCheckOverlay({
 
           {solutionText && (
             <div className="rounded-md border border-emerald-200 bg-emerald-50 p-3 dark:border-emerald-800 dark:bg-emerald-950/30">
-              <p className="mb-1 font-medium text-emerald-800 dark:text-emerald-300">Expected construction</p>
+              <p className="mb-1 font-medium text-emerald-800 dark:text-emerald-300">
+                Expected construction
+              </p>
               <p className="text-emerald-900 dark:text-emerald-200">{solutionText}</p>
             </div>
           )}
@@ -55,4 +57,3 @@ export function SelfCheckOverlay({
     </div>
   );
 }
-

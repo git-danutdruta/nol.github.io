@@ -71,4 +71,3 @@ describe('gradeGeometryDrawing', () => {
     expect(result.correct).toBe(false);
   });
 });
-

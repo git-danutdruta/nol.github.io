@@ -23,7 +23,9 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
   const initialMode = exercise.drawingMode === 'graph' ? 'graph' : 'freehand';
   const drawingKey = `exercise:${exercise.id}`;
   const question = getLocalizedString(exercise.question, i18n.language);
-  const solution = exercise.solution ? getLocalizedString(exercise.solution, i18n.language) : undefined;
+  const solution = exercise.solution
+    ? getLocalizedString(exercise.solution, i18n.language)
+    : undefined;
 
   const isGeometryExercise = useMemo(() => {
     const lower = question.toLowerCase();
@@ -68,9 +70,7 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
 
   return (
     <div className="space-y-3 rounded-lg border border-slate-200 p-4 dark:border-slate-800">
-      <p className="text-lg font-medium text-slate-900 dark:text-white">
-        {question}
-      </p>
+      <p className="text-lg font-medium text-slate-900 dark:text-white">{question}</p>
 
       {isGeometryExercise && (
         <div className="flex flex-wrap gap-2">
