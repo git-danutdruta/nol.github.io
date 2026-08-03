@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState, type PointerEvent } from 'react';
 import { FreehandMode } from '@/components/drawing/modes/FreehandMode';
 import { GraphingMode } from '@/components/drawing/modes/GraphingMode';
 import { MobileToolbar } from '@/components/drawing/MobileToolbar';
+import { ToolOptionsSheet } from '@/components/drawing/ToolOptionsSheet';
+import { FullscreenDrawing } from '@/components/drawing/FullscreenDrawing';
 import type {
   DrawingMode,
   DrawingModeType,
@@ -72,6 +74,8 @@ export function DrawingEngine({
   const getDrawing = useDrawingStore((store) => store.getDrawing);
   const [state, setState] = useState<DrawingState>(() => createInitialState(initialMode));
   const [graphInput, setGraphInput] = useState('x');
+  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
     const persisted = getDrawing(drawingKey);
@@ -127,6 +131,46 @@ export function DrawingEngine({
     onSave?.();
   };
 
+  const toggleFullscreen = () => {
+    setIsFullscreen((value) => !value);
+  };
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+
+      const key = event.key.toLowerCase();
+      if (key === 'f') {
+        event.preventDefault();
+        toggleFullscreen();
+      }
+      if (key === 'c') {
+        event.preventDefault();
+        clearCurrentMode();
+      }
+      if (key === 's') {
+        event.preventDefault();
+        saveCurrent();
+      }
+      if (key === 'g') {
+        event.preventDefault();
+        setMode('graph');
+      }
+      if (key === 'm') {
+        event.preventDefault();
+        setMode('freehand');
+      }
+      if (key === 'o') {
+        event.preventDefault();
+        setIsOptionsOpen((value) => !value);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  });
+
   const onPointerDown = (event: PointerEvent<HTMLCanvasElement>) => {
     if (state.mode !== 'freehand') return;
     const canvas = canvasRef.current;
@@ -176,13 +220,17 @@ export function DrawingEngine({
   };
 
   return (
-    <div className="space-y-3">
-      <MobileToolbar
-        mode={state.mode}
-        onModeChange={setMode}
-        onSave={saveCurrent}
-        onClear={clearCurrentMode}
-      />
+    <FullscreenDrawing isFullscreen={isFullscreen}>
+      <div className="space-y-3">
+        <MobileToolbar
+          mode={state.mode}
+          onModeChange={setMode}
+          onSave={saveCurrent}
+          onClear={clearCurrentMode}
+          onOpenOptions={() => setIsOptionsOpen(true)}
+          onToggleFullscreen={toggleFullscreen}
+          isFullscreen={isFullscreen}
+        />
 
       {state.mode === 'graph' && (
         <div className="flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
@@ -210,15 +258,27 @@ export function DrawingEngine({
         </div>
       )}
 
-      <canvas
-        ref={canvasRef}
-        width={CANVAS_WIDTH}
-        height={CANVAS_HEIGHT}
-        className="w-full rounded-lg border border-slate-300 bg-white touch-none dark:border-slate-700 dark:bg-slate-950"
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={onPointerUp}
-      />
-    </div>
+        <canvas
+          ref={canvasRef}
+          width={CANVAS_WIDTH}
+          height={CANVAS_HEIGHT}
+          className="w-full rounded-lg border border-slate-300 bg-white touch-none dark:border-slate-700 dark:bg-slate-950"
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+        />
+
+        <p className="hidden text-xs text-slate-500 dark:text-slate-400 md:block">
+          Shortcuts: M freehand, G graph, C clear, S save, F full screen, O options.
+        </p>
+
+        <ToolOptionsSheet
+          open={isOptionsOpen}
+          mode={state.mode}
+          onClose={() => setIsOptionsOpen(false)}
+          onModeChange={setMode}
+        />
+      </div>
+    </FullscreenDrawing>
   );
 }
