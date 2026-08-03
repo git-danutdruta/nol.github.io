@@ -16,4 +16,3 @@ export function FullscreenDrawing({ isFullscreen, children }: FullscreenDrawingP
     </div>
   );
 }
-

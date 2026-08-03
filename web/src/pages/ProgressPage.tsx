@@ -3,6 +3,7 @@ import { useCurriculum } from '@/hooks/useCurriculum';
 import { getLocalizedString } from '@/lib/i18n';
 import { formatLocaleDate } from '@/lib/utils';
 import { getCurrentStreak, useProgressStore } from '@/stores/progressStore';
+import { Seo } from '@/components/Seo';
 
 const BADGE_LABELS: Record<string, string> = {
   first_steps: 'progress.badges.first_steps',
@@ -36,6 +37,10 @@ export function ProgressPage() {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
+      <Seo
+        title="NOL Math | Progress"
+        description="Track your lesson completion, mastery, streaks, and review schedule in one place."
+      />
       <h1 className="mb-6 text-3xl font-bold text-slate-900 dark:text-white">
         {t('progress.title')}
       </h1>

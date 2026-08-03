@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
+import { Seo } from '@/components/Seo';
 
 export function HomePage() {
   const { t } = useTranslation();
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16 md:py-24">
+      <Seo
+        title="NOL Math | Home"
+        description="Learn math from top to bottom with structured lessons, practice exercises, and interactive tools."
+      />
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-6xl">
           {t('home.welcome')}

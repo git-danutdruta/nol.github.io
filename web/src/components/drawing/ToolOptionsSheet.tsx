@@ -11,7 +11,11 @@ export function ToolOptionsSheet({ open, mode, onClose, onModeChange }: ToolOpti
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-40 flex items-end bg-slate-950/40 md:hidden" role="dialog" aria-modal="true">
+    <div
+      className="fixed inset-0 z-40 flex items-end bg-slate-950/40 md:hidden"
+      role="dialog"
+      aria-modal="true"
+    >
       <div className="w-full rounded-t-2xl border border-slate-200 bg-white p-4 shadow-xl dark:border-slate-700 dark:bg-slate-900">
         <div className="mb-3 h-1.5 w-12 rounded-full bg-slate-300 dark:bg-slate-700" />
         <p className="mb-3 text-sm font-semibold text-slate-900 dark:text-white">Tool options</p>
@@ -44,7 +48,8 @@ export function ToolOptionsSheet({ open, mode, onClose, onModeChange }: ToolOpti
         </div>
 
         <p className="mt-4 text-xs text-slate-600 dark:text-slate-400">
-          Palm rejection tip: if your hand causes stray strokes, zoom in and draw with short strokes.
+          Palm rejection tip: if your hand causes stray strokes, zoom in and draw with short
+          strokes.
         </p>
 
         <button
@@ -58,4 +63,3 @@ export function ToolOptionsSheet({ open, mode, onClose, onModeChange }: ToolOpti
     </div>
   );
 }
-

@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { copyFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { generateSitemap } from './scripts/generate-sitemap';
 
 /**
  * GitHub Pages SPA fallback plugin.
@@ -19,13 +20,14 @@ import { resolve } from 'node:path';
 function githubPagesSpaFallback() {
   return {
     name: 'github-pages-spa-fallback',
-    closeBundle() {
+    async closeBundle() {
       const distDir = resolve(__dirname, 'dist');
       const indexPath = resolve(distDir, 'index.html');
       const notFoundPath = resolve(distDir, '404.html');
       if (existsSync(indexPath)) {
         copyFileSync(indexPath, notFoundPath);
       }
+      await generateSitemap(distDir);
     },
   };
 }

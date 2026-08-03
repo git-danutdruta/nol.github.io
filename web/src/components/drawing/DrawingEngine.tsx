@@ -232,31 +232,31 @@ export function DrawingEngine({
           isFullscreen={isFullscreen}
         />
 
-      {state.mode === 'graph' && (
-        <div className="flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-          <label
-            htmlFor={`graph-expression-${drawingKey}`}
-            className="text-sm font-medium text-slate-700 dark:text-slate-300"
-          >
-            f(x)
-          </label>
-          <input
-            id={`graph-expression-${drawingKey}`}
-            type="text"
-            value={graphInput}
-            onChange={(event) => setGraphInput(event.target.value)}
-            placeholder="e.g. x^2 - 3*x + 2"
-            className="min-w-[220px] flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-900"
-          />
-          <button
-            type="button"
-            onClick={addGraphFunction}
-            className="rounded-md bg-primary-600 px-3 py-2 text-sm font-medium text-white hover:bg-primary-700"
-          >
-            Plot
-          </button>
-        </div>
-      )}
+        {state.mode === 'graph' && (
+          <div className="flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
+            <label
+              htmlFor={`graph-expression-${drawingKey}`}
+              className="text-sm font-medium text-slate-700 dark:text-slate-300"
+            >
+              f(x)
+            </label>
+            <input
+              id={`graph-expression-${drawingKey}`}
+              type="text"
+              value={graphInput}
+              onChange={(event) => setGraphInput(event.target.value)}
+              placeholder="e.g. x^2 - 3*x + 2"
+              className="min-w-[220px] flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-900"
+            />
+            <button
+              type="button"
+              onClick={addGraphFunction}
+              className="rounded-md bg-primary-600 px-3 py-2 text-sm font-medium text-white hover:bg-primary-700"
+            >
+              Plot
+            </button>
+          </div>
+        )}
 
         <canvas
           ref={canvasRef}

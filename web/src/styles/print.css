@@ -1,0 +1,31 @@
+@media print {
+  header,
+  footer,
+  nav,
+  button,
+  .skip-link {
+    display: none !important;
+  }
+
+  body,
+  main {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  article,
+  section,
+  div {
+    box-shadow: none !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+}

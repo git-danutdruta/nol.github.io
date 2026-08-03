@@ -4,6 +4,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { SettingsErrorLogPanel } from '@/components/SettingsErrorLogPanel';
 import { Toast } from '@/components/ui/Toast';
+import { Seo } from '@/components/Seo';
 import { downloadProgressBackup, parseImportedProgress } from '@/lib/exportImport';
 import { exportFirstCanvasAsPng, triggerPrintPdf } from '@/lib/exportMedia';
 import { useProgressStore } from '@/stores/progressStore';
@@ -69,6 +70,10 @@ export function SettingsPage() {
 
   return (
     <section className="mx-auto max-w-2xl px-4 py-16">
+      <Seo
+        title="NOL Math | Settings"
+        description="Configure language, theme, backups, and export options for your learning workspace."
+      />
       <h1 className="mb-8 text-3xl font-bold text-slate-900 dark:text-white">
         {t('settings.title')}
       </h1>

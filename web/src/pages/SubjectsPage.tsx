@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
 import { useCurriculum } from '@/hooks/useCurriculum';
 import { getLocalizedString } from '@/lib/i18n';
+import { Seo } from '@/components/Seo';
 
 export function SubjectsPage() {
   const { t, i18n } = useTranslation();
@@ -39,6 +40,10 @@ export function SubjectsPage() {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
+      <Seo
+        title="NOL Math | Subjects"
+        description="Browse all available math subjects, from arithmetic and algebra to geometry, calculus, and statistics."
+      />
       <h1 className="mb-8 text-3xl font-bold text-slate-900 dark:text-white">
         {t('nav.subjects')}
       </h1>

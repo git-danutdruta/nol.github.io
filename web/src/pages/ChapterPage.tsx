@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useCurriculum } from '@/hooks/useCurriculum';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { getLocalizedString } from '@/lib/i18n';
+import { Seo } from '@/components/Seo';
 
 export function ChapterPage() {
   const { chapterId } = useParams<{ chapterId: string }>();
@@ -23,6 +24,10 @@ export function ChapterPage() {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
+      <Seo
+        title={`NOL Math | ${getLocalizedString(chapter.title, i18n.language)}`}
+        description={`Study ${chapter.lessons.length} lesson${chapter.lessons.length === 1 ? '' : 's'} in this chapter.`}
+      />
       <h1 className="mb-4 text-3xl font-bold text-slate-900 dark:text-white">
         {getLocalizedString(chapter.title, i18n.language)}
       </h1>
