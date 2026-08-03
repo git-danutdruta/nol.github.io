@@ -18,6 +18,7 @@ interface DrawingEngineProps {
   drawingKey: string;
   initialMode?: DrawingModeType;
   onSave?: () => void;
+  onStateChange?: (state: DrawingState) => void;
 }
 
 const CANVAS_WIDTH = 960;
@@ -64,6 +65,7 @@ export function DrawingEngine({
   drawingKey,
   initialMode = 'freehand',
   onSave,
+  onStateChange,
 }: DrawingEngineProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const saveDrawing = useDrawingStore((store) => store.saveDrawing);
@@ -102,6 +104,10 @@ export function DrawingEngine({
       );
     }
   }, [activeMode, state]);
+
+  useEffect(() => {
+    onStateChange?.(state);
+  }, [onStateChange, state]);
 
   const setMode = (mode: DrawingModeType) => {
     setState((prev) => ensureModeState({ ...prev, mode }, mode));
