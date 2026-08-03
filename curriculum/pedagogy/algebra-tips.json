@@ -1,0 +1,126 @@
+{
+  "libraryId": "algebra-tips",
+  "version": "1.0.0",
+  "description": "Reusable pedagogy blocks for algebra lessons.",
+  "blocks": [
+    {
+      "id": "algebra-algebra-expressions-variables-a-variable-is-a-placeholder",
+      "type": "tip",
+      "title": "A variable is a placeholder",
+      "content": "Think of a variable as a box that can hold any number.",
+      "tags": [
+        "algebra",
+        "algebra-expressions",
+        "variables",
+        "tip"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-expressions",
+        "lessonId": "variables"
+      }
+    },
+    {
+      "id": "algebra-algebra-expressions-simplify-expressions-combine-like-terms",
+      "type": "strategy",
+      "title": "Combine like terms",
+      "content": "Terms with the same variable part can be combined by adding their coefficients.",
+      "tags": [
+        "algebra",
+        "algebra-expressions",
+        "simplify-expressions",
+        "strategy"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-expressions",
+        "lessonId": "simplify-expressions"
+      }
+    },
+    {
+      "id": "algebra-algebra-expressions-evaluate-expressions-use-parentheses",
+      "type": "trick",
+      "title": "Use parentheses",
+      "content": "When substituting a negative number or a fraction, use parentheses to avoid sign errors.",
+      "tags": [
+        "algebra",
+        "algebra-expressions",
+        "evaluate-expressions",
+        "trick"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-expressions",
+        "lessonId": "evaluate-expressions"
+      }
+    },
+    {
+      "id": "algebra-algebra-equations-one-step-equations-undo-the-operation",
+      "type": "strategy",
+      "title": "Undo the operation",
+      "content": "Use the inverse operation to isolate the variable. Addition undoes subtraction; multiplication undoes division.",
+      "tags": [
+        "algebra",
+        "algebra-equations",
+        "one-step-equations",
+        "strategy"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-equations",
+        "lessonId": "one-step-equations"
+      }
+    },
+    {
+      "id": "algebra-algebra-equations-two-step-equations-reverse-pemdas",
+      "type": "strategy",
+      "title": "Reverse PEMDAS",
+      "content": "Undo addition and subtraction first, then multiplication and division.",
+      "tags": [
+        "algebra",
+        "algebra-equations",
+        "two-step-equations",
+        "strategy"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-equations",
+        "lessonId": "two-step-equations"
+      }
+    },
+    {
+      "id": "algebra-algebra-equations-equations-with-variables-both-sides-watch-your-signs",
+      "type": "pitfall",
+      "title": "Watch your signs",
+      "content": "When moving a term to the other side, its sign changes.",
+      "tags": [
+        "algebra",
+        "algebra-equations",
+        "equations-with-variables-both-sides",
+        "pitfall"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-equations",
+        "lessonId": "equations-with-variables-both-sides"
+      }
+    },
+    {
+      "id": "algebra-algebra-functions-graphing-linear-functions-slope-intercept-form",
+      "type": "tip",
+      "title": "Slope-intercept form",
+      "content": "$y = mx + b$ gives the slope $m$ and the y-intercept $b$.",
+      "tags": [
+        "algebra",
+        "algebra-functions-graphing",
+        "linear-functions",
+        "tip"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-functions-graphing",
+        "lessonId": "linear-functions"
+      }
+    }
+  ]
+}

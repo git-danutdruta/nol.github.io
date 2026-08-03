@@ -1,0 +1,75 @@
+{
+  "libraryId": "mnemonics",
+  "version": "1.0.0",
+  "description": "Culturally neutral mnemonic blocks spanning arithmetic and algebra.",
+  "blocks": [
+    {
+      "id": "algebra-algebra-functions-graphing-coordinate-plane-quadrants",
+      "type": "mnemonic",
+      "title": "Quadrants",
+      "content": "Counter-clockwise from the top right: All, Silver, Teacups, Dance. All positive, then negative x, then both negative, then negative y.",
+      "tags": [
+        "algebra",
+        "algebra-functions-graphing",
+        "coordinate-plane",
+        "mnemonic"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-functions-graphing",
+        "lessonId": "coordinate-plane"
+      }
+    },
+    {
+      "id": "algebra-algebra-functions-graphing-slope-rise-over-run",
+      "type": "mnemonic",
+      "title": "Rise over run",
+      "content": "Slope is rise over run: $m = \\frac{\\Delta y}{\\Delta x}$.",
+      "tags": [
+        "algebra",
+        "algebra-functions-graphing",
+        "slope",
+        "mnemonic"
+      ],
+      "source": {
+        "subjectId": "algebra",
+        "chapterId": "algebra-functions-graphing",
+        "lessonId": "slope"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-number-sense-counting-place-value-remember-the-order",
+      "type": "mnemonic",
+      "title": "Remember the order",
+      "content": "Ones, Tens, Hundreds: O-T-H sounds like 'oath'\u2014make a promise to always start from the right.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-number-sense",
+        "counting-place-value",
+        "mnemonic"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-number-sense",
+        "lessonId": "counting-place-value"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-multiplication-division-multiplication-basics-times-tables",
+      "type": "mnemonic",
+      "title": "Times tables",
+      "content": "5, 6, 7, 8: 56 is 7 times 8.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-multiplication-division",
+        "multiplication-basics",
+        "mnemonic"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-multiplication-division",
+        "lessonId": "multiplication-basics"
+      }
+    }
+  ]
+}

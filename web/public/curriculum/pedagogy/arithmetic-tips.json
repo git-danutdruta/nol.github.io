@@ -1,0 +1,160 @@
+{
+  "libraryId": "arithmetic-tips",
+  "version": "1.0.0",
+  "description": "Reusable pedagogy blocks for arithmetic lessons.",
+  "blocks": [
+    {
+      "id": "arithmetic-arithmetic-number-sense-counting-place-value-place-value-columns",
+      "type": "tip",
+      "title": "Place value columns",
+      "content": "From right to left: ones, tens, hundreds, thousands, ten-thousands.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-number-sense",
+        "counting-place-value",
+        "tip"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-number-sense",
+        "lessonId": "counting-place-value"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-number-sense-comparing-ordering-line-up-digits",
+      "type": "strategy",
+      "title": "Line up digits",
+      "content": "When comparing two numbers, align them by place value and compare from the leftmost digit.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-number-sense",
+        "comparing-ordering",
+        "strategy"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-number-sense",
+        "lessonId": "comparing-ordering"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-number-sense-rounding-5-or-more-raise-the-score",
+      "type": "trick",
+      "title": "5 or more, raise the score",
+      "content": "Look at the digit to the right of the target place. If it is 5 or greater, round up. Otherwise, round down.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-number-sense",
+        "rounding",
+        "trick"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-number-sense",
+        "lessonId": "rounding"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-number-sense-intro-fractions-numerator-and-denominator",
+      "type": "tip",
+      "title": "Numerator and denominator",
+      "content": "The denominator tells how many equal parts the whole is divided into. The numerator tells how many parts you have.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-number-sense",
+        "intro-fractions",
+        "tip"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-number-sense",
+        "lessonId": "intro-fractions"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-addition-subtraction-addition-basics-carry-the-one",
+      "type": "trick",
+      "title": "Carry the one",
+      "content": "When a column sums to 10 or more, write the ones digit and carry the tens digit to the next column.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-addition-subtraction",
+        "addition-basics",
+        "trick"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-addition-subtraction",
+        "lessonId": "addition-basics"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-addition-subtraction-subtraction-basics-borrow-when-needed",
+      "type": "strategy",
+      "title": "Borrow when needed",
+      "content": "If the top digit in a column is smaller than the bottom digit, borrow 1 from the next column to the left.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-addition-subtraction",
+        "subtraction-basics",
+        "strategy"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-addition-subtraction",
+        "lessonId": "subtraction-basics"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-addition-subtraction-add-subtract-fractions-do-not-add-denominators",
+      "type": "pitfall",
+      "title": "Do not add denominators",
+      "content": "When adding fractions with the same denominator, only add the numerators. The denominator stays the same.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-addition-subtraction",
+        "add-subtract-fractions",
+        "pitfall"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-addition-subtraction",
+        "lessonId": "add-subtract-fractions"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-multiplication-division-division-basics-think-backwards",
+      "type": "tip",
+      "title": "Think backwards",
+      "content": "Division asks: how many groups of a size fit into a total? Use multiplication facts to check your answer.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-multiplication-division",
+        "division-basics",
+        "tip"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-multiplication-division",
+        "lessonId": "division-basics"
+      }
+    },
+    {
+      "id": "arithmetic-arithmetic-multiplication-division-area-model-multiplication-break-it-into-rectangles",
+      "type": "strategy",
+      "title": "Break it into rectangles",
+      "content": "Split each factor into tens and ones, then find the area of each smaller rectangle and add them.",
+      "tags": [
+        "arithmetic",
+        "arithmetic-multiplication-division",
+        "area-model-multiplication",
+        "strategy"
+      ],
+      "source": {
+        "subjectId": "arithmetic",
+        "chapterId": "arithmetic-multiplication-division",
+        "lessonId": "area-model-multiplication"
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const CACHE_PREFIX = `nol-math-${CACHE_VERSION}`;
 const STATIC_CACHE = `${CACHE_PREFIX}-static`;
 const CONTENT_CACHE = `${CACHE_PREFIX}-content`;
@@ -141,7 +141,8 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (isCurriculumOrLocale(pathname)) {
-    event.respondWith(staleWhileRevalidate(request, CONTENT_CACHE, MAX_CONTENT_ENTRIES));
+    // Prefer fresh curriculum/locales to avoid stale cached content regressions.
+    event.respondWith(networkFirst(request, CONTENT_CACHE, MAX_CONTENT_ENTRIES));
     return;
   }
 
