@@ -71,6 +71,29 @@ A curriculum file is an object with a `subject` key:
 
 Types: `tip`, `trick`, `mnemonic`, `strategy`, `pitfall`, `why`.
 
+## Pedagogy Library Files
+
+Reusable pedagogy blocks can also be stored in `curriculum/pedagogy/*.json` so multiple lessons can share the same guidance.
+
+```json
+{
+  "libraryId": "arithmetic-tips",
+  "version": "1.0.0",
+  "description": "Reusable pedagogy blocks for arithmetic lessons.",
+  "blocks": [
+    {
+      "id": "arithmetic-arithmetic-number-sense-counting-place-value-place-value-columns",
+      "type": "tip",
+      "title": "Place value columns",
+      "content": "From right to left: ones, tens, hundreds, thousands, ten-thousands.",
+      "tags": ["arithmetic", "arithmetic-number-sense", "counting-place-value", "tip"]
+    }
+  ]
+}
+```
+
+`blocks[*]` must be valid `PedagogyBlock` objects. Extra metadata fields such as `id`, `tags`, and `source` are allowed for search/discovery.
+
 ## ContentBlock
 
 Types: `paragraph`, `heading`, `list`, `callout`, `example`, `math`, `image`, `drawing`.
@@ -136,6 +159,8 @@ Or validate a single file:
 ```bash
 node scripts/validate-curriculum.js ../curriculum/arithmetic/chapters/01-number-sense/chapter.json
 ```
+
+Validation also checks `curriculum/pedagogy/*.json`, requires at least 20 reusable blocks for MVP, and verifies that every arithmetic/algebra lesson uses at least one block from the pedagogy library.
 
 ## Versioning
 

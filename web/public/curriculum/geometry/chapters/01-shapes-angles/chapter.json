@@ -97,7 +97,7 @@
         },
         {
           "type": "math",
-          "latex": "P_{rectangle} = 2(l + w), \quad A_{rectangle} = l \times w"
+          "latex": "P_{rectangle} = 2(l + w), \\quad A_{rectangle} = l \\times w"
         },
         {
           "type": "example",
