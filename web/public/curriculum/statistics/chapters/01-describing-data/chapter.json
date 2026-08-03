@@ -1,7 +1,7 @@
 {
   "id": "statistics-describing-data",
-  "title": "Describing Data",
-  "description": "Summarize datasets using center and spread, then interpret simple charts.",
+  "title": "Describing Data and Distributions",
+  "description": "Summarize datasets using center and spread, then visualize distributions with common chart types.",
   "lessons": [
     {
       "id": "mean-median-mode",
@@ -65,8 +65,8 @@
       ]
     },
     {
-      "id": "range-and-charts",
-      "title": "Range and Data Displays",
+      "id": "range-and-frequency-displays",
+      "title": "Range and Frequency Displays",
       "objectives": [
         "Compute range as a measure of spread",
         "Interpret bar charts and simple frequency tables"
@@ -86,7 +86,7 @@
       "content": [
         {
           "type": "paragraph",
-          "content": "Spread shows how far data values vary. The range is a quick spread measure."
+          "content": "Spread shows how far data values vary. The range is a quick spread measure. Frequency tables and bar charts help summarize categorical counts."
         },
         {
           "type": "example",
@@ -124,6 +124,64 @@
           "validation": "manual",
           "maxAttempts": 1,
           "solution": "Self-check: bars should show frequencies: 0->1, 1->2, 2->1, 3->1 with labeled axes."
+        }
+      ]
+    },
+    {
+      "id": "histograms-and-box-plots",
+      "title": "Histograms and Box Plots",
+      "objectives": [
+        "Build a histogram from grouped numerical data",
+        "Use the five-number summary to draw and read a box plot"
+      ],
+      "pedagogy": [
+        {
+          "type": "strategy",
+          "title": "Group values consistently",
+          "content": "Use equal-width intervals for histogram bins so bar heights are comparable."
+        },
+        {
+          "type": "tip",
+          "title": "Five-number summary first",
+          "content": "Find minimum, Q1, median, Q3, and maximum before drawing a box plot."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "A histogram shows how numeric data is distributed across value intervals. A box plot compresses distribution into the five-number summary."
+        },
+        {
+          "type": "example",
+          "content": "Scores 52, 55, 57, 60, 61, 64, 66, 70, 72, 75 can be grouped into bins 50-59, 60-69, 70-79 for a histogram."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "histogram-drawing-self-check",
+          "type": "drawing",
+          "question": "Draw a histogram for quiz scores: 51, 55, 57, 58, 62, 64, 65, 68, 72, 74 using bins 50-59, 60-69, 70-79.",
+          "hints": [
+            "Count how many values land in each bin.",
+            "Label both axes and bin boundaries."
+          ],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check frequencies: 50-59 -> 4, 60-69 -> 4, 70-79 -> 2."
+        },
+        {
+          "id": "box-plot-drawing-self-check",
+          "type": "drawing",
+          "question": "Use data 4, 6, 7, 9, 11, 13, 15, 18, 20 to draw a box plot.",
+          "hints": [
+            "Median is the middle value.",
+            "Find Q1 and Q3 from lower and upper halves."
+          ],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: min=4, Q1=6.5, median=11, Q3=16.5, max=20."
         }
       ]
     }

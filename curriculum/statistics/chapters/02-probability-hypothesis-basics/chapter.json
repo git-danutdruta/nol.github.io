@@ -1,0 +1,186 @@
+{
+  "id": "statistics-probability-hypothesis-basics",
+  "title": "Probability and Hypothesis Basics",
+  "description": "Model chance events with sample spaces and tree diagrams, then interpret simple evidence for claims.",
+  "lessons": [
+    {
+      "id": "sample-space-and-theoretical-probability",
+      "title": "Sample Space and Theoretical Probability",
+      "objectives": [
+        "List outcomes in a sample space for simple experiments",
+        "Compute probability as favorable outcomes divided by total outcomes"
+      ],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Start with an organized list",
+          "content": "Write outcomes in a table or ordered list so you do not miss cases."
+        },
+        {
+          "type": "pitfall",
+          "title": "Equally likely assumption",
+          "content": "Only use simple counting when outcomes are equally likely."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "The sample space is the set of all possible outcomes. Theoretical probability is favorable outcomes over total outcomes."
+        },
+        {
+          "type": "math",
+          "latex": "P(A) = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}"
+        },
+        {
+          "type": "drawing",
+          "prompt": "Build a sample space table for rolling one six-sided die and flipping one coin.",
+          "mode": "freehand"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "sample-space-grid-self-check",
+          "type": "drawing",
+          "question": "Draw a sample space diagram for spinner outcomes {Red, Blue, Green} and coin outcomes {H, T}. Then circle outcomes where color is Blue or coin is Heads.",
+          "hints": [
+            "Make a 3x2 table or a tree with six leaves.",
+            "Label every outcome pair clearly."
+          ],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check sample space: (R,H), (R,T), (B,H), (B,T), (G,H), (G,T). Favorable outcomes for Blue or Heads: 4 of 6."
+        },
+        {
+          "id": "theoretical-probability-mcq",
+          "type": "multiple-choice",
+          "question": "A bag has 2 red, 3 blue, and 5 green marbles. What is P(blue)?",
+          "options": ["3/10", "1/2", "3/5", "2/10"],
+          "correctOptionIndex": 0,
+          "validation": "exact",
+          "maxAttempts": 3,
+          "solution": "Total marbles = 10 and blue marbles = 3, so P(blue)=3/10."
+        }
+      ]
+    },
+    {
+      "id": "probability-trees-and-compound-events",
+      "title": "Probability Trees and Compound Events",
+      "objectives": [
+        "Represent multi-step random experiments with a probability tree",
+        "Find probabilities of compound events by multiplying branch probabilities"
+      ],
+      "pedagogy": [
+        {
+          "type": "strategy",
+          "title": "One stage per branch level",
+          "content": "Each level of the tree should represent one step of the experiment."
+        },
+        {
+          "type": "why",
+          "title": "Why multiply branches",
+          "content": "For independent stages, each branch narrows outcomes, so multiplying keeps only the overlap."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Tree diagrams help track compound events such as two flips or a flip followed by a die roll."
+        },
+        {
+          "type": "math",
+          "latex": "P(A \\cap B) = P(A) \\times P(B) \\quad \\text{(independent events)}"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "probability-tree-drawing",
+          "type": "drawing",
+          "question": "Draw a probability tree for: flip a fair coin, then roll a fair die. Use the tree to find P(Heads and even number).",
+          "hints": [
+            "First split into H and T, then from each branch split into 1..6.",
+            "Count outcomes H2, H4, H6."
+          ],
+          "drawingMode": "freehand",
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: 12 equally likely outcomes, favorable are H2, H4, H6 so probability is 3/12 = 1/4."
+        },
+        {
+          "id": "compound-event-numeric",
+          "type": "numeric",
+          "question": "A fair coin is flipped twice. What is the probability of getting exactly one head?",
+          "hints": [
+            "List outcomes: HH, HT, TH, TT.",
+            "Exactly one head occurs in HT and TH."
+          ],
+          "answer": 0.5,
+          "tolerance": 0.0001,
+          "validation": "numeric",
+          "maxAttempts": 3,
+          "solution": "2 favorable outcomes out of 4 total, so probability is 1/2 = 0.5."
+        }
+      ]
+    },
+    {
+      "id": "hypothesis-testing-basics",
+      "title": "Hypothesis Testing Basics",
+      "objectives": [
+        "State a simple null hypothesis and alternative hypothesis",
+        "Use sample evidence to decide whether results are unusual"
+      ],
+      "pedagogy": [
+        {
+          "type": "tip",
+          "title": "Null means no change",
+          "content": "The null hypothesis usually represents the current claim or no effect."
+        },
+        {
+          "type": "pitfall",
+          "title": "Not proof of truth",
+          "content": "Failing to reject the null does not prove it is true; it only means evidence is not strong enough."
+        }
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Hypothesis testing compares observed data to what we would expect under a default claim. If the observation is very unlikely, we reject the default claim."
+        },
+        {
+          "type": "callout",
+          "content": "In this course, use a simple unusualness rule: if probability under the null is less than 5%, treat the result as unusual."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "null-vs-alt-mcq",
+          "type": "multiple-choice",
+          "question": "A coin is claimed to be fair. Which is an appropriate null hypothesis?",
+          "options": [
+            "The coin lands heads 50% of the time.",
+            "The coin always lands heads.",
+            "The coin lands heads less than 50% of the time.",
+            "The coin is lucky."
+          ],
+          "correctOptionIndex": 0,
+          "validation": "exact",
+          "maxAttempts": 3,
+          "solution": "A fair coin means heads probability is 0.5, so that is the null hypothesis."
+        },
+        {
+          "id": "unusual-result-free-response",
+          "type": "free-response",
+          "question": "Under a fair coin model, a student gets 9 heads in 10 flips. Explain whether this seems unusual and what that suggests about the fairness claim.",
+          "hints": [
+            "Estimate or look up P(9 or more heads in 10 fair flips).",
+            "Compare that probability to 5%."
+          ],
+          "validation": "manual",
+          "maxAttempts": 1,
+          "solution": "Self-check: P(9 or 10 heads) = 11/1024 about 1.1%, which is below 5%, so this is unusual under fairness and gives evidence against the fair-coin claim."
+        }
+      ]
+    }
+  ]
+}
+

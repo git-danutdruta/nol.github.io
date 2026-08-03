@@ -3,7 +3,8 @@
   "title": "Statistics",
   "description": "Learn to summarize data with mean, median, mode, and visualize distributions.",
   "chapters": [
-    "chapters/01-describing-data/chapter.json"
+    "chapters/01-describing-data/chapter.json",
+    "chapters/02-probability-hypothesis-basics/chapter.json"
   ]
 }
 
