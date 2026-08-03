@@ -30,7 +30,10 @@ export async function generateSitemap(outputDir: string): Promise<void> {
 
     const subjectPath = path.join(curriculumRoot, subjectEntry.name, 'subject.json');
     try {
-      const subject = await readJson<{ id: string; chapters: Array<string | { id: string; lessons: any[] }> }>(
+      const subject = await readJson<{
+        id: string;
+        chapters: Array<string | { id: string; lessons: Array<{ id: string }> }>;
+      }>(
         subjectPath
       );
       routes.add(`/subjects/${subject.id}`);
