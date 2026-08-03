@@ -1,0 +1,7 @@
+{
+  "maxAnyJsChunkBytes": 716800,
+  "maxInitialJsGzipBytes": 204800,
+  "maxInitialJsBytes": 327680,
+  "initialChunkPrefixes": ["index-", "vendor-", "i18n-", "state-"]
+}
+

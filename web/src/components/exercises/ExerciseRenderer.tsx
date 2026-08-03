@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import type { Exercise } from '@/types/curriculum';
+import { SkeletonLoader } from '@/components/SkeletonLoader';
 
 const MultipleChoiceExercise = lazy(() =>
   import('@/components/exercises/MultipleChoiceExercise').then((module) => ({
@@ -37,7 +38,7 @@ export function ExerciseRenderer({ exercise, onEvaluated }: ExerciseRendererProp
     onEvaluated?.({ exerciseId: exercise.id, correct });
   };
 
-  const loadingFallback = <p className="text-sm text-slate-500">Loading exercise…</p>;
+  const loadingFallback = <SkeletonLoader lines={2} className="border-dashed" />;
 
   switch (exercise.type) {
     case 'multiple-choice':
