@@ -68,7 +68,9 @@ export function ProgressPage() {
       </div>
 
       {allLessonProgress.length === 0 && (
-        <p className="mt-8 text-slate-600 dark:text-slate-400">{t('progress.empty')}</p>
+        <div className="mt-8 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-5 text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
+          {t('progress.empty')}
+        </div>
       )}
 
       {badges.length > 0 && (
@@ -94,7 +96,9 @@ export function ProgressPage() {
           {t('progress.review.title')}
         </h2>
         {dueLessonIds.length === 0 ? (
-          <p className="text-slate-600 dark:text-slate-400">{t('progress.review.noneDue')}</p>
+          <div className="rounded-lg border border-dashed border-emerald-300 bg-emerald-50 p-4 text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/30 dark:text-emerald-200">
+            {t('progress.review.noneDue')}
+          </div>
         ) : (
           <ul className="space-y-2">
             {dueLessonIds.map((lessonId) => (
@@ -135,6 +139,12 @@ export function ProgressPage() {
                     <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                       {Math.round(lesson.mastery * 100)}%
                     </p>
+                  </div>
+                  <div className="mt-3 h-2 overflow-hidden rounded bg-slate-200 dark:bg-slate-700">
+                    <div
+                      className="motion-progress-fill h-full rounded bg-primary-600"
+                      style={{ width: `${Math.round(lesson.mastery * 100)}%` }}
+                    />
                   </div>
                   {lesson.nextReviewAt && (
                     <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">

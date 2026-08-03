@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SERVICE_WORKER_UPDATE_EVENT } from '@/lib/pwa/registerServiceWorker';
+import { Toast } from '@/components/ui/Toast';
 
 export function ServiceWorkerUpdatePrompt() {
   const { t } = useTranslation();
@@ -34,26 +35,32 @@ export function ServiceWorkerUpdatePrompt() {
   if (!registration || dismissed) return null;
 
   return (
-    <div className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-xl -translate-x-1/2 rounded-lg border border-primary-200 bg-white p-4 shadow-lg dark:border-primary-900 dark:bg-slate-900">
-      <p className="text-sm text-slate-700 dark:text-slate-200">{t('pwa.updateAvailable')}</p>
-      <div className="mt-3 flex items-center justify-end gap-2">
-        <button
-          type="button"
-          onClick={() => setDismissed(true)}
-          className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
-        >
-          {t('pwa.dismiss')}
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
-          }}
-          className="rounded-md bg-primary-600 px-3 py-2 text-sm font-medium text-white hover:bg-primary-700"
-        >
-          {t('pwa.refreshToUpdate')}
-        </button>
-      </div>
-    </div>
+    <Toast
+      open={true}
+      message={t('pwa.updateAvailable')}
+      durationMs={0}
+      variant="info"
+      onClose={() => setDismissed(true)}
+      actions={
+        <>
+          <button
+            type="button"
+            onClick={() => setDismissed(true)}
+            className="motion-press rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+          >
+            {t('pwa.dismiss')}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
+            }}
+            className="motion-press rounded-md bg-primary-600 px-3 py-2 text-sm font-medium text-white hover:bg-primary-700"
+          >
+            {t('pwa.refreshToUpdate')}
+          </button>
+        </>
+      }
+    />
   );
 }

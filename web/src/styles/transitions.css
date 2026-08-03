@@ -1,0 +1,60 @@
+.motion-toast-enter {
+  animation: toast-in 180ms ease-out;
+}
+
+.motion-press {
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.motion-press:active {
+  transform: scale(0.98);
+  filter: brightness(0.98);
+}
+
+.motion-progress-fill {
+  transition: width 280ms ease-out;
+}
+
+.motion-success-pop {
+  animation: success-pop 220ms ease-out;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes success-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-toast-enter,
+  .motion-success-pop {
+    animation: none !important;
+  }
+
+  .motion-press,
+  .motion-progress-fill {
+    transition: none !important;
+  }
+
+  .motion-press:active {
+    transform: none;
+    filter: none;
+  }
+}
+

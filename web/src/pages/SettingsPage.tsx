@@ -3,13 +3,17 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { SettingsErrorLogPanel } from '@/components/SettingsErrorLogPanel';
+import { Toast } from '@/components/ui/Toast';
 import { downloadProgressBackup, parseImportedProgress } from '@/lib/exportImport';
 import { exportFirstCanvasAsPng, triggerPrintPdf } from '@/lib/exportMedia';
 import { useProgressStore } from '@/stores/progressStore';
 
 export function SettingsPage() {
   const { t } = useTranslation();
-  const [message, setMessage] = useState<string | null>(null);
+  const [toast, setToast] = useState<{
+    message: string;
+    variant: 'info' | 'success' | 'error';
+  } | null>(null);
   const importProgress = useProgressStore((state) => state.importProgress);
   const resetProgress = useProgressStore((state) => state.resetProgress);
   const progressData = useProgressStore((state) => ({
@@ -23,7 +27,7 @@ export function SettingsPage() {
   const handleExport = () => {
     if (!window.confirm(t('settings.progress.exportConfirm'))) return;
     downloadProgressBackup(progressData);
-    setMessage(t('settings.progress.exportSuccess'));
+    setToast({ message: t('settings.progress.exportSuccess'), variant: 'success' });
   };
 
   const handleImport = async (file: File | null) => {
@@ -33,28 +37,32 @@ export function SettingsPage() {
       const imported = parseImportedProgress(text);
       if (!window.confirm(t('settings.progress.importConfirm'))) return;
       importProgress(imported);
-      setMessage(t('settings.progress.importSuccess'));
+      setToast({ message: t('settings.progress.importSuccess'), variant: 'success' });
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : t('settings.progress.importError'));
+      setToast({
+        message: error instanceof Error ? error.message : t('settings.progress.importError'),
+        variant: 'error',
+      });
     }
   };
 
   const handleReset = () => {
     if (!window.confirm(t('settings.progress.resetConfirm'))) return;
     resetProgress();
-    setMessage(t('settings.progress.resetSuccess'));
+    setToast({ message: t('settings.progress.resetSuccess'), variant: 'success' });
   };
 
   const handleExportCanvas = () => {
     const exported = exportFirstCanvasAsPng();
-    setMessage(
-      exported ? t('settings.media.exportImageSuccess') : t('settings.media.exportImageNoCanvas')
-    );
+    setToast({
+      message: exported ? t('settings.media.exportImageSuccess') : t('settings.media.exportImageNoCanvas'),
+      variant: exported ? 'success' : 'info',
+    });
   };
 
   const handleExportPdf = () => {
     triggerPrintPdf();
-    setMessage(t('settings.media.exportPdfHint'));
+    setToast({ message: t('settings.media.exportPdfHint'), variant: 'info' });
   };
 
   return (
@@ -77,12 +85,12 @@ export function SettingsPage() {
             <button
               type="button"
               onClick={handleExport}
-              className="rounded-md border border-primary-200 bg-primary-50 px-3 py-2 text-sm font-medium text-primary-800 hover:bg-primary-100 dark:border-primary-800 dark:bg-primary-900/20 dark:text-primary-300"
+              className="motion-press rounded-md border border-primary-200 bg-primary-50 px-3 py-2 text-sm font-medium text-primary-800 hover:bg-primary-100 dark:border-primary-800 dark:bg-primary-900/20 dark:text-primary-300"
             >
               {t('settings.progress.export')}
             </button>
 
-            <label className="cursor-pointer rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800">
+            <label className="motion-press cursor-pointer rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800">
               {t('settings.progress.import')}
               <input
                 type="file"
@@ -98,13 +106,11 @@ export function SettingsPage() {
             <button
               type="button"
               onClick={handleReset}
-              className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm font-medium text-red-700 hover:bg-red-100 dark:border-red-900 dark:bg-red-900/20 dark:text-red-300"
+              className="motion-press rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm font-medium text-red-700 hover:bg-red-100 dark:border-red-900 dark:bg-red-900/20 dark:text-red-300"
             >
               {t('settings.progress.reset')}
             </button>
           </div>
-
-          {message && <p className="text-sm text-slate-700 dark:text-slate-300">{message}</p>}
         </div>
 
         <div className="space-y-3 border-t border-slate-200 pt-6 dark:border-slate-700">
@@ -118,14 +124,14 @@ export function SettingsPage() {
             <button
               type="button"
               onClick={handleExportCanvas}
-              className="rounded-md border border-primary-200 bg-primary-50 px-3 py-2 text-sm font-medium text-primary-800 hover:bg-primary-100 dark:border-primary-800 dark:bg-primary-900/20 dark:text-primary-300"
+              className="motion-press rounded-md border border-primary-200 bg-primary-50 px-3 py-2 text-sm font-medium text-primary-800 hover:bg-primary-100 dark:border-primary-800 dark:bg-primary-900/20 dark:text-primary-300"
             >
               {t('settings.media.exportImage')}
             </button>
             <button
               type="button"
               onClick={handleExportPdf}
-              className="rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+              className="motion-press rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
             >
               {t('settings.media.exportPdf')}
             </button>
@@ -134,6 +140,13 @@ export function SettingsPage() {
 
         <SettingsErrorLogPanel />
       </div>
+
+      <Toast
+        open={toast !== null}
+        message={toast?.message ?? ''}
+        variant={toast?.variant ?? 'info'}
+        onClose={() => setToast(null)}
+      />
     </section>
   );
 }

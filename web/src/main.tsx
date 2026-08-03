@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { AppRoutes } from '@/routes';
 import { registerServiceWorker } from '@/lib/pwa/registerServiceWorker';
 import '@/styles/index.css';
+import '@/styles/transitions.css';
 
 if (import.meta.env.PROD) {
   registerServiceWorker();
