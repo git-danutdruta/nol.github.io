@@ -2,8 +2,5 @@
   "id": "calculus",
   "title": "Calculus",
   "description": "Start with rates of change and basic derivatives through intuitive, visual exercises.",
-  "chapters": [
-    "chapters/01-limits-derivatives/chapter.json"
-  ]
+  "chapters": ["chapters/01-limits-derivatives/chapter.json"]
 }
-

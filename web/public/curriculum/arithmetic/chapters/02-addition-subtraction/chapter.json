@@ -73,7 +73,10 @@
           "id": "subtract-borrow",
           "type": "numeric",
           "question": "What is $503 - 267$?",
-          "hints": ["You need to borrow from the hundreds.", "503 becomes 4 hundreds, 9 tens, and 13 ones."],
+          "hints": [
+            "You need to borrow from the hundreds.",
+            "503 becomes 4 hundreds, 9 tens, and 13 ones."
+          ],
           "answer": 236,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -127,4 +130,3 @@
     }
   ]
 }
-

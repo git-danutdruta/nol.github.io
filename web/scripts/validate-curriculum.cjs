@@ -100,14 +100,18 @@ function validatePedagogyLibraries(curriculumRoot, chapterFiles) {
 
   // MVP lessons are arithmetic + algebra lessons.
   const mvpChapterFiles = chapterFiles.filter(
-    (filePath) => filePath.includes(`${path.sep}arithmetic${path.sep}`) || filePath.includes(`${path.sep}algebra${path.sep}`)
+    (filePath) =>
+      filePath.includes(`${path.sep}arithmetic${path.sep}`) ||
+      filePath.includes(`${path.sep}algebra${path.sep}`)
   );
 
   for (const chapterFile of mvpChapterFiles) {
     const chapter = JSON.parse(fs.readFileSync(chapterFile, 'utf8'));
     for (const lesson of chapter.lessons ?? []) {
       const lessonBlocks = Array.isArray(lesson.pedagogy) ? lesson.pedagogy : [];
-      const hasLibraryBlock = lessonBlocks.some((block) => librarySignatures.has(blockSignature(block)));
+      const hasLibraryBlock = lessonBlocks.some((block) =>
+        librarySignatures.has(blockSignature(block))
+      );
       if (!hasLibraryBlock) {
         console.error(
           `Lesson ${lesson.id} in ${chapterFile} does not reference any block from curriculum/pedagogy/*.json.`
@@ -141,7 +145,9 @@ if (!validatePedagogyLibraries(curriculumDir, chapterFiles)) {
 }
 
 if (allValid) {
-  console.log(`All ${chapterFiles.length} chapters, ${subjectFiles.length} subjects, and pedagogy libraries passed validation.`);
+  console.log(
+    `All ${chapterFiles.length} chapters, ${subjectFiles.length} subjects, and pedagogy libraries passed validation.`
+  );
   process.exit(0);
 } else {
   console.error('Some curriculum files failed validation.');

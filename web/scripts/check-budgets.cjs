@@ -74,9 +74,14 @@ function runBudgetCheck() {
   }
 
   const largestChunk = jsAssets[0];
-  const initialChunks = jsAssets.filter((asset) => isInitialChunk(asset.file, budgets.initialChunkPrefixes));
+  const initialChunks = jsAssets.filter((asset) =>
+    isInitialChunk(asset.file, budgets.initialChunkPrefixes)
+  );
   const initialTotal = initialChunks.reduce((sum, asset) => sum + asset.bytes, 0);
-  const initialGzipTotal = initialChunks.reduce((sum, asset) => sum + gzipSizeForFile(asset.file), 0);
+  const initialGzipTotal = initialChunks.reduce(
+    (sum, asset) => sum + gzipSizeForFile(asset.file),
+    0
+  );
 
   const violations = [];
 
@@ -119,4 +124,3 @@ function runBudgetCheck() {
 }
 
 runBudgetCheck();
-

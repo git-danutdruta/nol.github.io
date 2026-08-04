@@ -46,12 +46,7 @@
             "Recall the names by side count: 3 triangle, 4 quadrilateral, 5 pentagon.",
             "Eliminate options with 3 or 4 sides first."
           ],
-          "options": [
-            "Triangle",
-            "Quadrilateral",
-            "Pentagon",
-            "Hexagon"
-          ],
+          "options": ["Triangle", "Quadrilateral", "Pentagon", "Hexagon"],
           "correctOptionIndex": 2,
           "maxAttempts": 3,
           "solution": "A pentagon has exactly 5 sides."
@@ -113,12 +108,7 @@
             "Compare 120° to 90° and 180°.",
             "It is more than a right angle but less than a straight angle."
           ],
-          "options": [
-            "Acute",
-            "Right",
-            "Obtuse",
-            "Straight"
-          ],
+          "options": ["Acute", "Right", "Obtuse", "Straight"],
           "correctOptionIndex": 2,
           "maxAttempts": 3,
           "solution": "120° is obtuse because it is greater than 90° and less than 180°."
@@ -127,10 +117,7 @@
           "id": "perimeter-rectangle-numeric",
           "type": "numeric",
           "question": "Find the perimeter of a rectangle with length 12 and width 5.",
-          "hints": [
-            "Use P = 2(l + w).",
-            "Substitute l=12 and w=5, then multiply by 2."
-          ],
+          "hints": ["Use P = 2(l + w).", "Substitute l=12 and w=5, then multiply by 2."],
           "answer": 34,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -152,4 +139,3 @@
     }
   ]
 }
-

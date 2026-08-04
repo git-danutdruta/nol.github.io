@@ -29,4 +29,3 @@ describe('reportIssue url helpers', () => {
     expect(url.searchParams.get('section_id')).toBe('lesson-content');
   });
 });
-

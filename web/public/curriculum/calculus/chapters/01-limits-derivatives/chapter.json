@@ -102,10 +102,7 @@
           "id": "derivative-value-numeric",
           "type": "numeric",
           "question": "Given f(x)=x^2 and f'(x)=2x, what is f'(5)?",
-          "hints": [
-            "Use the derivative formula f'(x)=2x.",
-            "Substitute x=5."
-          ],
+          "hints": ["Use the derivative formula f'(x)=2x.", "Substitute x=5."],
           "answer": 10,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -128,4 +125,3 @@
     }
   ]
 }
-

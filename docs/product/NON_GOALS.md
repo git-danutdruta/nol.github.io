@@ -31,4 +31,3 @@ This document lists what the NOL Math Learning PWA intentionally does **not** do
 14. **Cross-curricular content.** We focus exclusively on mathematics. Physics, coding, and other subjects are out of scope.
 
 15. **Live customer support.** Feedback is collected via GitHub issues and email. No live chat or helpdesk integration.
-

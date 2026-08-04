@@ -6,7 +6,10 @@
     {
       "id": "variables",
       "title": "What is a Variable?",
-      "objectives": ["Understand variables as symbols for unknown values", "Translate phrases into algebraic expressions"],
+      "objectives": [
+        "Understand variables as symbols for unknown values",
+        "Translate phrases into algebraic expressions"
+      ],
       "pedagogy": [
         {
           "type": "tip",
@@ -127,4 +130,3 @@
     }
   ]
 }
-

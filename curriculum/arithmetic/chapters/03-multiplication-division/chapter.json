@@ -6,7 +6,10 @@
     {
       "id": "multiplication-basics",
       "title": "Multiplication Basics",
-      "objectives": ["Multiply multi-digit whole numbers", "Understand multiplication as repeated addition"],
+      "objectives": [
+        "Multiply multi-digit whole numbers",
+        "Understand multiplication as repeated addition"
+      ],
       "pedagogy": [
         {
           "type": "mnemonic",
@@ -50,7 +53,10 @@
     {
       "id": "division-basics",
       "title": "Division Basics",
-      "objectives": ["Divide whole numbers with and without remainders", "Relate division to multiplication"],
+      "objectives": [
+        "Divide whole numbers with and without remainders",
+        "Relate division to multiplication"
+      ],
       "pedagogy": [
         {
           "type": "tip",
@@ -83,7 +89,10 @@
           "id": "divide-remainder",
           "type": "free-response",
           "question": "What is $23 \\div 4$? Write your answer as a quotient and remainder (for example, 5 R 3).",
-          "hints": ["Find the largest multiple of 4 that is less than or equal to 23.", "$4 \\times 5 = 20$, so the remainder is 3."],
+          "hints": [
+            "Find the largest multiple of 4 that is less than or equal to 23.",
+            "$4 \\times 5 = 20$, so the remainder is 3."
+          ],
           "answer": "5 R 3",
           "validation": "exact",
           "maxAttempts": 3,
@@ -117,7 +126,11 @@
           "id": "area-model-draw",
           "type": "drawing",
           "question": "Draw an area model for $14 \\times 11$ and label the four partial products.",
-          "hints": ["Split 14 into 10 and 4.", "Split 11 into 10 and 1.", "The four areas are 100, 10, 40, and 4."],
+          "hints": [
+            "Split 14 into 10 and 4.",
+            "Split 11 into 10 and 1.",
+            "The four areas are 100, 10, 40, and 4."
+          ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
@@ -127,4 +140,3 @@
     }
   ]
 }
-

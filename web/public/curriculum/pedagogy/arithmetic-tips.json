@@ -8,12 +8,7 @@
       "type": "tip",
       "title": "Place value columns",
       "content": "From right to left: ones, tens, hundreds, thousands, ten-thousands.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-number-sense",
-        "counting-place-value",
-        "tip"
-      ],
+      "tags": ["arithmetic", "arithmetic-number-sense", "counting-place-value", "tip"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-number-sense",
@@ -25,12 +20,7 @@
       "type": "strategy",
       "title": "Line up digits",
       "content": "When comparing two numbers, align them by place value and compare from the leftmost digit.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-number-sense",
-        "comparing-ordering",
-        "strategy"
-      ],
+      "tags": ["arithmetic", "arithmetic-number-sense", "comparing-ordering", "strategy"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-number-sense",
@@ -42,12 +32,7 @@
       "type": "trick",
       "title": "5 or more, raise the score",
       "content": "Look at the digit to the right of the target place. If it is 5 or greater, round up. Otherwise, round down.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-number-sense",
-        "rounding",
-        "trick"
-      ],
+      "tags": ["arithmetic", "arithmetic-number-sense", "rounding", "trick"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-number-sense",
@@ -59,12 +44,7 @@
       "type": "tip",
       "title": "Numerator and denominator",
       "content": "The denominator tells how many equal parts the whole is divided into. The numerator tells how many parts you have.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-number-sense",
-        "intro-fractions",
-        "tip"
-      ],
+      "tags": ["arithmetic", "arithmetic-number-sense", "intro-fractions", "tip"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-number-sense",
@@ -76,12 +56,7 @@
       "type": "trick",
       "title": "Carry the one",
       "content": "When a column sums to 10 or more, write the ones digit and carry the tens digit to the next column.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-addition-subtraction",
-        "addition-basics",
-        "trick"
-      ],
+      "tags": ["arithmetic", "arithmetic-addition-subtraction", "addition-basics", "trick"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-addition-subtraction",
@@ -93,12 +68,7 @@
       "type": "strategy",
       "title": "Borrow when needed",
       "content": "If the top digit in a column is smaller than the bottom digit, borrow 1 from the next column to the left.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-addition-subtraction",
-        "subtraction-basics",
-        "strategy"
-      ],
+      "tags": ["arithmetic", "arithmetic-addition-subtraction", "subtraction-basics", "strategy"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-addition-subtraction",
@@ -127,12 +97,7 @@
       "type": "tip",
       "title": "Think backwards",
       "content": "Division asks: how many groups of a size fit into a total? Use multiplication facts to check your answer.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-multiplication-division",
-        "division-basics",
-        "tip"
-      ],
+      "tags": ["arithmetic", "arithmetic-multiplication-division", "division-basics", "tip"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-multiplication-division",

@@ -21,4 +21,3 @@
 ## Related Tickets
 
 <!-- Link related tickets, e.g., MATH-LEARN-001-CONTENT-001 -->
-

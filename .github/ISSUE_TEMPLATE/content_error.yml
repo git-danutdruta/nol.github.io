@@ -59,4 +59,3 @@ body:
       placeholder: Provide the corrected statement, equation, or explanation.
     validations:
       required: false
-

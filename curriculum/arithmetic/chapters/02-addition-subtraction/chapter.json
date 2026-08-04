@@ -29,7 +29,10 @@
           "id": "add-two-digit",
           "type": "numeric",
           "question": "What is $47 + 58$?",
-          "hints": ["Add the ones: 7 + 8 = 15. Carry the 1.", "Add the tens: 4 + 5 + 1 = 10."],
+          "hints": [
+            "Add the ones: 7 + 8 = 15. Carry the 1.",
+            "Add the tens: 4 + 5 + 1 = 10."
+          ],
           "answer": 105,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -39,7 +42,10 @@
           "id": "add-three-digit",
           "type": "numeric",
           "question": "What is $256 + 478$?",
-          "hints": ["Carry from the ones column.", "Carry from the tens column."],
+          "hints": [
+            "Carry from the ones column.",
+            "Carry from the tens column."
+          ],
           "answer": 734,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -50,7 +56,10 @@
     {
       "id": "subtraction-basics",
       "title": "Subtraction Basics",
-      "objectives": ["Subtract multi-digit whole numbers", "Use borrowing correctly"],
+      "objectives": [
+        "Subtract multi-digit whole numbers",
+        "Use borrowing correctly"
+      ],
       "pedagogy": [
         {
           "type": "strategy",
@@ -73,7 +82,10 @@
           "id": "subtract-borrow",
           "type": "numeric",
           "question": "What is $503 - 267$?",
-          "hints": ["You need to borrow from the hundreds.", "503 becomes 4 hundreds, 9 tens, and 13 ones."],
+          "hints": [
+            "You need to borrow from the hundreds.",
+            "503 becomes 4 hundreds, 9 tens, and 13 ones."
+          ],
           "answer": 236,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -127,4 +139,3 @@
     }
   ]
 }
-

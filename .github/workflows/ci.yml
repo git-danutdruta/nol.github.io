@@ -102,5 +102,3 @@ jobs:
       - name: Skip e2e (no specs found)
         if: steps.detect.outputs.has_e2e != 'true'
         run: echo "No Playwright specs found; skipping e2e gate."
-
-

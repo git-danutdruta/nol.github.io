@@ -50,4 +50,3 @@ Build a free, open-source, universally accessible math learning platform that ta
 - **Progressive enhancement:** core learning works without JavaScript; enhanced features layer on top.
 - **Open contribution:** curriculum content is data-driven JSON in `public/curriculum/`.
 - **Delightful restraint:** micro-interactions and polish support learning, never distract from it.
-

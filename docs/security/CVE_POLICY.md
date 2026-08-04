@@ -89,4 +89,3 @@ If you discover a vulnerability affecting NOL Math:
 - Do not open a public exploit issue with sensitive details.
 - Report privately to repository maintainers first.
 - Include package name, affected version, advisory/CVE reference, and reproduction details.
-

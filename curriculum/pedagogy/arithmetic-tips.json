@@ -42,12 +42,7 @@
       "type": "trick",
       "title": "5 or more, raise the score",
       "content": "Look at the digit to the right of the target place. If it is 5 or greater, round up. Otherwise, round down.",
-      "tags": [
-        "arithmetic",
-        "arithmetic-number-sense",
-        "rounding",
-        "trick"
-      ],
+      "tags": ["arithmetic", "arithmetic-number-sense", "rounding", "trick"],
       "source": {
         "subjectId": "arithmetic",
         "chapterId": "arithmetic-number-sense",

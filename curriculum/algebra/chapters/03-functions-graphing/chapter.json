@@ -29,7 +29,10 @@
           "id": "plot-point",
           "type": "drawing",
           "question": "Plot the point $(2, 3)$ on the coordinate plane.",
-          "hints": ["Start at the origin.", "Move 2 units right and 3 units up."],
+          "hints": [
+            "Start at the origin.",
+            "Move 2 units right and 3 units up."
+          ],
           "drawingMode": "graph",
           "validation": "manual",
           "maxAttempts": 1,
@@ -39,7 +42,9 @@
           "id": "identify-quadrant",
           "type": "multiple-choice",
           "question": "In which quadrant is the point $(-4, 5)$?",
-          "hints": ["The x-coordinate is negative and the y-coordinate is positive."],
+          "hints": [
+            "The x-coordinate is negative and the y-coordinate is positive."
+          ],
           "options": ["I", "II", "III", "IV"],
           "correctOptionIndex": 1,
           "maxAttempts": 3,
@@ -50,7 +55,10 @@
     {
       "id": "linear-functions",
       "title": "Linear Functions",
-      "objectives": ["Evaluate linear functions", "Identify slope and y-intercept"],
+      "objectives": [
+        "Evaluate linear functions",
+        "Identify slope and y-intercept"
+      ],
       "pedagogy": [
         {
           "type": "tip",
@@ -83,7 +91,10 @@
           "id": "graph-linear",
           "type": "drawing",
           "question": "Graph the line $y = x + 2$.",
-          "hints": ["The y-intercept is 2.", "The slope is 1, so rise 1 and run 1."],
+          "hints": [
+            "The y-intercept is 2.",
+            "The slope is 1, so rise 1 and run 1."
+          ],
           "drawingMode": "graph",
           "validation": "manual",
           "maxAttempts": 1,
@@ -94,7 +105,10 @@
     {
       "id": "slope",
       "title": "Slope of a Line",
-      "objectives": ["Calculate slope from two points", "Interpret slope as rate of change"],
+      "objectives": [
+        "Calculate slope from two points",
+        "Interpret slope as rate of change"
+      ],
       "pedagogy": [
         {
           "type": "mnemonic",
@@ -127,7 +141,10 @@
           "id": "graph-slope",
           "type": "drawing",
           "question": "Graph a line with slope $-2$ passing through $(0, 1)$.",
-          "hints": ["Start at (0, 1).", "Move right 1 and down 2 to find another point."],
+          "hints": [
+            "Start at (0, 1).",
+            "Move right 1 and down 2 to find another point."
+          ],
           "drawingMode": "graph",
           "validation": "manual",
           "maxAttempts": 1,
@@ -137,4 +154,3 @@
     }
   ]
 }
-

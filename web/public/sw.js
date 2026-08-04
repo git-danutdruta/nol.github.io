@@ -135,7 +135,9 @@ self.addEventListener('fetch', (event) => {
 
   if (isNavigationRequest(request)) {
     event.respondWith(
-      networkFirst(request, RUNTIME_CACHE, MAX_RUNTIME_ENTRIES).catch(() => caches.match('/index.html'))
+      networkFirst(request, RUNTIME_CACHE, MAX_RUNTIME_ENTRIES).catch(() =>
+        caches.match('/index.html')
+      )
     );
     return;
   }
@@ -153,4 +155,3 @@ self.addEventListener('fetch', (event) => {
 
   event.respondWith(networkFirst(request, RUNTIME_CACHE, MAX_RUNTIME_ENTRIES));
 });
-

@@ -110,10 +110,7 @@
           "id": "compound-event-numeric",
           "type": "numeric",
           "question": "A fair coin is flipped twice. What is the probability of getting exactly one head?",
-          "hints": [
-            "List outcomes: HH, HT, TH, TT.",
-            "Exactly one head occurs in HT and TH."
-          ],
+          "hints": ["List outcomes: HH, HT, TH, TT.", "Exactly one head occurs in HT and TH."],
           "answer": 0.5,
           "tolerance": 0.0001,
           "validation": "numeric",
@@ -183,4 +180,3 @@
     }
   ]
 }
-

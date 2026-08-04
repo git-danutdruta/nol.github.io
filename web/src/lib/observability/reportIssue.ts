@@ -23,7 +23,10 @@ export function buildBugReportUrl(context: IssueContext): string {
   const url = new URL(ISSUE_BASE_URL);
   url.searchParams.set('template', 'bug_report.yml');
   url.searchParams.set('labels', 'bug');
-  url.searchParams.set('title', `[BUG] ${context.lessonId}${context.exerciseId ? ` / ${context.exerciseId}` : ''}`);
+  url.searchParams.set(
+    'title',
+    `[BUG] ${context.lessonId}${context.exerciseId ? ` / ${context.exerciseId}` : ''}`
+  );
   url.searchParams.set('app_url', context.appUrl ?? getDefaultAppUrl());
   url.searchParams.set('browser_info', context.browserInfo ?? getDefaultBrowserInfo());
   url.searchParams.set('lesson_id', context.lessonId);
@@ -46,4 +49,3 @@ export function buildContentErrorUrl(context: IssueContext): string {
 export function buildIssueUrl(template: IssueTemplate, context: IssueContext): string {
   return template === 'bug_report.yml' ? buildBugReportUrl(context) : buildContentErrorUrl(context);
 }
-

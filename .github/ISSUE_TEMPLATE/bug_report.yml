@@ -73,4 +73,3 @@ body:
       placeholder: Drag/drop debug file or paste relevant snippets
     validations:
       required: false
-

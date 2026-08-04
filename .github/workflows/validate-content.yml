@@ -3,13 +3,13 @@ name: Validate Curriculum Content
 on:
   pull_request:
     paths:
-      - 'curriculum/**'
-      - 'schemas/**'
+      - "curriculum/**"
+      - "schemas/**"
   push:
     branches: [main]
     paths:
-      - 'curriculum/**'
-      - 'schemas/**'
+      - "curriculum/**"
+      - "schemas/**"
 
 jobs:
   validate:
@@ -33,4 +33,3 @@ jobs:
 
       - name: Validate curriculum
         run: cd web && pnpm validate-content
-

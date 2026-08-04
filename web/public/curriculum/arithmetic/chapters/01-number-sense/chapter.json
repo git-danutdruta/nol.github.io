@@ -6,7 +6,10 @@
     {
       "id": "counting-place-value",
       "title": "Counting and Place Value",
-      "objectives": ["Read and write multi-digit whole numbers", "Understand place value positions"],
+      "objectives": [
+        "Read and write multi-digit whole numbers",
+        "Understand place value positions"
+      ],
       "pedagogy": [
         {
           "type": "tip",
@@ -38,7 +41,10 @@
           "id": "place-value-identify",
           "type": "multiple-choice",
           "question": "In the number 6,249, what value does the digit 4 represent?",
-          "hints": ["Start from the right: ones, tens, hundreds, thousands.", "The 4 is two places from the right."],
+          "hints": [
+            "Start from the right: ones, tens, hundreds, thousands.",
+            "The 4 is two places from the right."
+          ],
           "options": ["4", "40", "400", "4000"],
           "correctOptionIndex": 2,
           "maxAttempts": 3,
@@ -69,7 +75,10 @@
     {
       "id": "comparing-ordering",
       "title": "Comparing and Ordering Numbers",
-      "objectives": ["Compare whole numbers using >, <, and =", "Order numbers from least to greatest"],
+      "objectives": [
+        "Compare whole numbers using >, <, and =",
+        "Order numbers from least to greatest"
+      ],
       "pedagogy": [
         {
           "type": "strategy",
@@ -137,7 +146,10 @@
     {
       "id": "intro-fractions",
       "title": "Introduction to Fractions",
-      "objectives": ["Understand fractions as parts of a whole", "Identify numerator and denominator"],
+      "objectives": [
+        "Understand fractions as parts of a whole",
+        "Identify numerator and denominator"
+      ],
       "pedagogy": [
         {
           "type": "tip",
@@ -160,7 +172,10 @@
           "id": "fraction-shade",
           "type": "drawing",
           "question": "A rectangle is divided into 6 equal parts. Shade 2/6 of the rectangle.",
-          "hints": ["Divide the rectangle into 6 equal parts if needed.", "Shade 2 of the 6 parts."],
+          "hints": [
+            "Divide the rectangle into 6 equal parts if needed.",
+            "Shade 2 of the 6 parts."
+          ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
@@ -171,7 +186,11 @@
           "type": "multiple-choice",
           "question": "In the fraction $\\frac{5}{9}$, what does the 9 represent?",
           "hints": ["The bottom number is the denominator."],
-          "options": ["The number of parts you have", "The total number of equal parts", "The number of parts left"],
+          "options": [
+            "The number of parts you have",
+            "The total number of equal parts",
+            "The number of parts left"
+          ],
           "correctOptionIndex": 1,
           "maxAttempts": 3,
           "solution": "The denominator 9 means the whole is divided into 9 equal parts."
@@ -180,4 +199,3 @@
     }
   ]
 }
-

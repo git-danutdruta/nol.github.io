@@ -25,12 +25,7 @@
       "type": "mnemonic",
       "title": "Rise over run",
       "content": "Slope is rise over run: $m = \\frac{\\Delta y}{\\Delta x}$.",
-      "tags": [
-        "algebra",
-        "algebra-functions-graphing",
-        "slope",
-        "mnemonic"
-      ],
+      "tags": ["algebra", "algebra-functions-graphing", "slope", "mnemonic"],
       "source": {
         "subjectId": "algebra",
         "chapterId": "algebra-functions-graphing",

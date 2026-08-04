@@ -131,10 +131,7 @@
         "chapters": {
           "type": "array",
           "items": {
-            "oneOf": [
-              { "$ref": "#/definitions/chapter" },
-              { "type": "string" }
-            ]
+            "oneOf": [{ "$ref": "#/definitions/chapter" }, { "type": "string" }]
           }
         }
       },
@@ -147,4 +144,3 @@
   },
   "required": ["subject"]
 }
-

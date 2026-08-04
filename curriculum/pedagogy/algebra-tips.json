@@ -8,12 +8,7 @@
       "type": "tip",
       "title": "A variable is a placeholder",
       "content": "Think of a variable as a box that can hold any number.",
-      "tags": [
-        "algebra",
-        "algebra-expressions",
-        "variables",
-        "tip"
-      ],
+      "tags": ["algebra", "algebra-expressions", "variables", "tip"],
       "source": {
         "subjectId": "algebra",
         "chapterId": "algebra-expressions",

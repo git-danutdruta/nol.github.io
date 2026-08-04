@@ -32,32 +32,32 @@ A curriculum file is an object with a `subject` key:
 
 ## Subject
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | yes | URL-safe identifier |
-| `title` | localized string | yes | Display title |
-| `description` | localized string | yes | Short description |
-| `chapters` | array of Chapter | yes | Ordered chapters |
+| Field         | Type             | Required | Description         |
+| ------------- | ---------------- | -------- | ------------------- |
+| `id`          | string           | yes      | URL-safe identifier |
+| `title`       | localized string | yes      | Display title       |
+| `description` | localized string | yes      | Short description   |
+| `chapters`    | array of Chapter | yes      | Ordered chapters    |
 
 ## Chapter
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | yes | URL-safe identifier |
-| `title` | localized string | yes | Display title |
-| `description` | localized string | no | Short description |
-| `lessons` | array of Lesson | yes | Ordered lessons |
+| Field         | Type             | Required | Description         |
+| ------------- | ---------------- | -------- | ------------------- |
+| `id`          | string           | yes      | URL-safe identifier |
+| `title`       | localized string | yes      | Display title       |
+| `description` | localized string | no       | Short description   |
+| `lessons`     | array of Lesson  | yes      | Ordered lessons     |
 
 ## Lesson
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | yes | URL-safe identifier |
-| `title` | localized string | yes | Display title |
-| `objectives` | array of localized strings | no | Learning objectives |
-| `pedagogy` | array of PedagogyBlock | no | Tips, tricks, mnemonics, strategies |
-| `content` | array of ContentBlock | yes | Lesson body |
-| `exercises` | array of Exercise | yes | Practice exercises |
+| Field        | Type                       | Required | Description                         |
+| ------------ | -------------------------- | -------- | ----------------------------------- |
+| `id`         | string                     | yes      | URL-safe identifier                 |
+| `title`      | localized string           | yes      | Display title                       |
+| `objectives` | array of localized strings | no       | Learning objectives                 |
+| `pedagogy`   | array of PedagogyBlock     | no       | Tips, tricks, mnemonics, strategies |
+| `content`    | array of ContentBlock      | yes      | Lesson body                         |
+| `exercises`  | array of Exercise          | yes      | Practice exercises                  |
 
 ## PedagogyBlock
 
@@ -86,7 +86,12 @@ Reusable pedagogy blocks can also be stored in `curriculum/pedagogy/*.json` so m
       "type": "tip",
       "title": "Place value columns",
       "content": "From right to left: ones, tens, hundreds, thousands, ten-thousands.",
-      "tags": ["arithmetic", "arithmetic-number-sense", "counting-place-value", "tip"]
+      "tags": [
+        "arithmetic",
+        "arithmetic-number-sense",
+        "counting-place-value",
+        "tip"
+      ]
     }
   ]
 }
@@ -119,20 +124,20 @@ Types: `paragraph`, `heading`, `list`, `callout`, `example`, `math`, `image`, `d
 
 ## Exercise
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | yes | Unique within lesson |
-| `type` | string | yes | `multiple-choice`, `numeric`, `free-response`, `expression`, `drawing` |
-| `question` | localized string | yes | Exercise prompt |
-| `hints` | array | no | Hints revealed progressively |
-| `options` | array | yes for multiple-choice | Answer choices |
-| `correctOptionIndex` | integer | yes for multiple-choice | Zero-based index |
-| `answer` | string/number/array | yes for numeric/expression | Correct answer |
-| `tolerance` | number | no | Allowed numeric tolerance |
-| `validation` | string | no | `exact`, `numeric`, `expression`, `manual` |
-| `maxAttempts` | integer | no | Default 3 |
-| `solution` | localized string | no | Worked solution |
-| `drawingMode` | string | yes for drawing | `freehand`, `graph`, `geometry` |
+| Field                | Type                | Required                   | Description                                                            |
+| -------------------- | ------------------- | -------------------------- | ---------------------------------------------------------------------- |
+| `id`                 | string              | yes                        | Unique within lesson                                                   |
+| `type`               | string              | yes                        | `multiple-choice`, `numeric`, `free-response`, `expression`, `drawing` |
+| `question`           | localized string    | yes                        | Exercise prompt                                                        |
+| `hints`              | array               | no                         | Hints revealed progressively                                           |
+| `options`            | array               | yes for multiple-choice    | Answer choices                                                         |
+| `correctOptionIndex` | integer             | yes for multiple-choice    | Zero-based index                                                       |
+| `answer`             | string/number/array | yes for numeric/expression | Correct answer                                                         |
+| `tolerance`          | number              | no                         | Allowed numeric tolerance                                              |
+| `validation`         | string              | no                         | `exact`, `numeric`, `expression`, `manual`                             |
+| `maxAttempts`        | integer             | no                         | Default 3                                                              |
+| `solution`           | localized string    | no                         | Worked solution                                                        |
+| `drawingMode`        | string              | yes for drawing            | `freehand`, `graph`, `geometry`                                        |
 
 ## Localized Strings
 
@@ -165,4 +170,3 @@ Validation also checks `curriculum/pedagogy/*.json`, requires at least 20 reusab
 ## Versioning
 
 This is `curriculum-v1.json`. When breaking changes are needed, create `curriculum-v2.json` and a migration script in `scripts/migrations/`.
-

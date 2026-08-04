@@ -7,7 +7,12 @@ interface ReportIssueProps {
   compact?: boolean;
 }
 
-export function ReportIssue({ lessonId, exerciseId, kind = 'bug', compact = false }: ReportIssueProps) {
+export function ReportIssue({
+  lessonId,
+  exerciseId,
+  kind = 'bug',
+  compact = false,
+}: ReportIssueProps) {
   const template = kind === 'content' ? 'content_error.yml' : 'bug_report.yml';
   const href = buildIssueUrl(template, { lessonId, exerciseId });
   const label =
@@ -30,4 +35,3 @@ export function ReportIssue({ lessonId, exerciseId, kind = 'bug', compact = fals
     </a>
   );
 }
-

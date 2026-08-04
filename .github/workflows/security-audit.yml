@@ -36,4 +36,3 @@ jobs:
 
       - name: Audit dependencies (High and Critical)
         run: pnpm audit --audit-level=high
-

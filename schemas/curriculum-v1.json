@@ -34,7 +34,16 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["paragraph", "heading", "list", "callout", "example", "math", "image", "drawing"]
+          "enum": [
+            "paragraph",
+            "heading",
+            "list",
+            "callout",
+            "example",
+            "math",
+            "image",
+            "drawing"
+          ]
         },
         "content": { "$ref": "#/definitions/localizedString" },
         "items": {
@@ -55,7 +64,13 @@
         "id": { "type": "string" },
         "type": {
           "type": "string",
-          "enum": ["multiple-choice", "numeric", "free-response", "expression", "drawing"]
+          "enum": [
+            "multiple-choice",
+            "numeric",
+            "free-response",
+            "expression",
+            "drawing"
+          ]
         },
         "question": { "$ref": "#/definitions/localizedString" },
         "hints": {
@@ -81,7 +96,10 @@
         },
         "maxAttempts": { "type": "integer", "minimum": 1, "default": 3 },
         "solution": { "$ref": "#/definitions/localizedString" },
-        "drawingMode": { "type": "string", "enum": ["freehand", "graph", "geometry"] }
+        "drawingMode": {
+          "type": "string",
+          "enum": ["freehand", "graph", "geometry"]
+        }
       },
       "required": ["id", "type", "question"]
     },
@@ -131,10 +149,7 @@
         "chapters": {
           "type": "array",
           "items": {
-            "oneOf": [
-              { "$ref": "#/definitions/chapter" },
-              { "type": "string" }
-            ]
+            "oneOf": [{ "$ref": "#/definitions/chapter" }, { "type": "string" }]
           }
         }
       },

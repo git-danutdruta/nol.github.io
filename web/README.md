@@ -71,4 +71,3 @@ web/
 3. Restart the dev server.
 
 See `docs/frontend/I18N.md` for more details.
-

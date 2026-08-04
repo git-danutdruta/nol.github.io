@@ -33,9 +33,7 @@ export async function generateSitemap(outputDir: string): Promise<void> {
       const subject = await readJson<{
         id: string;
         chapters: Array<string | { id: string; lessons: Array<{ id: string }> }>;
-      }>(
-        subjectPath
-      );
+      }>(subjectPath);
       routes.add(`/subjects/${subject.id}`);
 
       for (const chapterRef of subject.chapters ?? []) {
@@ -69,4 +67,3 @@ export async function generateSitemap(outputDir: string): Promise<void> {
   await fs.mkdir(outputDir, { recursive: true });
   await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemap, 'utf8');
 }
-

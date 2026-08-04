@@ -23,4 +23,3 @@ The drawing engine is inherently inaccessible to some assistive technologies. Fu
 - Text alternatives for drawing prompts.
 - Keyboard-friendly alternatives where possible.
 - Descriptive labels for toolbar controls.
-
