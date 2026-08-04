@@ -6,6 +6,8 @@ import i18n from '@/i18n/config';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { AppRoutes } from '@/routes';
 import { registerServiceWorker } from '@/lib/pwa/registerServiceWorker';
+import { installGlobalErrorHandlers } from '@/lib/observability/errorReporter';
+import { initWebVitalsLogging } from '@/lib/observability/webVitals';
 import '@/styles/index.css';
 import '@/styles/transitions.css';
 import '@/styles/print.css';
@@ -13,6 +15,9 @@ import '@/styles/print.css';
 if (import.meta.env.PROD) {
   registerServiceWorker();
 }
+
+installGlobalErrorHandlers();
+initWebVitalsLogging();
 
 /**
  * Derive React Router basename from Vite's BASE_URL so that GitHub Pages

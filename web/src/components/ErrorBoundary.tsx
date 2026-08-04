@@ -60,6 +60,13 @@ function ErrorFallback({ error, onReset }: { error?: Error; onReset: () => void 
       >
         {t('errors.retry')}
       </button>
+      <button
+        type="button"
+        onClick={() => window.location.reload()}
+        className="mt-2 rounded-md border border-slate-300 px-4 py-2 text-slate-700 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+      >
+        Reload page
+      </button>
     </div>
   );
 }

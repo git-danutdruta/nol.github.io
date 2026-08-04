@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { SettingsErrorLogPanel } from '@/components/SettingsErrorLogPanel';
+import { DebugInfoExport } from '@/components/DebugInfoExport';
 import { Toast } from '@/components/ui/Toast';
 import { downloadProgressBackup, parseImportedProgress } from '@/lib/exportImport';
 import { exportFirstCanvasAsPng, triggerPrintPdf } from '@/lib/exportMedia';
@@ -141,6 +142,7 @@ export function SettingsPage() {
         </div>
 
         <SettingsErrorLogPanel />
+        <DebugInfoExport />
       </div>
 
       <Toast
