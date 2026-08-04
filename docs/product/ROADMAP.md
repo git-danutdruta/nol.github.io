@@ -7,7 +7,7 @@
 | Vision, scope, non-goals | PROD-001 | `docs/product/VISION.md`, `ROADMAP.md`, `NON_GOALS.md` |
 | Content schema & workflow | PROD-002 | `docs/product/CONTENT_SCHEMA.md`, `CONTRIBUTING.md` |
 | Gamification & progress rules | PROD-003 | `docs/product/GAMIFICATION.md` |
-| MVP & phased rollout | PROD-004 | `docs/product/MVP.md` |
+| MVP & phased rollout | PROD-004 | `docs/product/PHASED_ROLLOUT.md` |
 | Search, navigation, discovery | PROD-005 | `docs/product/NAVIGATION.md` |
 | Onboarding, settings, FTUE | PROD-006 | `docs/product/ONBOARDING.md` |
 | Legal, privacy, licensing | PROD-007 | `docs/legal/` |
