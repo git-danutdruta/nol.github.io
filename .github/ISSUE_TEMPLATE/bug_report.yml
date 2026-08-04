@@ -1,0 +1,76 @@
+name: Bug report
+description: Report a runtime, UI, or exercise bug in NOL Math
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please include as much context as possible.
+  - type: input
+    id: app_url
+    attributes:
+      label: App URL
+      description: The exact page where the issue happened
+      placeholder: https://git-danutdruta.github.io/nol.github.io/...
+    validations:
+      required: true
+  - type: input
+    id: browser_info
+    attributes:
+      label: Browser / device info
+      description: Browser name/version and OS or device details
+      placeholder: Firefox 140 on Linux
+    validations:
+      required: true
+  - type: input
+    id: lesson_id
+    attributes:
+      label: Lesson ID
+      description: Curriculum lesson id if known
+      placeholder: algebra-linear-equations
+    validations:
+      required: false
+  - type: input
+    id: exercise_id
+    attributes:
+      label: Exercise ID
+      description: Exercise id if issue is exercise-specific
+      placeholder: ex-2
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open lesson ...
+        2. Answer exercise ...
+        3. Click ...
+        4. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: debug_info
+    attributes:
+      label: Debug info export (optional)
+      description: Attach the exported debug JSON file from Settings if available
+      placeholder: Drag/drop debug file or paste relevant snippets
+    validations:
+      required: false
+

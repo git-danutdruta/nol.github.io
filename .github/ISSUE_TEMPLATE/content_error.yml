@@ -1,0 +1,62 @@
+name: Content error report
+description: Report incorrect, unclear, or inconsistent curriculum content
+title: "[CONTENT] "
+labels:
+  - content
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for math/content correctness issues (not app runtime bugs).
+  - type: input
+    id: app_url
+    attributes:
+      label: App URL
+      description: The exact lesson page URL
+      placeholder: https://git-danutdruta.github.io/nol.github.io/...
+    validations:
+      required: true
+  - type: input
+    id: lesson_id
+    attributes:
+      label: Lesson ID
+      description: Curriculum lesson id
+      placeholder: arithmetic-fractions
+    validations:
+      required: true
+  - type: input
+    id: section_id
+    attributes:
+      label: Section / exercise ID
+      description: Optional content block or exercise reference
+      placeholder: ex-3 or heading text
+    validations:
+      required: false
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Type of content issue
+      options:
+        - Mathematical error
+        - Ambiguous wording
+        - Typo / grammar
+        - Broken hint or solution
+        - Missing prerequisite context
+    validations:
+      required: true
+  - type: textarea
+    id: explanation
+    attributes:
+      label: What is wrong?
+      placeholder: Explain the issue and where it appears.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_fix
+    attributes:
+      label: Suggested correction
+      placeholder: Provide the corrected statement, equation, or explanation.
+    validations:
+      required: false
+

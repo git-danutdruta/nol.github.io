@@ -5,6 +5,7 @@ import { getLocalizedString } from '@/lib/i18n';
 import { ContentBlock } from '@/components/lesson/ContentBlock';
 import { PedagogyBlock } from '@/components/lesson/PedagogyBlock';
 import { ExerciseRenderer } from '@/components/exercises/ExerciseRenderer';
+import { ReportIssue } from '@/components/ReportIssue';
 import { useProgressStore } from '@/stores/progressStore';
 
 interface LessonRendererProps {
@@ -26,6 +27,10 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
           {getLocalizedString(lesson.title, i18n.language)}
         </h1>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <ReportIssue lessonId={lesson.id} kind="bug" />
+          <ReportIssue lessonId={lesson.id} kind="content" />
+        </div>
         {lesson.objectives && lesson.objectives.length > 0 && (
           <div className="mt-4 rounded-lg bg-slate-50 p-4 dark:bg-slate-900">
             <h2 className="font-semibold">Learning objectives</h2>
@@ -58,7 +63,10 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
           <div className="space-y-6">
             {lesson.exercises.map((exercise, index) => (
               <div key={exercise.id}>
-                <p className="mb-2 text-sm font-medium text-slate-500">Exercise {index + 1}</p>
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <p className="text-sm font-medium text-slate-500">Exercise {index + 1}</p>
+                  <ReportIssue lessonId={lesson.id} exerciseId={exercise.id} compact />
+                </div>
                 <ExerciseRenderer
                   exercise={exercise}
                   onEvaluated={({ exerciseId, correct }) =>
