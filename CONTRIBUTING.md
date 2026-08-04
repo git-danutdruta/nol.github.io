@@ -54,3 +54,5 @@ For frontend or platform changes, open an issue first to discuss the approach. F
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
+For curriculum and pedagogical content under `curriculum/`, contributors also agree to the content terms in `docs/legal/CONTENT_LICENSE.md` (CC BY-SA 4.0 for content assets).
+
