@@ -1,23 +1,50 @@
 {
   "id": "arithmetic-addition-subtraction",
-  "title": "Addition and Subtraction",
-  "description": "Add and subtract whole numbers, fractions, and decimals with confidence.",
+  "title": {
+    "en": "Addition and Subtraction",
+    "ro": "Adunare și Scădere"
+  },
+  "description": {
+    "en": "Add and subtract whole numbers, fractions, and decimals with confidence.",
+    "ro": "Adună și scade numere întregi, fracții și zecimale cu încredere."
+  },
   "lessons": [
     {
       "id": "addition-basics",
-      "title": "Addition Basics",
-      "objectives": ["Add multi-digit whole numbers", "Use carrying correctly"],
+      "title": {
+        "en": "Addition Basics",
+        "ro": "Bazele Adunării"
+      },
+      "objectives": [
+        {
+          "en": "Add multi-digit whole numbers",
+          "ro": "Adună numere întregi cu mai multe cifre"
+        },
+        {
+          "en": "Use carrying correctly",
+          "ro": "Folosește corect transferul"
+        }
+      ],
       "pedagogy": [
         {
           "type": "trick",
-          "title": "Carry the one",
-          "content": "When a column sums to 10 or more, write the ones digit and carry the tens digit to the next column."
+          "title": {
+            "en": "Carry the one",
+            "ro": "Transferă unul"
+          },
+          "content": {
+            "en": "When a column sums to 10 or more, write the ones digit and carry the tens digit to the next column.",
+            "ro": "Când suma unei coloane este 10 sau mai mare, scrie cifra unităților și transferă cifra zecilor în coloana următoare."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Addition combines quantities. Align numbers by place value and add each column from right to left."
+          "content": {
+            "en": "Addition combines quantities. Align numbers by place value and add each column from right to left.",
+            "ro": "Adunarea combină cantități. Aliniază numerele după valoarea pozițională și adună fiecare coloană de la dreapta la stânga."
+          }
         },
         {
           "type": "math",
@@ -28,49 +55,91 @@
         {
           "id": "add-two-digit",
           "type": "numeric",
-          "question": "What is $47 + 58$?",
+          "question": {
+            "en": "What is $47 + 58$?",
+            "ro": "Cât este $47 + 58$?"
+          },
           "hints": [
-            "Add the ones: 7 + 8 = 15. Carry the 1.",
-            "Add the tens: 4 + 5 + 1 = 10."
+            {
+              "en": "Add the ones: 7 + 8 = 15. Carry the 1.",
+              "ro": "Adună unitățile: 7 + 8 = 15. Transferă 1."
+            },
+            {
+              "en": "Add the tens: 4 + 5 + 1 = 10.",
+              "ro": "Adună zecile: 4 + 5 + 1 = 10."
+            }
           ],
           "answer": 105,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "$47 + 58 = 105$."
+          "solution": {
+            "en": "$47 + 58 = 105$.",
+            "ro": "$47 + 58 = 105$."
+          }
         },
         {
           "id": "add-three-digit",
           "type": "numeric",
-          "question": "What is $256 + 478$?",
+          "question": {
+            "en": "What is $256 + 478$?",
+            "ro": "Cât este $256 + 478$?"
+          },
           "hints": [
-            "Carry from the ones column.",
-            "Carry from the tens column."
+            {
+              "en": "Carry from the ones column.",
+              "ro": "Transferă din coloana unităților."
+            },
+            {
+              "en": "Carry from the tens column.",
+              "ro": "Transferă din coloana zecilor."
+            }
           ],
           "answer": 734,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "$256 + 478 = 734$."
+          "solution": {
+            "en": "$256 + 478 = 734$.",
+            "ro": "$256 + 478 = 734$."
+          }
         }
       ]
     },
     {
       "id": "subtraction-basics",
-      "title": "Subtraction Basics",
+      "title": {
+        "en": "Subtraction Basics",
+        "ro": "Bazele Scăderii"
+      },
       "objectives": [
-        "Subtract multi-digit whole numbers",
-        "Use borrowing correctly"
+        {
+          "en": "Subtract multi-digit whole numbers",
+          "ro": "Scade numere întregi cu mai multe cifre"
+        },
+        {
+          "en": "Use borrowing correctly",
+          "ro": "Folosește corect împrumutul"
+        }
       ],
       "pedagogy": [
         {
           "type": "strategy",
-          "title": "Borrow when needed",
-          "content": "If the top digit in a column is smaller than the bottom digit, borrow 1 from the next column to the left."
+          "title": {
+            "en": "Borrow when needed",
+            "ro": "Împrumută când este nevoie"
+          },
+          "content": {
+            "en": "If the top digit in a column is smaller than the bottom digit, borrow 1 from the next column to the left.",
+            "ro": "Dacă cifra de sus dintr-o coloană este mai mică decât cea de jos, împrumută 1 din coloana următoare din stânga."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Subtraction finds the difference between two numbers. Borrow when the digit on top is too small."
+          "content": {
+            "en": "Subtraction finds the difference between two numbers. Borrow when the digit on top is too small.",
+            "ro": "Scăderea află diferența dintre două numere. Împrumută când cifra de sus este prea mică."
+          }
         },
         {
           "type": "math",
@@ -81,33 +150,62 @@
         {
           "id": "subtract-borrow",
           "type": "numeric",
-          "question": "What is $503 - 267$?",
+          "question": {
+            "en": "What is $503 - 267$?",
+            "ro": "Cât este $503 - 267$?"
+          },
           "hints": [
-            "You need to borrow from the hundreds.",
-            "503 becomes 4 hundreds, 9 tens, and 13 ones."
+            {
+              "en": "You need to borrow from the hundreds.",
+              "ro": "Trebuie să împrumuți de la sute."
+            },
+            {
+              "en": "503 becomes 4 hundreds, 9 tens, and 13 ones.",
+              "ro": "503 devine 4 sute, 9 zeci și 13 unități."
+            }
           ],
           "answer": 236,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "$503 - 267 = 236$."
+          "solution": {
+            "en": "$503 - 267 = 236$.",
+            "ro": "$503 - 267 = 236$."
+          }
         }
       ]
     },
     {
       "id": "add-subtract-fractions",
-      "title": "Adding and Subtracting Fractions",
-      "objectives": ["Add and subtract fractions with like denominators"],
+      "title": {
+        "en": "Adding and Subtracting Fractions",
+        "ro": "Adunarea și Scăderea Fracțiilor"
+      },
+      "objectives": [
+        {
+          "en": "Add and subtract fractions with like denominators",
+          "ro": "Adună și scade fracții cu numitori egali"
+        }
+      ],
       "pedagogy": [
         {
           "type": "pitfall",
-          "title": "Do not add denominators",
-          "content": "When adding fractions with the same denominator, only add the numerators. The denominator stays the same."
+          "title": {
+            "en": "Do not add denominators",
+            "ro": "Nu aduna numitorii"
+          },
+          "content": {
+            "en": "When adding fractions with the same denominator, only add the numerators. The denominator stays the same.",
+            "ro": "Când aduni fracții cu același numitor, adună doar numărătorii. Numitorul rămâne neschimbat."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Fractions with the same denominator can be added or subtracted by combining the numerators."
+          "content": {
+            "en": "Fractions with the same denominator can be added or subtracted by combining the numerators.",
+            "ro": "Fracțiile cu același numitor pot fi adunate sau scăzute prin combinarea numărătorilor."
+          }
         },
         {
           "type": "math",
@@ -118,8 +216,20 @@
         {
           "id": "add-fractions-like",
           "type": "expression",
-          "question": "Simplify $\\frac{3}{8} + \\frac{2}{8}$.",
-          "hints": ["Add the numerators.", "Keep the denominator 8."],
+          "question": {
+            "en": "Simplify $\\frac{3}{8} + \\frac{2}{8}$.",
+            "ro": "Simplifică $\\frac{3}{8} + \\frac{2}{8}$."
+          },
+          "hints": [
+            {
+              "en": "Add the numerators.",
+              "ro": "Adună numărătorii."
+            },
+            {
+              "en": "Keep the denominator 8.",
+              "ro": "Păstrează numitorul 8."
+            }
+          ],
           "answer": "5/8",
           "validation": "expression",
           "maxAttempts": 3,
@@ -128,12 +238,27 @@
         {
           "id": "subtract-fractions-like",
           "type": "expression",
-          "question": "Simplify $\\frac{5}{6} - \\frac{1}{6}$.",
-          "hints": ["Subtract the numerators.", "Keep the denominator 6."],
+          "question": {
+            "en": "Simplify $\\frac{5}{6} - \\frac{1}{6}$.",
+            "ro": "Simplifică $\\frac{5}{6} - \\frac{1}{6}$."
+          },
+          "hints": [
+            {
+              "en": "Subtract the numerators.",
+              "ro": "Scade numărătorii."
+            },
+            {
+              "en": "Keep the denominator 6.",
+              "ro": "Păstrează numitorul 6."
+            }
+          ],
           "answer": "4/6",
           "validation": "expression",
           "maxAttempts": 3,
-          "solution": "$\\frac{5}{6} - \\frac{1}{6} = \\frac{4}{6} = \\frac{2}{3}$."
+          "solution": {
+            "en": "$\\frac{5}{6} - \\frac{1}{6} = \\frac{4}{6} = \\frac{2}{3}$.",
+            "ro": "$\\frac{5}{6} - \\frac{1}{6} = \\frac{4}{6} = \\frac{2}{3}$."
+          }
         }
       ]
     }

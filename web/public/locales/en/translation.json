@@ -93,5 +93,40 @@
     "updateAvailable": "A new version is available. Refresh to update.",
     "refreshToUpdate": "Refresh now",
     "dismiss": "Later"
+  },
+  "exercise": {
+    "check": "Check",
+    "solution": "Solution",
+    "exerciseLabel": "Exercise {{number}}",
+    "hint": "Hint",
+    "hints": "Hints",
+    "placeholder": {
+      "numeric": "Enter a number",
+      "freeResponse": "Type your answer"
+    },
+    "aria": {
+      "numericAnswer": "Numeric answer",
+      "freeResponseAnswer": "Free response answer"
+    },
+    "feedback": {
+      "correct": "Correct!",
+      "incorrect": "Incorrect. Try again."
+    }
+  },
+  "lesson": {
+    "objectives": "Learning objectives",
+    "practice": "Practice"
+  },
+  "drawing": {
+    "autoCheck": "Auto-check",
+    "selfCheck": "Self-check mode",
+    "markComplete": "Mark complete",
+    "saved": "Drawing saved for review.",
+    "markedComplete": "Marked complete with self-assessment.",
+    "selfCheckTitle": "Geometry self-check",
+    "rubric": {
+      "constraints": "Check key geometric constraints requested in the prompt.",
+      "compare": "Compare your construction to the expected method before marking complete."
+    }
   }
 }

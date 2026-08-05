@@ -1,31 +1,61 @@
 {
   "id": "arithmetic-number-sense",
-  "title": "Number Sense",
-  "description": "Understand counting, place value, and the structure of whole numbers.",
+  "title": {
+    "en": "Number Sense",
+    "ro": "Noțiuni despre Numere"
+  },
+  "description": {
+    "en": "Understand counting, place value, and the structure of whole numbers.",
+    "ro": "Înțelege număratul, valoarea pozițională și structura numerelor întregi."
+  },
   "lessons": [
     {
       "id": "counting-place-value",
-      "title": "Counting and Place Value",
+      "title": {
+        "en": "Counting and Place Value",
+        "ro": "Număratul și Valoarea Pozițională"
+      },
       "objectives": [
-        "Read and write multi-digit whole numbers",
-        "Understand place value positions"
+        {
+          "en": "Read and write multi-digit whole numbers",
+          "ro": "Citește și scrie numere întregi cu mai multe cifre"
+        },
+        {
+          "en": "Understand place value positions",
+          "ro": "Înțelege pozițiile valorii poziționale"
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Place value columns",
-          "content": "From right to left: ones, tens, hundreds, thousands, ten-thousands."
+          "title": {
+            "en": "Place value columns",
+            "ro": "Coloanele valorii poziționale"
+          },
+          "content": {
+            "en": "From right to left: ones, tens, hundreds, thousands, ten-thousands.",
+            "ro": "De la dreapta la stânga: unități, zeci, sute, mii, zeci de mii."
+          }
         },
         {
           "type": "mnemonic",
-          "title": "Remember the order",
-          "content": "Ones, Tens, Hundreds: O-T-H sounds like 'oath'—make a promise to always start from the right."
+          "title": {
+            "en": "Remember the order",
+            "ro": "Amintește-ți ordinea"
+          },
+          "content": {
+            "en": "Ones, Tens, Hundreds: O-T-H sounds like 'oath'—make a promise to always start from the right.",
+            "ro": "Unități, Zeci, Sute: U-Z-S sună ca 'u-zis'—promite-ți să începi mereu de la dreapta."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Every digit in a number has a value based on its position. In 4,573, the digit 5 is in the hundreds place, so it represents 500."
+          "content": {
+            "en": "Every digit in a number has a value based on its position. In 4,573, the digit 5 is in the hundreds place, so it represents 500.",
+            "ro": "Fiecare cifră dintr-un număr are o valoare în funcție de poziția sa. În 4.573, cifra 5 este pe poziția sutelor, deci reprezintă 500."
+          }
         },
         {
           "type": "math",
@@ -33,63 +63,123 @@
         },
         {
           "type": "example",
-          "content": "In 28,406, the digit 8 is in the thousands place and represents 8,000."
+          "content": {
+            "en": "In 28,406, the digit 8 is in the thousands place and represents 8,000.",
+            "ro": "În 28.406, cifra 8 este pe poziția miilor și reprezintă 8.000."
+          }
         }
       ],
       "exercises": [
         {
           "id": "place-value-identify",
           "type": "multiple-choice",
-          "question": "In the number 6,249, what value does the digit 4 represent?",
+          "question": {
+            "en": "In the number 6,249, what value does the digit 4 represent?",
+            "ro": "În numărul 6.249, ce valoare reprezintă cifra 4?"
+          },
           "hints": [
-            "Start from the right: ones, tens, hundreds, thousands.",
-            "The 4 is two places from the right."
+            {
+              "en": "Start from the right: ones, tens, hundreds, thousands.",
+              "ro": "Începe de la dreapta: unități, zeci, sute, mii."
+            },
+            {
+              "en": "The 4 is two places from the right.",
+              "ro": "Cifra 4 este la două poziții de la dreapta."
+            }
           ],
-          "options": ["4", "40", "400", "4000"],
+          "options": [
+            "4",
+            "40",
+            "400",
+            "4000"
+          ],
           "correctOptionIndex": 2,
           "maxAttempts": 3,
-          "solution": "The digit 4 is in the hundreds place, so it represents 400."
+          "solution": {
+            "en": "The digit 4 is in the hundreds place, so it represents 400.",
+            "ro": "Cifra 4 este pe poziția sutelor, deci reprezintă 400."
+          }
         },
         {
           "id": "place-value-expanded",
           "type": "numeric",
-          "question": "What is $3000 + 200 + 50 + 7$?",
-          "hints": ["Add the thousands, hundreds, tens, and ones separately."],
+          "question": {
+            "en": "What is $3000 + 200 + 50 + 7$?",
+            "ro": "Cât este $3000 + 200 + 50 + 7$?"
+          },
+          "hints": [
+            {
+              "en": "Add the thousands, hundreds, tens, and ones separately.",
+              "ro": "Adună miile, sutele, zecile și unitățile separat."
+            }
+          ],
           "answer": 3257,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "$3000 + 200 + 50 + 7 = 3257$."
+          "solution": {
+            "en": "$3000 + 200 + 50 + 7 = 3257$.",
+            "ro": "$3000 + 200 + 50 + 7 = 3257$."
+          }
         },
         {
           "id": "place-value-drawing",
           "type": "drawing",
-          "question": "Draw a place-value chart for 5,318 and label each digit.",
-          "hints": ["Use columns for thousands, hundreds, tens, and ones."],
+          "question": {
+            "en": "Draw a place-value chart for 5,318 and label each digit.",
+            "ro": "Desenează un tabel al valorii poziționale pentru 5.318 și etichetează fiecare cifră."
+          },
+          "hints": [
+            {
+              "en": "Use columns for thousands, hundreds, tens, and ones.",
+              "ro": "Folosește coloane pentru mii, sute, zeci și unități."
+            }
+          ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "A chart with 5 in thousands, 3 in hundreds, 1 in tens, and 8 in ones."
+          "solution": {
+            "en": "A chart with 5 in thousands, 3 in hundreds, 1 in tens, and 8 in ones.",
+            "ro": "Un tabel cu 5 la mii, 3 la sute, 1 la zeci și 8 la unități."
+          }
         }
       ]
     },
     {
       "id": "comparing-ordering",
-      "title": "Comparing and Ordering Numbers",
+      "title": {
+        "en": "Comparing and Ordering Numbers",
+        "ro": "Compararea și Ordonarea Numerelor"
+      },
       "objectives": [
-        "Compare whole numbers using >, <, and =",
-        "Order numbers from least to greatest"
+        {
+          "en": "Compare whole numbers using >, <, and =",
+          "ro": "Compară numerele întregi folosind >, < și ="
+        },
+        {
+          "en": "Order numbers from least to greatest",
+          "ro": "Ordonează numerele de la cel mai mic la cel mai mare"
+        }
       ],
       "pedagogy": [
         {
           "type": "strategy",
-          "title": "Line up digits",
-          "content": "When comparing two numbers, align them by place value and compare from the leftmost digit."
+          "title": {
+            "en": "Line up digits",
+            "ro": "Aliniază cifrele"
+          },
+          "content": {
+            "en": "When comparing two numbers, align them by place value and compare from the leftmost digit.",
+            "ro": "La compararea a două numere, aliniază-le după valoarea pozițională și compară de la cifra cea mai din stânga."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Use the symbols > (greater than), < (less than), and = (equal to) to compare numbers. The open side of the symbol always faces the larger number."
+          "content": {
+            "en": "Use the symbols > (greater than), < (less than), and = (equal to) to compare numbers. The open side of the symbol always faces the larger number.",
+            "ro": "Folosește simbolurile > (mai mare decât), < (mai mic decât) și = (egal cu) pentru a compara numerele. Partea deschisă a simbolului este întotdeauna spre numărul mai mare."
+          }
         },
         {
           "type": "math",
@@ -100,70 +190,135 @@
         {
           "id": "compare-numbers",
           "type": "multiple-choice",
-          "question": "Which statement is true?",
-          "hints": ["Compare the hundreds first, then tens, then ones."],
-          "options": ["472 > 481", "472 < 481", "472 = 481"],
+          "question": {
+            "en": "Which statement is true?",
+            "ro": "Care afirmație este adevărată?"
+          },
+          "hints": [
+            {
+              "en": "Compare the hundreds first, then tens, then ones.",
+              "ro": "Compară mai întâi sutele, apoi zecile, apoi unitățile."
+            }
+          ],
+          "options": [
+            "472 > 481",
+            "472 < 481",
+            "472 = 481"
+          ],
           "correctOptionIndex": 1,
           "maxAttempts": 3,
-          "solution": "Both numbers have 4 hundreds. 481 has 8 tens while 472 has 7 tens, so 472 < 481."
+          "solution": {
+            "en": "Both numbers have 4 hundreds. 481 has 8 tens while 472 has 7 tens, so 472 < 481.",
+            "ro": "Ambele numere au 4 sute. 481 are 8 zeci, iar 472 are 7 zeci, deci 472 < 481."
+          }
         }
       ]
     },
     {
       "id": "rounding",
-      "title": "Rounding Whole Numbers",
-      "objectives": ["Round whole numbers to a given place value"],
+      "title": {
+        "en": "Rounding Whole Numbers",
+        "ro": "Rotunjirea Numerelor Întregi"
+      },
+      "objectives": [
+        {
+          "en": "Round whole numbers to a given place value",
+          "ro": "Rotunjește numerele întregi la o anumită valoare pozițională"
+        }
+      ],
       "pedagogy": [
         {
           "type": "trick",
-          "title": "5 or more, raise the score",
-          "content": "Look at the digit to the right of the target place. If it is 5 or greater, round up. Otherwise, round down."
+          "title": {
+            "en": "5 or more, raise the score",
+            "ro": "5 sau mai mult, mărești rezultatul"
+          },
+          "content": {
+            "en": "Look at the digit to the right of the target place. If it is 5 or greater, round up. Otherwise, round down.",
+            "ro": "Uită-te la cifra din dreapta poziției vizate. Dacă este 5 sau mai mare, rotunjește în sus. Altfel, rotunjește în jos."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Rounding makes numbers easier to work with by replacing them with nearby multiples of 10, 100, or 1000."
+          "content": {
+            "en": "Rounding makes numbers easier to work with by replacing them with nearby multiples of 10, 100, or 1000.",
+            "ro": "Rotunjirea face numerele mai ușor de folosit, înlocuindu-le cu multipli apropiați de 10, 100 sau 1000."
+          }
         },
         {
           "type": "example",
-          "content": "Round 738 to the nearest hundred. The tens digit is 3, which is less than 5, so 738 rounds to 700."
+          "content": {
+            "en": "Round 738 to the nearest hundred. The tens digit is 3, which is less than 5, so 738 rounds to 700.",
+            "ro": "Rotunjește 738 la cea mai apropiată sută. Cifra zecilor este 3, mai mică decât 5, deci 738 se rotunjește la 700."
+          }
         }
       ],
       "exercises": [
         {
           "id": "round-hundreds",
           "type": "numeric",
-          "question": "Round 856 to the nearest hundred.",
+          "question": {
+            "en": "Round 856 to the nearest hundred.",
+            "ro": "Rotunjește 856 la cea mai apropiată sută."
+          },
           "hints": [
-            "Look at the tens digit.",
-            "The tens digit is 5, so round up."
+            {
+              "en": "Look at the tens digit.",
+              "ro": "Uită-te la cifra zecilor."
+            },
+            {
+              "en": "The tens digit is 5, so round up.",
+              "ro": "Cifra zecilor este 5, deci rotunjește în sus."
+            }
           ],
           "answer": 900,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "The tens digit is 5, so 856 rounds up to 900."
+          "solution": {
+            "en": "The tens digit is 5, so 856 rounds up to 900.",
+            "ro": "Cifra zecilor este 5, deci 856 se rotunjește în sus la 900."
+          }
         }
       ]
     },
     {
       "id": "intro-fractions",
-      "title": "Introduction to Fractions",
+      "title": {
+        "en": "Introduction to Fractions",
+        "ro": "Introducere în Fracții"
+      },
       "objectives": [
-        "Understand fractions as parts of a whole",
-        "Identify numerator and denominator"
+        {
+          "en": "Understand fractions as parts of a whole",
+          "ro": "Înțelege fracțiile ca părți dintr-un întreg"
+        },
+        {
+          "en": "Identify numerator and denominator",
+          "ro": "Identifică numărătorul și numitorul"
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Numerator and denominator",
-          "content": "The denominator tells how many equal parts the whole is divided into. The numerator tells how many parts you have."
+          "title": {
+            "en": "Numerator and denominator",
+            "ro": "Numărător și numitor"
+          },
+          "content": {
+            "en": "The denominator tells how many equal parts the whole is divided into. The numerator tells how many parts you have.",
+            "ro": "Numitorul arată în câte părți egale este împărțit întregul. Numărătorul arată câte părți ai."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "A fraction represents a part of a whole. If a pizza is cut into 8 equal slices and you eat 3, you ate 3/8 of the pizza."
+          "content": {
+            "en": "A fraction represents a part of a whole. If a pizza is cut into 8 equal slices and you eat 3, you ate 3/8 of the pizza.",
+            "ro": "O fracție reprezintă o parte dintr-un întreg. Dacă o pizza este tăiată în 8 felii egale și mănânci 3, ai mâncat 3/8 din pizza."
+          }
         },
         {
           "type": "math",
@@ -174,29 +329,61 @@
         {
           "id": "fraction-shade",
           "type": "drawing",
-          "question": "A rectangle is divided into 6 equal parts. Shade 2/6 of the rectangle.",
+          "question": {
+            "en": "A rectangle is divided into 6 equal parts. Shade 2/6 of the rectangle.",
+            "ro": "Un dreptunghi este împărțit în 6 părți egale. Colorează 2/6 din dreptunghi."
+          },
           "hints": [
-            "Divide the rectangle into 6 equal parts if needed.",
-            "Shade 2 of the 6 parts."
+            {
+              "en": "Divide the rectangle into 6 equal parts if needed.",
+              "ro": "Împarte dreptunghiul în 6 părți egale, dacă este necesar."
+            },
+            {
+              "en": "Shade 2 of the 6 parts.",
+              "ro": "Colorează 2 din cele 6 părți."
+            }
           ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Two out of six equal parts should be shaded."
+          "solution": {
+            "en": "Two out of six equal parts should be shaded.",
+            "ro": "Două din cele șase părți egale ar trebui colorate."
+          }
         },
         {
           "id": "fraction-parts",
           "type": "multiple-choice",
-          "question": "In the fraction $\\frac{5}{9}$, what does the 9 represent?",
-          "hints": ["The bottom number is the denominator."],
+          "question": {
+            "en": "In the fraction $\\frac{5}{9}$, what does the 9 represent?",
+            "ro": "În fracția $\\frac{5}{9}$, ce reprezintă 9?"
+          },
+          "hints": [
+            {
+              "en": "The bottom number is the denominator.",
+              "ro": "Numărul de jos este numitorul."
+            }
+          ],
           "options": [
-            "The number of parts you have",
-            "The total number of equal parts",
-            "The number of parts left"
+            {
+              "en": "The number of parts you have",
+              "ro": "Numărul de părți pe care le ai"
+            },
+            {
+              "en": "The total number of equal parts",
+              "ro": "Numărul total de părți egale"
+            },
+            {
+              "en": "The number of parts left",
+              "ro": "Numărul de părți rămase"
+            }
           ],
           "correctOptionIndex": 1,
           "maxAttempts": 3,
-          "solution": "The denominator 9 means the whole is divided into 9 equal parts."
+          "solution": {
+            "en": "The denominator 9 means the whole is divided into 9 equal parts.",
+            "ro": "Numitorul 9 înseamnă că întregul este împărțit în 9 părți egale."
+          }
         }
       ]
     }

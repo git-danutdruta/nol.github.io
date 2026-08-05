@@ -3,6 +3,7 @@ import type { Exercise } from '@/types/curriculum';
 import { validateAnswer } from '@/lib/validateAnswer';
 import { getLocalizedString } from '@/lib/i18n';
 import { useTranslation } from 'react-i18next';
+import { Hints } from './Hints';
 
 interface MultipleChoiceExerciseProps {
   exercise: Exercise;
@@ -10,7 +11,7 @@ interface MultipleChoiceExerciseProps {
 }
 
 export function MultipleChoiceExercise({ exercise, onEvaluated }: MultipleChoiceExerciseProps) {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [selected, setSelected] = useState<number | null>(null);
   const [result, setResult] = useState<{ correct: boolean; message: string } | null>(null);
   const [attempts, setAttempts] = useState(0);
@@ -34,6 +35,7 @@ export function MultipleChoiceExercise({ exercise, onEvaluated }: MultipleChoice
       <legend className="text-lg font-medium text-slate-900 dark:text-white">
         {getLocalizedString(exercise.question, i18n.language)}
       </legend>
+      {exercise.hints && exercise.hints.length > 0 && <Hints hints={exercise.hints} />}
       <div className="space-y-2">
         {exercise.options?.map((option, index) => (
           <label
@@ -58,7 +60,7 @@ export function MultipleChoiceExercise({ exercise, onEvaluated }: MultipleChoice
         disabled={selected === null}
         className="motion-press rounded-md bg-primary-600 px-4 py-2 text-white hover:bg-primary-700 disabled:opacity-50"
       >
-        Check
+        {t('exercise.check')}
       </button>
       {result && (
         <div
@@ -75,7 +77,8 @@ export function MultipleChoiceExercise({ exercise, onEvaluated }: MultipleChoice
       )}
       {showSolution && exercise.solution && (
         <div className="rounded-md bg-slate-100 p-3 dark:bg-slate-800">
-          <strong>Solution:</strong> {getLocalizedString(exercise.solution, i18n.language)}
+          <strong>{t('exercise.solution')}:</strong>{' '}
+          {getLocalizedString(exercise.solution, i18n.language)}
         </div>
       )}
     </fieldset>

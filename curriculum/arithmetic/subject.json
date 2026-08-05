@@ -1,7 +1,13 @@
 {
   "id": "arithmetic",
-  "title": "Arithmetic",
-  "description": "Build a solid foundation with numbers, operations, fractions, decimals, and percentages.",
+  "title": {
+    "en": "Arithmetic",
+    "ro": "Aritmetică"
+  },
+  "description": {
+    "en": "Build a solid foundation with numbers, operations, fractions, decimals, and percentages.",
+    "ro": "Construiește o bază solidă cu numere, operații, fracții, zecimale și procente."
+  },
   "chapters": [
     "chapters/01-number-sense/chapter.json",
     "chapters/02-addition-subtraction/chapter.json",

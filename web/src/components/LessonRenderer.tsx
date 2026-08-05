@@ -13,7 +13,7 @@ interface LessonRendererProps {
 }
 
 export function LessonRenderer({ lesson }: LessonRendererProps) {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const syncLessonStructure = useProgressStore((state) => state.syncLessonStructure);
   const recordExerciseResult = useProgressStore((state) => state.recordExerciseResult);
 
@@ -33,7 +33,7 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
         </div>
         {lesson.objectives && lesson.objectives.length > 0 && (
           <div className="mt-4 rounded-lg bg-slate-50 p-4 dark:bg-slate-900">
-            <h2 className="font-semibold">Learning objectives</h2>
+            <h2 className="font-semibold">{t('lesson.objectives', 'Learning objectives')}</h2>
             <ul className="mt-2 list-inside list-disc space-y-1">
               {lesson.objectives.map((objective, index) => (
                 <li key={index}>{getLocalizedString(objective, i18n.language)}</li>
@@ -59,12 +59,16 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
 
       {lesson.exercises.length > 0 && (
         <section aria-label="Exercises">
-          <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-white">Practice</h2>
+          <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-white">
+            {t('lesson.practice', 'Practice')}
+          </h2>
           <div className="space-y-6">
             {lesson.exercises.map((exercise, index) => (
               <div key={exercise.id}>
                 <div className="mb-2 flex items-center justify-between gap-2">
-                  <p className="text-sm font-medium text-slate-500">Exercise {index + 1}</p>
+                  <p className="text-sm font-medium text-slate-500">
+                    {t('exercise.exerciseLabel', { number: index + 1 })}
+                  </p>
                   <ReportIssue lessonId={lesson.id} exerciseId={exercise.id} compact />
                 </div>
                 <ExerciseRenderer

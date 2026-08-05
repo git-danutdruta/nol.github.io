@@ -6,6 +6,7 @@ import { DrawingEngine } from '@/components/drawing/DrawingEngine';
 import type { DrawingState } from '@/components/drawing/types';
 import { gradeGeometryDrawing, type GeometryGradeResult } from '@/lib/geometry/grader';
 import { SelfCheckOverlay } from '@/components/drawing/SelfCheckOverlay';
+import { Hints } from './Hints';
 
 interface DrawingExerciseProps {
   exercise: Exercise;
@@ -13,7 +14,7 @@ interface DrawingExerciseProps {
 }
 
 export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps) {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [saved, setSaved] = useState(false);
   const [selfCheckOpen, setSelfCheckOpen] = useState(false);
   const [latestDrawing, setLatestDrawing] = useState<DrawingState | null>(null);
@@ -40,8 +41,8 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
   }, [exercise.drawingMode, question]);
 
   const rubric = gradeResult?.rubric ?? [
-    'Check key geometric constraints requested in the prompt.',
-    'Compare your construction to the expected method before marking complete.',
+    t('drawing.rubric.constraints', 'Check key geometric constraints requested in the prompt.'),
+    t('drawing.rubric.compare', 'Compare your construction to the expected method before marking complete.'),
   ];
 
   const runAutoCheck = () => {
@@ -71,6 +72,7 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
   return (
     <div className="space-y-3 rounded-lg border border-slate-200 p-4 dark:border-slate-800">
       <p className="text-lg font-medium text-slate-900 dark:text-white">{question}</p>
+      {exercise.hints && exercise.hints.length > 0 && <Hints hints={exercise.hints} />}
 
       {isGeometryExercise && (
         <div className="flex flex-wrap gap-2">
@@ -79,21 +81,21 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
             onClick={runAutoCheck}
             className="rounded-md bg-primary-600 px-3 py-2 text-sm font-medium text-white hover:bg-primary-700"
           >
-            Auto-check
+            {t('drawing.autoCheck', 'Auto-check')}
           </button>
           <button
             type="button"
             onClick={() => setSelfCheckOpen(true)}
             className="rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
           >
-            Self-check mode
+            {t('drawing.selfCheck', 'Self-check mode')}
           </button>
           <button
             type="button"
             onClick={markManualComplete}
             className="rounded-md border border-emerald-300 px-3 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50 dark:border-emerald-800 dark:text-emerald-300 dark:hover:bg-emerald-950/30"
           >
-            Mark complete
+            {t('drawing.markComplete', 'Mark complete')}
           </button>
         </div>
       )}
@@ -128,7 +130,7 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
           role="status"
           aria-live="polite"
         >
-          Drawing saved for review.
+          {t('drawing.saved', 'Drawing saved for review.')}
         </div>
       )}
 
@@ -138,14 +140,14 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
           role="status"
           aria-live="polite"
         >
-          Marked complete with self-assessment.
+          {t('drawing.markedComplete', 'Marked complete with self-assessment.')}
         </div>
       )}
 
       <SelfCheckOverlay
         open={selfCheckOpen}
         onClose={() => setSelfCheckOpen(false)}
-        title="Geometry self-check"
+        title={t('drawing.selfCheckTitle', 'Geometry self-check')}
         solutionText={solution}
         rubric={rubric}
       />

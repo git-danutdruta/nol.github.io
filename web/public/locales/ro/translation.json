@@ -1,97 +1,132 @@
 {
   "app": {
     "name": "NOL Math",
-    "tagline": "Invata matematica de la baza pana la avansat"
+    "tagline": "Învață matematica de la bază până la avansat"
   },
   "nav": {
-    "home": "Acasa",
+    "home": "Acasă",
     "subjects": "Materii",
     "progress": "Progres",
-    "settings": "Setari",
+    "settings": "Setări",
     "menu": "Deschide meniul de navigare",
-    "closeMenu": "Inchide meniul de navigare"
+    "closeMenu": "Închide meniul de navigare"
   },
   "home": {
     "welcome": "Bine ai venit la NOL Math",
-    "subtitle": "O platforma gratuita de invatare a matematicii, cu suport offline.",
-    "startLearning": "Incepe sa inveti",
-    "noSubjects": "Nu exista inca materii disponibile. Revino in curand!"
+    "subtitle": "O platformă gratuită de învățare a matematicii, cu suport offline.",
+    "startLearning": "Începe să înveți",
+    "noSubjects": "Nu există încă materii disponibile. Revino în curând!"
   },
   "settings": {
-    "title": "Setari",
-    "language": "Limba",
-    "theme": "Tema",
-    "themeLight": "Luminoasa",
-    "themeDark": "Intunecata",
+    "title": "Setări",
+    "language": "Limbă",
+    "theme": "Temă",
+    "themeLight": "Luminoasă",
+    "themeDark": "Întunecată",
     "themeSystem": "Sistem",
     "progress": {
       "title": "Date de progres",
-      "description": "Exporta progresul local intr-un backup JSON, importa un backup anterior sau reseteaza tot progresul.",
-      "export": "Exporta progresul",
-      "import": "Importa progresul",
-      "reset": "Reseteaza progresul",
-      "exportConfirm": "Exporti progresul local intr-un fisier JSON?",
-      "importConfirm": "Importul va inlocui progresul local curent. Continui?",
-      "resetConfirm": "Aceasta actiune va sterge permanent progresul local de pe acest dispozitiv. Continui?",
+      "description": "Exportă progresul local într-un backup JSON, importă un backup anterior sau resetează tot progresul.",
+      "export": "Exportă progresul",
+      "import": "Importă progresul",
+      "reset": "Resetează progresul",
+      "exportConfirm": "Exporezi progresul local într-un fișier JSON?",
+      "importConfirm": "Importul va înlocui progresul local curent. Continui?",
+      "resetConfirm": "Această acțiune va șterge permanent progresul local de pe acest dispozitiv. Continui?",
       "exportSuccess": "Progres exportat.",
       "importSuccess": "Progres importat.",
-      "importError": "Nu s-a putut importa fisierul de progres.",
-      "resetSuccess": "Resetarea progresului s-a incheiat."
+      "importError": "Nu s-a putut importa fișierul de progres.",
+      "resetSuccess": "Resetarea progresului s-a încheiat."
     },
     "errors": {
       "title": "Diagnostic erori",
-      "description": "Revizuieste erorile recente din client stocate pe acest dispozitiv si exporta-le pentru depanare.",
-      "refresh": "Reincarca lista",
-      "export": "Exporta jurnalul de erori",
-      "empty": "Nu exista inca erori client inregistrate."
+      "description": "Revizuiește erorile recente din client stocate pe acest dispozitiv și exportă-le pentru depanare.",
+      "refresh": "Reîncarcă lista",
+      "export": "Exportă jurnalul de erori",
+      "empty": "Nu există încă erori client înregistrate."
     },
     "media": {
-      "title": "Export imagine si PDF",
-      "description": "Exporta un canvas de desen ca PNG sau deschide dialogul de tiparire al browserului pentru a salva un PDF.",
-      "exportImage": "Exporta PNG",
-      "exportPdf": "Exporta PDF",
-      "exportImageSuccess": "Imaginea canvasului a fost exportata.",
-      "exportImageNoCanvas": "Nu a fost gasit niciun canvas pentru export.",
-      "exportPdfHint": "Dialogul de tiparire a fost deschis. Alege Salvare ca PDF in browser."
+      "title": "Export imagine și PDF",
+      "description": "Exportă un canvas de desen ca PNG sau deschide dialogul de tipărire al browserului pentru a salva un PDF.",
+      "exportImage": "Exportă PNG",
+      "exportPdf": "Exportă PDF",
+      "exportImageSuccess": "Imaginea canvasului a fost exportată.",
+      "exportImageNoCanvas": "Nu a fost găsit niciun canvas pentru export.",
+      "exportPdfHint": "Dialogul de tipărire a fost deschis. Alege Salvare ca PDF în browser."
     }
   },
   "progress": {
-    "title": "Progresul tau",
-    "empty": "Nu exista progres inca. Finalizeaza o lectie ca sa il vezi aici.",
+    "title": "Progresul tău",
+    "empty": "Nu există progres încă. Finalizează o lecție ca să îl vezi aici.",
     "cards": {
       "xp": "XP",
-      "streak": "Serie curenta",
-      "completed": "Lectii finalizate",
-      "mastery": "Nivel mediu de stapanire"
+      "streak": "Serie curentă",
+      "completed": "Lecții finalizate",
+      "mastery": "Nivel mediu de stăpânire"
     },
     "review": {
-      "title": "Recapitulare spatiata",
-      "noneDue": "Nu exista lectii scadente pentru recapitulare acum."
+      "title": "Recapitulare spațiată",
+      "noneDue": "Nu există lecții scadente pentru recapitulare acum."
     },
     "badges": {
       "title": "Insigne",
-      "first_steps": "Primii pasi",
-      "lesson_finisher": "Finalizator de lectii",
+      "first_steps": "Primii pași",
+      "lesson_finisher": "Finalizator de lecții",
       "streak_3": "Serie de 3 zile",
-      "mastery_5": "Stapanire x5"
+      "mastery_5": "Stăpânire x5"
     },
-    "lessonBreakdown": "Detaliere pe lectii",
-    "attemptsLabel": "{{count}} incercari",
-    "nextReview": "Urmatoarea recapitulare: {{date}}",
-    "totalAttempts": "Total incercari inregistrate: {{count}}"
+    "lessonBreakdown": "Detaliere pe lecții",
+    "attemptsLabel": "{{count}} încercări",
+    "nextReview": "Următoarea recapitulare: {{date}}",
+    "totalAttempts": "Total încercări înregistrate: {{count}}"
   },
   "errors": {
-    "generic": "Ceva nu a functionat corect.",
-    "retry": "Incearca din nou",
-    "notFound": "Pagina nu a fost gasita",
-    "goHome": "Mergi la acasa"
+    "generic": "Ceva nu a funcționat corect.",
+    "retry": "Încearcă din nou",
+    "notFound": "Pagina nu a fost găsită",
+    "goHome": "Mergi acasă"
   },
   "accessibility": {
-    "skipToContent": "Sari la continutul principal"
+    "skipToContent": "Sari la conținutul principal"
   },
   "pwa": {
-    "updateAvailable": "Este disponibila o versiune noua. Reimprospateaza pentru actualizare.",
-    "refreshToUpdate": "Actualizeaza acum",
-    "dismiss": "Mai tarziu"
+    "updateAvailable": "Este disponibilă o versiune nouă. Reîmprospătează pentru actualizare.",
+    "refreshToUpdate": "Actualizează acum",
+    "dismiss": "Mai târziu"
+  },
+  "exercise": {
+    "check": "Verifică",
+    "solution": "Soluție",
+    "exerciseLabel": "Exercițiul {{number}}",
+    "hint": "Indiciu",
+    "hints": "Indicii",
+    "placeholder": {
+      "numeric": "Introdu un număr",
+      "freeResponse": "Scrie răspunsul tău"
+    },
+    "aria": {
+      "numericAnswer": "Răspuns numeric",
+      "freeResponseAnswer": "Răspuns liber"
+    },
+    "feedback": {
+      "correct": "Corect!",
+      "incorrect": "Incorect. Încearcă din nou."
+    }
+  },
+  "lesson": {
+    "objectives": "Obiective de învățare",
+    "practice": "Exerciții"
+  },
+  "drawing": {
+    "autoCheck": "Verificare automată",
+    "selfCheck": "Mod autoevaluare",
+    "markComplete": "Marchează ca finalizat",
+    "saved": "Desenul a fost salvat pentru recapitulare.",
+    "markedComplete": "Marcat ca finalizat prin autoevaluare.",
+    "selfCheckTitle": "Autoevaluare geometrie",
+    "rubric": {
+      "constraints": "Verifică constrângerile geometrice cerute în enunț.",
+      "compare": "Compară construcția ta cu metoda așteptată înainte de a marca finalizarea."
+    }
   }
 }
