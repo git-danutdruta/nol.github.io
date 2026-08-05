@@ -1,11 +1,17 @@
 {
   "id": "statistics-describing-data",
-  "title": "Describing Data and Distributions",
+  "title": {
+    "en": "Describing Data and Distributions",
+    "ro": "Descrierea Datelor și a Distribuțiilor"
+  },
   "description": "Summarize datasets using center and spread, then visualize distributions with common chart types.",
   "lessons": [
     {
       "id": "mean-median-mode",
-      "title": "Mean, Median, and Mode",
+      "title": {
+        "en": "Mean, Median, and Mode",
+        "ro": "Media, Mediana și Modul"
+      },
       "objectives": [
         "Compute mean, median, and mode for small datasets",
         "Choose an appropriate center measure for different data shapes"

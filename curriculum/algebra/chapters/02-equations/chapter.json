@@ -1,12 +1,17 @@
 {
   "id": "algebra-equations",
-  "title": "Equations",
+  "title": {
+    "en": "Equations",
+    "ro": "Ecuații"
+  },
   "description": "Solve linear equations and inequalities using inverse operations.",
   "lessons": [
     {
       "id": "one-step-equations",
       "title": "One-Step Equations",
-      "objectives": ["Solve one-step equations using inverse operations"],
+      "objectives": [
+        "Solve one-step equations using inverse operations"
+      ],
       "pedagogy": [
         {
           "type": "strategy",
@@ -29,7 +34,9 @@
           "id": "solve-addition-equation",
           "type": "numeric",
           "question": "Solve $x + 8 = 15$.",
-          "hints": ["Subtract 8 from both sides."],
+          "hints": [
+            "Subtract 8 from both sides."
+          ],
           "answer": 7,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -39,7 +46,9 @@
           "id": "solve-division-equation",
           "type": "numeric",
           "question": "Solve $\\frac{x}{4} = 6$.",
-          "hints": ["Multiply both sides by 4."],
+          "hints": [
+            "Multiply both sides by 4."
+          ],
           "answer": 24,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -50,7 +59,9 @@
     {
       "id": "two-step-equations",
       "title": "Two-Step Equations",
-      "objectives": ["Solve two-step equations"],
+      "objectives": [
+        "Solve two-step equations"
+      ],
       "pedagogy": [
         {
           "type": "strategy",
@@ -73,7 +84,10 @@
           "id": "solve-two-step",
           "type": "numeric",
           "question": "Solve $3x - 4 = 11$.",
-          "hints": ["Add 4 to both sides.", "Divide both sides by 3."],
+          "hints": [
+            "Add 4 to both sides.",
+            "Divide both sides by 3."
+          ],
           "answer": 5,
           "validation": "numeric",
           "maxAttempts": 3,
@@ -84,7 +98,9 @@
     {
       "id": "equations-with-variables-both-sides",
       "title": "Variables on Both Sides",
-      "objectives": ["Solve equations with variables on both sides"],
+      "objectives": [
+        "Solve equations with variables on both sides"
+      ],
       "pedagogy": [
         {
           "type": "pitfall",

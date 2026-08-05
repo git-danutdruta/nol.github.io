@@ -1,6 +1,9 @@
 {
   "id": "statistics-probability-hypothesis-basics",
-  "title": "Probability and Hypothesis Basics",
+  "title": {
+    "en": "Probability and Hypothesis Basics",
+    "ro": "Bazele Probabilității și Ipotezelor"
+  },
   "description": "Model chance events with sample spaces and tree diagrams, then interpret simple evidence for claims.",
   "lessons": [
     {
@@ -55,7 +58,12 @@
           "id": "theoretical-probability-mcq",
           "type": "multiple-choice",
           "question": "A bag has 2 red, 3 blue, and 5 green marbles. What is P(blue)?",
-          "options": ["3/10", "1/2", "3/5", "2/10"],
+          "options": [
+            "3/10",
+            "1/2",
+            "3/5",
+            "2/10"
+          ],
           "correctOptionIndex": 0,
           "validation": "exact",
           "maxAttempts": 3,

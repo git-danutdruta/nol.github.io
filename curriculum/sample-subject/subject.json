@@ -1,6 +1,14 @@
 {
   "id": "sample",
-  "title": "Sample Subject",
-  "description": "A minimal example subject demonstrating the curriculum schema.",
-  "chapters": ["chapters/01-basics/chapter.json"]
+  "title": {
+    "en": "Sample Subject",
+    "ro": "Materie Exemplu"
+  },
+  "description": {
+    "en": "A minimal example subject demonstrating the curriculum schema.",
+    "ro": "O materie exemplu minimală care demonstrează schema curriculară."
+  },
+  "chapters": [
+    "chapters/01-basics/chapter.json"
+  ]
 }

@@ -1,11 +1,20 @@
 {
   "id": "calculus-limits-derivatives",
-  "title": "Limits and Derivatives",
-  "description": "Build intuition for approaching values and interpreting derivatives as rates of change.",
+  "title": {
+    "en": "Limits and Derivatives",
+    "ro": "Limite și Derivative"
+  },
+  "description": {
+    "en": "Build intuition for approaching values and interpreting derivatives as rates of change.",
+    "ro": "Construiește intuiția pentru valori apropiate și interpretează derivatele ca rate de schimbare."
+  },
   "lessons": [
     {
       "id": "intro-to-limits",
-      "title": "Introduction to Limits",
+      "title": {
+        "en": "Introduction to Limits",
+        "ro": "Introducere în Limite"
+      },
       "objectives": [
         "Understand a limit as an approaching value",
         "Evaluate simple limits from tables and expressions"
@@ -102,7 +111,10 @@
           "id": "derivative-value-numeric",
           "type": "numeric",
           "question": "Given f(x)=x^2 and f'(x)=2x, what is f'(5)?",
-          "hints": ["Use the derivative formula f'(x)=2x.", "Substitute x=5."],
+          "hints": [
+            "Use the derivative formula f'(x)=2x.",
+            "Substitute x=5."
+          ],
           "answer": 10,
           "validation": "numeric",
           "maxAttempts": 3,

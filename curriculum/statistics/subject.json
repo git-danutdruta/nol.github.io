@@ -1,7 +1,13 @@
 {
   "id": "statistics",
-  "title": "Statistics",
-  "description": "Learn to summarize data with mean, median, mode, and visualize distributions.",
+  "title": {
+    "en": "Statistics",
+    "ro": "Statistică"
+  },
+  "description": {
+    "en": "Learn to summarize data with mean, median, mode, and visualize distributions.",
+    "ro": "Învață să rezumi date cu media, mediana, modul și să vizualizezi distribuții."
+  },
   "chapters": [
     "chapters/01-describing-data/chapter.json",
     "chapters/02-probability-hypothesis-basics/chapter.json"

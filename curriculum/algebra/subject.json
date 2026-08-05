@@ -1,7 +1,13 @@
 {
   "id": "algebra",
-  "title": "Algebra",
-  "description": "Learn to use variables, solve equations, and reason with symbols.",
+  "title": {
+    "en": "Algebra",
+    "ro": "Algebră"
+  },
+  "description": {
+    "en": "Learn to use variables, solve equations, and reason with symbols.",
+    "ro": "Învață să folosești variabile, să rezolvi ecuații și să raționezi cu simboluri."
+  },
   "chapters": [
     "chapters/01-expressions/chapter.json",
     "chapters/02-equations/chapter.json",

@@ -1,6 +1,9 @@
 {
   "id": "algebra-expressions",
-  "title": "Expressions",
+  "title": {
+    "en": "Expressions",
+    "ro": "Expresii"
+  },
   "description": "Write, simplify, and evaluate algebraic expressions.",
   "lessons": [
     {
@@ -32,7 +35,9 @@
           "id": "translate-sum",
           "type": "expression",
           "question": "Write an expression for 'a number $n$ increased by 7'.",
-          "hints": ["'Increased by' means addition."],
+          "hints": [
+            "'Increased by' means addition."
+          ],
           "answer": "n+7",
           "validation": "expression",
           "maxAttempts": 3,
@@ -42,7 +47,9 @@
           "id": "translate-product",
           "type": "expression",
           "question": "Write an expression for 'the product of 4 and a number $x$'.",
-          "hints": ["'Product' means multiplication."],
+          "hints": [
+            "'Product' means multiplication."
+          ],
           "answer": "4x",
           "validation": "expression",
           "maxAttempts": 3,
@@ -52,12 +59,24 @@
     },
     {
       "id": "simplify-expressions",
-      "title": "Simplifying Expressions",
-      "objectives": ["Combine like terms", "Use the distributive property"],
+      "title": {
+        "en": "Simplifying Expressions",
+        "ro": "Simplificarea Expresiilor"
+      },
+      "objectives": [
+        {
+          "en": "Combine like terms",
+          "ro": "Combină termenii asemenea"
+        },
+        "Use the distributive property"
+      ],
       "pedagogy": [
         {
           "type": "strategy",
-          "title": "Combine like terms",
+          "title": {
+            "en": "Combine like terms",
+            "ro": "Combină termenii asemenea"
+          },
           "content": "Terms with the same variable part can be combined by adding their coefficients."
         }
       ],
@@ -76,7 +95,10 @@
           "id": "combine-like-terms",
           "type": "expression",
           "question": "Simplify $2x + 3y + 5x - y$.",
-          "hints": ["Combine the $x$ terms.", "Combine the $y$ terms."],
+          "hints": [
+            "Combine the $x$ terms.",
+            "Combine the $y$ terms."
+          ],
           "answer": "7x+2y",
           "validation": "expression",
           "maxAttempts": 3,
@@ -86,7 +108,9 @@
           "id": "distribute",
           "type": "expression",
           "question": "Simplify $3(x + 4)$.",
-          "hints": ["Multiply 3 by each term inside the parentheses."],
+          "hints": [
+            "Multiply 3 by each term inside the parentheses."
+          ],
           "answer": "3x+12",
           "validation": "expression",
           "maxAttempts": 3,
@@ -97,7 +121,9 @@
     {
       "id": "evaluate-expressions",
       "title": "Evaluating Expressions",
-      "objectives": ["Substitute values into expressions and simplify"],
+      "objectives": [
+        "Substitute values into expressions and simplify"
+      ],
       "pedagogy": [
         {
           "type": "trick",
@@ -120,7 +146,10 @@
           "id": "evaluate-linear",
           "type": "numeric",
           "question": "Evaluate $2x + 5$ when $x = 3$.",
-          "hints": ["Substitute 3 for $x$.", "Calculate $2(3) + 5$."],
+          "hints": [
+            "Substitute 3 for $x$.",
+            "Calculate $2(3) + 5$."
+          ],
           "answer": 11,
           "validation": "numeric",
           "maxAttempts": 3,
