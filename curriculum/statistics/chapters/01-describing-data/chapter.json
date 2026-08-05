@@ -4,7 +4,10 @@
     "en": "Describing Data and Distributions",
     "ro": "Descrierea Datelor și a Distribuțiilor"
   },
-  "description": "Summarize datasets using center and spread, then visualize distributions with common chart types.",
+  "description": {
+    "en": "Summarize datasets using center and spread, then visualize distributions with common chart types.",
+    "ro": "Rezumă seturi de date folosind centrul și dispersia, apoi vizualizează distribuțiile cu tipuri comune de grafice."
+  },
   "lessons": [
     {
       "id": "mean-median-mode",
@@ -13,25 +16,46 @@
         "ro": "Media, Mediana și Modul"
       },
       "objectives": [
-        "Compute mean, median, and mode for small datasets",
-        "Choose an appropriate center measure for different data shapes"
+        {
+          "en": "Compute mean, median, and mode for small datasets",
+          "ro": "Calculează media, mediana și modul pentru seturi mici de date"
+        },
+        {
+          "en": "Choose an appropriate center measure for different data shapes",
+          "ro": "Alege o măsură adecvată a centrului pentru diferite forme de date"
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Sort first for median",
-          "content": "Always sort the numbers before finding the median."
+          "title": {
+            "en": "Sort first for median",
+            "ro": "Ordonează mai întâi pentru mediană"
+          },
+          "content": {
+            "en": "Always sort the numbers before finding the median.",
+            "ro": "Ordonează întotdeauna numerele înainte de a găsi mediana."
+          }
         },
         {
           "type": "strategy",
-          "title": "Check for outliers",
-          "content": "If one value is very extreme, median may represent the center better than mean."
+          "title": {
+            "en": "Check for outliers",
+            "ro": "Verifică valorile extreme"
+          },
+          "content": {
+            "en": "If one value is very extreme, median may represent the center better than mean.",
+            "ro": "Dacă o valoare este foarte extremă, mediana poate reprezenta centrul mai bine decât media."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "The mean is the average, the median is the middle value of sorted data, and the mode is the most frequent value."
+          "content": {
+            "en": "The mean is the average, the median is the middle value of sorted data, and the mode is the most frequent value.",
+            "ro": "Media este media aritmetică, mediana este valoarea din mijloc a datelor ordonate, iar modul este valoarea cea mai frecventă."
+          }
         },
         {
           "type": "math",
@@ -39,60 +63,105 @@
         },
         {
           "type": "example",
-          "content": "For 2, 4, 4, 8: mean=4.5, median=4, mode=4."
+          "content": {
+            "en": "For 2, 4, 4, 8: mean=4.5, median=4, mode=4.",
+            "ro": "Pentru 2, 4, 4, 8: media=4,5, mediana=4, modul=4."
+          }
         }
       ],
       "exercises": [
         {
           "id": "mean-calc-1",
           "type": "numeric",
-          "question": "Find the mean of 3, 5, 7, 9.",
+          "question": {
+            "en": "Find the mean of 3, 5, 7, 9.",
+            "ro": "Găsește media lui 3, 5, 7, 9."
+          },
           "hints": [
-            "Add all values first.",
-            "Divide by the number of values (4)."
+            {
+              "en": "Add all values first.",
+              "ro": "Adună toate valorile mai întâi."
+            },
+            {
+              "en": "Divide by the number of values (4).",
+              "ro": "Împarte la numărul de valori (4)."
+            }
           ],
           "answer": 6,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "(3+5+7+9)/4 = 24/4 = 6."
+          "solution": {
+            "en": "(3+5+7+9)/4 = 24/4 = 6.",
+            "ro": "(3+5+7+9)/4 = 24/4 = 6."
+          }
         },
         {
           "id": "median-self-check",
           "type": "free-response",
           "question": "Compute the median of 12, 4, 8, 20, 16 and explain your steps.",
           "hints": [
-            "Sort the values first.",
+            {
+              "en": "Sort the values first.",
+              "ro": "Ordonează valorile mai întâi."
+            },
             "Pick the middle value after sorting."
           ],
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check: sorted data is 4, 8, 12, 16, 20 so the median is 12."
+          "solution": {
+            "en": "Self-check: sorted data is 4, 8, 12, 16, 20 so the median is 12.",
+            "ro": "Autoverificare: datele ordonate sunt 4, 8, 12, 16, 20, deci mediana este 12."
+          }
         }
       ]
     },
     {
       "id": "range-and-frequency-displays",
-      "title": "Range and Frequency Displays",
+      "title": {
+        "en": "Range and Frequency Displays",
+        "ro": "Domeniul și Reprezentările de Frecvență"
+      },
       "objectives": [
-        "Compute range as a measure of spread",
-        "Interpret bar charts and simple frequency tables"
+        {
+          "en": "Compute range as a measure of spread",
+          "ro": "Calculează domeniul ca măsură a dispersiei"
+        },
+        {
+          "en": "Interpret bar charts and simple frequency tables",
+          "ro": "Interpretează diagrame cu bare și tabele simple de frecvență"
+        }
       ],
       "pedagogy": [
         {
           "type": "mnemonic",
-          "title": "Range = max minus min",
-          "content": "Range is the largest value minus the smallest value."
+          "title": {
+            "en": "Range = max minus min",
+            "ro": "Domeniul = max minus min"
+          },
+          "content": {
+            "en": "Range is the largest value minus the smallest value.",
+            "ro": "Domeniul este cea mai mare valoare minus cea mai mică valoare."
+          }
         },
         {
           "type": "pitfall",
-          "title": "Axis labels matter",
-          "content": "Always check chart axes and category labels before drawing conclusions."
+          "title": {
+            "en": "Axis labels matter",
+            "ro": "Etichetele axelor contează"
+          },
+          "content": {
+            "en": "Always check chart axes and category labels before drawing conclusions.",
+            "ro": "Verifică întotdeauna axele graficului și etichetele categoriilor înainte de a trage concluzii."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Spread shows how far data values vary. The range is a quick spread measure. Frequency tables and bar charts help summarize categorical counts."
+          "content": {
+            "en": "Spread shows how far data values vary. The range is a quick spread measure. Frequency tables and bar charts help summarize categorical counts.",
+            "ro": "Dispersia arată cât de mult variază valorile datelor. Domeniul este o măsură rapidă a dispersiei. Tabelele de frecvență și diagramele cu bare ajută la rezumarea categoriilor."
+          }
         },
         {
           "type": "example",
@@ -100,7 +169,10 @@
         },
         {
           "type": "drawing",
-          "prompt": "Sketch a bar chart for study hours: Mon=1, Tue=2, Wed=2, Thu=3, Fri=1.",
+          "prompt": {
+            "en": "Sketch a bar chart for study hours: Mon=1, Tue=2, Wed=2, Thu=3, Fri=1.",
+            "ro": "Schițează o diagramă cu bare pentru orele de studiu: Luni=1, Marți=2, Miercuri=2, Joi=3, Vineri=1."
+          },
           "mode": "freehand"
         }
       ],
@@ -108,86 +180,158 @@
         {
           "id": "range-calc",
           "type": "numeric",
-          "question": "Find the range of 14, 9, 21, 11, 18.",
+          "question": {
+            "en": "Find the range of 14, 9, 21, 11, 18.",
+            "ro": "Găsește domeniul lui 14, 9, 21, 11, 18."
+          },
           "hints": [
-            "Identify the largest and smallest values.",
+            {
+              "en": "Identify the largest and smallest values.",
+              "ro": "Identifică cele mai mari și cele mai mici valori."
+            },
             "Subtract smallest from largest."
           ],
           "answer": 12,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "max=21, min=9, so range=21-9=12."
+          "solution": {
+            "en": "max=21, min=9, so range=21-9=12.",
+            "ro": "max=21, min=9, deci domeniul=21-9=12."
+          }
         },
         {
           "id": "bar-chart-self-check",
           "type": "drawing",
-          "question": "Draw a bar chart for pets owned by five students: 0, 1, 1, 2, 3. Label axes.",
+          "question": {
+            "en": "Draw a bar chart for pets owned by five students: 0, 1, 1, 2, 3. Label axes.",
+            "ro": "Desenează o diagramă cu bare pentru animalele de companie ale a cinci elevi: 0, 1, 1, 2, 3. Etichetează axele."
+          },
           "hints": [
-            "x-axis: number of pets categories.",
-            "y-axis: frequency (how many students)."
+            {
+              "en": "x-axis: number of pets categories.",
+              "ro": "axa x: categoriile numărului de animale."
+            },
+            {
+              "en": "y-axis: frequency (how many students).",
+              "ro": "axa y: frecvența (câți elevi)."
+            }
           ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check: bars should show frequencies: 0->1, 1->2, 2->1, 3->1 with labeled axes."
+          "solution": {
+            "en": "Self-check: bars should show frequencies: 0->1, 1->2, 2->1, 3->1 with labeled axes.",
+            "ro": "Autoverificare: barele ar trebui să arate frecvențele: 0->1, 1->2, 2->1, 3->1 cu axele etichetate."
+          }
         }
       ]
     },
     {
       "id": "histograms-and-box-plots",
-      "title": "Histograms and Box Plots",
+      "title": {
+        "en": "Histograms and Box Plots",
+        "ro": "Histograme și Diagrame Cutie"
+      },
       "objectives": [
-        "Build a histogram from grouped numerical data",
-        "Use the five-number summary to draw and read a box plot"
+        {
+          "en": "Build a histogram from grouped numerical data",
+          "ro": "Construiește o histogramă din date numerice grupate"
+        },
+        {
+          "en": "Use the five-number summary to draw and read a box plot",
+          "ro": "Folosește rezumatul celor cinci numere pentru a desena și citi o diagramă cutie"
+        }
       ],
       "pedagogy": [
         {
           "type": "strategy",
-          "title": "Group values consistently",
-          "content": "Use equal-width intervals for histogram bins so bar heights are comparable."
+          "title": {
+            "en": "Group values consistently",
+            "ro": "Grupează valorile consistent"
+          },
+          "content": {
+            "en": "Use equal-width intervals for histogram bins so bar heights are comparable.",
+            "ro": "Folosește intervale de lățime egală pentru barele histogramei, astfel încât înălțimile să fie comparabile."
+          }
         },
         {
           "type": "tip",
-          "title": "Five-number summary first",
-          "content": "Find minimum, Q1, median, Q3, and maximum before drawing a box plot."
+          "title": {
+            "en": "Five-number summary first",
+            "ro": "Mai întâi rezumatul celor cinci numere"
+          },
+          "content": {
+            "en": "Find minimum, Q1, median, Q3, and maximum before drawing a box plot.",
+            "ro": "Găsește minimul, Q1, mediana, Q3 și maximul înainte de a desena o diagramă cutie."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "A histogram shows how numeric data is distributed across value intervals. A box plot compresses distribution into the five-number summary."
+          "content": {
+            "en": "A histogram shows how numeric data is distributed across value intervals. A box plot compresses distribution into the five-number summary.",
+            "ro": "O histogramă arată cum sunt distribuite datele numerice pe intervale de valori. O diagramă cutie comprimă distribuția în rezumatul celor cinci numere."
+          }
         },
         {
           "type": "example",
-          "content": "Scores 52, 55, 57, 60, 61, 64, 66, 70, 72, 75 can be grouped into bins 50-59, 60-69, 70-79 for a histogram."
+          "content": {
+            "en": "Scores 52, 55, 57, 60, 61, 64, 66, 70, 72, 75 can be grouped into bins 50-59, 60-69, 70-79 for a histogram.",
+            "ro": "Scorurile 52, 55, 57, 60, 61, 64, 66, 70, 72, 75 pot fi grupate în intervale 50-59, 60-69, 70-79 pentru o histogramă."
+          }
         }
       ],
       "exercises": [
         {
           "id": "histogram-drawing-self-check",
           "type": "drawing",
-          "question": "Draw a histogram for quiz scores: 51, 55, 57, 58, 62, 64, 65, 68, 72, 74 using bins 50-59, 60-69, 70-79.",
+          "question": {
+            "en": "Draw a histogram for quiz scores: 51, 55, 57, 58, 62, 64, 65, 68, 72, 74 using bins 50-59, 60-69, 70-79.",
+            "ro": "Desenează o histogramă pentru scorurile testului: 51, 55, 57, 58, 62, 64, 65, 68, 72, 74 folosind intervalele 50-59, 60-69, 70-79."
+          },
           "hints": [
-            "Count how many values land in each bin.",
-            "Label both axes and bin boundaries."
+            {
+              "en": "Count how many values land in each bin.",
+              "ro": "Numără câte valori cad în fiecare interval."
+            },
+            {
+              "en": "Label both axes and bin boundaries.",
+              "ro": "Etichetează ambele axe și limitele intervalelor."
+            }
           ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check frequencies: 50-59 -> 4, 60-69 -> 4, 70-79 -> 2."
+          "solution": {
+            "en": "Self-check frequencies: 50-59 -> 4, 60-69 -> 4, 70-79 -> 2.",
+            "ro": "Autoverificare frecvențe: 50-59 -> 4, 60-69 -> 4, 70-79 -> 2."
+          }
         },
         {
           "id": "box-plot-drawing-self-check",
           "type": "drawing",
-          "question": "Use data 4, 6, 7, 9, 11, 13, 15, 18, 20 to draw a box plot.",
+          "question": {
+            "en": "Use data 4, 6, 7, 9, 11, 13, 15, 18, 20 to draw a box plot.",
+            "ro": "Folosește datele 4, 6, 7, 9, 11, 13, 15, 18, 20 pentru a desena o diagramă cutie."
+          },
           "hints": [
-            "Median is the middle value.",
-            "Find Q1 and Q3 from lower and upper halves."
+            {
+              "en": "Median is the middle value.",
+              "ro": "Mediana este valoarea din mijloc."
+            },
+            {
+              "en": "Find Q1 and Q3 from lower and upper halves.",
+              "ro": "Găsește Q1 și Q3 din jumătățile inferioară și superioară."
+            }
           ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check: min=4, Q1=6.5, median=11, Q3=16.5, max=20."
+          "solution": {
+            "en": "Self-check: min=4, Q1=6.5, median=11, Q3=16.5, max=20.",
+            "ro": "Autoverificare: min=4, Q1=6,5, mediana=11, Q3=16,5, max=20."
+          }
         }
       ]
     }

@@ -4,26 +4,47 @@
     "en": "Functions and Graphing",
     "ro": "Funcții și Reprezentare Grafică"
   },
-  "description": "Explore functions, coordinate planes, and linear graphs.",
+  "description": {
+    "en": "Explore functions, coordinate planes, and linear graphs.",
+    "ro": "Explorează funcții, planuri de coordonate și grafice liniare."
+  },
   "lessons": [
     {
       "id": "coordinate-plane",
-      "title": "The Coordinate Plane",
+      "title": {
+        "en": "The Coordinate Plane",
+        "ro": "Planul de Coordonate"
+      },
       "objectives": [
-        "Plot points using ordered pairs",
-        "Identify quadrants"
+        {
+          "en": "Plot points using ordered pairs",
+          "ro": "Reprezintă puncte folosind perechi ordonate"
+        },
+        {
+          "en": "Identify quadrants",
+          "ro": "Identifică cadranele"
+        }
       ],
       "pedagogy": [
         {
           "type": "mnemonic",
-          "title": "Quadrants",
-          "content": "Counter-clockwise from the top right: All, Silver, Teacups, Dance. All positive, then negative x, then both negative, then negative y."
+          "title": {
+            "en": "Quadrants",
+            "ro": "Cadrane"
+          },
+          "content": {
+            "en": "Counter-clockwise from the top right: All, Silver, Teacups, Dance. All positive, then negative x, then both negative, then negative y.",
+            "ro": "În sens invers acelor de ceasornic de sus-dreapta: toate pozitive, apoi x negativ, apoi ambele negative, apoi y negativ."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "A coordinate plane has a horizontal x-axis and a vertical y-axis. An ordered pair $(x, y)$ tells you how far to move right and up."
+          "content": {
+            "en": "A coordinate plane has a horizontal x-axis and a vertical y-axis. An ordered pair $(x, y)$ tells you how far to move right and up.",
+            "ro": "Un plan de coordonate are o axă x orizontală și o axă y verticală. O pereche ordonată $(x, y)$ îți spune cât de mult să te deplasezi la dreapta și în sus."
+          }
         },
         {
           "type": "math",
@@ -34,40 +55,79 @@
         {
           "id": "plot-point",
           "type": "drawing",
-          "question": "Plot the point $(2, 3)$ on the coordinate plane.",
+          "question": {
+            "en": "Plot the point $(2, 3)$ on the coordinate plane.",
+            "ro": "Reprezintă punctul $(2, 3)$ pe planul de coordonate."
+          },
           "hints": [
-            "Start at the origin.",
-            "Move 2 units right and 3 units up."
+            {
+              "en": "Start at the origin.",
+              "ro": "Începe din origine."
+            },
+            {
+              "en": "Move 2 units right and 3 units up.",
+              "ro": "Deplasează-te 2 unități la dreapta și 3 în sus."
+            }
           ],
           "drawingMode": "graph",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "A point at (2, 3) in the first quadrant."
+          "solution": {
+            "en": "A point at (2, 3) in the first quadrant.",
+            "ro": "Un punct la (2, 3) în primul cadran."
+          }
         },
         {
           "id": "identify-quadrant",
           "type": "multiple-choice",
-          "question": "In which quadrant is the point $(-4, 5)$?",
+          "question": {
+            "en": "In which quadrant is the point $(-4, 5)$?",
+            "ro": "În ce cadran este punctul $(-4, 5)$?"
+          },
           "hints": [
-            "The x-coordinate is negative and the y-coordinate is positive."
+            {
+              "en": "The x-coordinate is negative and the y-coordinate is positive.",
+              "ro": "Coordonata x este negativă și coordonata y este pozitivă."
+            }
           ],
           "options": [
-            "I",
-            "II",
-            "III",
-            "IV"
+            {
+              "en": "I",
+              "ro": "I"
+            },
+            {
+              "en": "II",
+              "ro": "II"
+            },
+            {
+              "en": "III",
+              "ro": "III"
+            },
+            {
+              "en": "IV",
+              "ro": "IV"
+            }
           ],
           "correctOptionIndex": 1,
           "maxAttempts": 3,
-          "solution": "Negative x and positive y is quadrant II."
+          "solution": {
+            "en": "Negative x and positive y is quadrant II.",
+            "ro": "x negativ și y pozitiv este cadranul II."
+          }
         }
       ]
     },
     {
       "id": "linear-functions",
-      "title": "Linear Functions",
+      "title": {
+        "en": "Linear Functions",
+        "ro": "Funcții Liniare"
+      },
       "objectives": [
-        "Evaluate linear functions",
+        {
+          "en": "Evaluate linear functions",
+          "ro": "Evaluează funcții liniare"
+        },
         {
           "en": "Identify slope and y-intercept",
           "ro": "Identifică panta și ordonata la origine"
@@ -76,14 +136,20 @@
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Slope-intercept form",
+          "title": {
+            "en": "Slope-intercept form",
+            "ro": "Forma panta-ordonată la origine"
+          },
           "content": "$y = mx + b$ gives the slope $m$ and the y-intercept $b$."
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "A linear function has a constant rate of change called slope. Its graph is a straight line."
+          "content": {
+            "en": "A linear function has a constant rate of change called slope. Its graph is a straight line.",
+            "ro": "O funcție liniară are o rată constantă de schimbare numită pantă. Graficul ei este o dreaptă."
+          }
         },
         {
           "type": "math",
@@ -94,9 +160,15 @@
         {
           "id": "evaluate-linear-function",
           "type": "numeric",
-          "question": "If $f(x) = 2x + 1$, what is $f(4)$?",
+          "question": {
+            "en": "If $f(x) = 2x + 1$, what is $f(4)$?",
+            "ro": "Dacă $f(x) = 2x + 1$, cât este $f(4)$?"
+          },
           "hints": [
-            "Substitute 4 for $x$."
+            {
+              "en": "Substitute 4 for $x$.",
+              "ro": "Înlocuiește pe $x$ cu 4."
+            }
           ],
           "answer": 9,
           "validation": "numeric",
@@ -106,36 +178,66 @@
         {
           "id": "graph-linear",
           "type": "drawing",
-          "question": "Graph the line $y = x + 2$.",
+          "question": {
+            "en": "Graph the line $y = x + 2$.",
+            "ro": "Reprezintă grafic dreapta $y = x + 2$."
+          },
           "hints": [
-            "The y-intercept is 2.",
-            "The slope is 1, so rise 1 and run 1."
+            {
+              "en": "The y-intercept is 2.",
+              "ro": "Ordonata la origine este 2."
+            },
+            {
+              "en": "The slope is 1, so rise 1 and run 1.",
+              "ro": "Panta este 1, deci crește 1 și merge 1."
+            }
           ],
           "drawingMode": "graph",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "A line passing through (0, 2) and (1, 3)."
+          "solution": {
+            "en": "A line passing through (0, 2) and (1, 3).",
+            "ro": "O dreaptă care trece prin (0, 2) și (1, 3)."
+          }
         }
       ]
     },
     {
       "id": "slope",
-      "title": "Slope of a Line",
+      "title": {
+        "en": "Slope of a Line",
+        "ro": "Panta unei Drepte"
+      },
       "objectives": [
-        "Calculate slope from two points",
-        "Interpret slope as rate of change"
+        {
+          "en": "Calculate slope from two points",
+          "ro": "Calculează panta din două puncte"
+        },
+        {
+          "en": "Interpret slope as rate of change",
+          "ro": "Interpretează panta ca rată de schimbare"
+        }
       ],
       "pedagogy": [
         {
           "type": "mnemonic",
-          "title": "Rise over run",
-          "content": "Slope is rise over run: $m = \\frac{\\Delta y}{\\Delta x}$."
+          "title": {
+            "en": "Rise over run",
+            "ro": "Creștere pe orizontală"
+          },
+          "content": {
+            "en": "Slope is rise over run: $m = \\frac{\\Delta y}{\\Delta x}$.",
+            "ro": "Panta este creșterea pe orizontală: $m = \\frac{\\Delta y}{\\Delta x}$."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Slope measures steepness. It is the ratio of vertical change to horizontal change between two points."
+          "content": {
+            "en": "Slope measures steepness. It is the ratio of vertical change to horizontal change between two points.",
+            "ro": "Panta măsoară înclinarea. Este raportul dintre schimbarea verticală și schimbarea orizontală dintre două puncte."
+          }
         },
         {
           "type": "math",
@@ -146,12 +248,24 @@
         {
           "id": "calculate-slope",
           "type": "expression",
-          "question": "Find the slope between $(1, 2)$ and $(3, 8)$.",
+          "question": {
+            "en": "Find the slope between $(1, 2)$ and $(3, 8)$.",
+            "ro": "Găsește panta dintre $(1, 2)$ și $(3, 8)$."
+          },
           "hints": [
-            "Rise is $8 - 2 = 6$.",
-            "Run is $3 - 1 = 2$."
+            {
+              "en": "Rise is $8 - 2 = 6$.",
+              "ro": "Creșterea este $8 - 2 = 6$."
+            },
+            {
+              "en": "Run is $3 - 1 = 2$.",
+              "ro": "Deplasarea este $3 - 1 = 2$."
+            }
           ],
-          "answer": "3",
+          "answer": {
+            "en": "3",
+            "ro": "3"
+          },
           "validation": "expression",
           "maxAttempts": 3,
           "solution": "$m = \\frac{8 - 2}{3 - 1} = \\frac{6}{2} = 3$."
@@ -159,15 +273,27 @@
         {
           "id": "graph-slope",
           "type": "drawing",
-          "question": "Graph a line with slope $-2$ passing through $(0, 1)$.",
+          "question": {
+            "en": "Graph a line with slope $-2$ passing through $(0, 1)$.",
+            "ro": "Reprezintă grafic o dreaptă cu panta $-2$ care trece prin $(0, 1)$."
+          },
           "hints": [
-            "Start at (0, 1).",
-            "Move right 1 and down 2 to find another point."
+            {
+              "en": "Start at (0, 1).",
+              "ro": "Începe în (0, 1)."
+            },
+            {
+              "en": "Move right 1 and down 2 to find another point.",
+              "ro": "Mergi 1 la dreapta și 2 în jos pentru a găsi alt punct."
+            }
           ],
           "drawingMode": "graph",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "A line through (0, 1) and (1, -1)."
+          "solution": {
+            "en": "A line through (0, 1) and (1, -1).",
+            "ro": "O dreaptă prin (0, 1) și (1, -1)."
+          }
         }
       ]
     }

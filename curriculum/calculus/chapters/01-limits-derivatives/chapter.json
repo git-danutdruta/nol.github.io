@@ -16,25 +16,46 @@
         "ro": "Introducere în Limite"
       },
       "objectives": [
-        "Understand a limit as an approaching value",
-        "Evaluate simple limits from tables and expressions"
+        {
+          "en": "Understand a limit as an approaching value",
+          "ro": "Înțelege o limită ca valoare apropiată"
+        },
+        {
+          "en": "Evaluate simple limits from tables and expressions",
+          "ro": "Evaluează limite simple din tabele și expresii"
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Approach, do not plug too fast",
-          "content": "For limits, first ask what values x approaches and what f(x) approaches, not only f(a)."
+          "title": {
+            "en": "Approach, do not plug too fast",
+            "ro": "Apropie-te, nu înlocui prea repede"
+          },
+          "content": {
+            "en": "For limits, first ask what values x approaches and what f(x) approaches, not only f(a).",
+            "ro": "Pentru limite, întreabă-te mai întâi ce valori aproape x și ce valori aproape f(x), nu doar f(a)."
+          }
         },
         {
           "type": "strategy",
-          "title": "Use nearby values",
-          "content": "If direct substitution is unclear, test x-values just below and above the target."
+          "title": {
+            "en": "Use nearby values",
+            "ro": "Folosește valori apropiate"
+          },
+          "content": {
+            "en": "If direct substitution is unclear, test x-values just below and above the target.",
+            "ro": "Dacă substituția directă este neclară, testează valori ale lui x chiar sub și deasupra țintei."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "A limit describes the value a function gets close to as x gets close to a number."
+          "content": {
+            "en": "A limit describes the value a function gets close to as x gets close to a number.",
+            "ro": "O limită descrie valoarea pe care o apropie o funcție pe măsură ce x se apropie de un număr."
+          }
         },
         {
           "type": "math",
@@ -42,60 +63,111 @@
         },
         {
           "type": "example",
-          "content": "As x approaches 3, the values of x+4 approach 7, so the limit is 7."
+          "content": {
+            "en": "As x approaches 3, the values of x+4 approach 7, so the limit is 7.",
+            "ro": "Pe măsură ce x se apropie de 3, valorile lui x+4 se apropie de 7, deci limita este 7."
+          }
         }
       ],
       "exercises": [
         {
           "id": "limit-basic-numeric",
           "type": "numeric",
-          "question": "Compute \\lim_{x \\to 4}(2x-1).",
+          "question": {
+            "en": "Compute \\lim_{x \\to 4}(2x-1).",
+            "ro": "Calculează \\lim_{x \\to 4}(2x-1)."
+          },
           "hints": [
-            "This is a polynomial expression, so direct substitution works.",
-            "Substitute x=4 into 2x-1."
+            {
+              "en": "This is a polynomial expression, so direct substitution works.",
+              "ro": "Aceasta este o expresie polinomială, deci substituția directă funcționează."
+            },
+            {
+              "en": "Substitute x=4 into 2x-1.",
+              "ro": "Înlocuiește x=4 în 2x-1."
+            }
           ],
           "answer": 7,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "2(4)-1=8-1=7."
+          "solution": {
+            "en": "2(4)-1=8-1=7.",
+            "ro": "2(4)-1=8-1=7."
+          }
         },
         {
           "id": "limit-self-check-free-response",
           "type": "free-response",
-          "question": "Explain in your own words what \\lim_{x \\to 5} f(x)=2 means.",
+          "question": {
+            "en": "Explain in your own words what \\lim_{x \\to 5} f(x)=2 means.",
+            "ro": "Explică cu cuvintele tale ce înseamnă \\lim_{x \\to 5} f(x)=2."
+          },
           "hints": [
-            "Use the phrase 'x gets close to 5'.",
-            "Describe what f(x) values do near x=5."
+            {
+              "en": "Use the phrase 'x gets close to 5'.",
+              "ro": "Folosește expresia 'x se apropie de 5'."
+            },
+            {
+              "en": "Describe what f(x) values do near x=5.",
+              "ro": "Descrie ce fac valorile f(x) în apropiere de x=5."
+            }
           ],
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check: as x gets close to 5 (from either side), f(x) gets close to 2."
+          "solution": {
+            "en": "Self-check: as x gets close to 5 (from either side), f(x) gets close to 2.",
+            "ro": "Autoverificare: pe măsură ce x se apropie de 5 (de orice parte), f(x) se apropie de 2."
+          }
         }
       ]
     },
     {
       "id": "derivative-as-rate",
-      "title": "Derivative as Rate of Change",
+      "title": {
+        "en": "Derivative as Rate of Change",
+        "ro": "Derivata ca Rată de Schimbare"
+      },
       "objectives": [
-        "Interpret derivatives as slopes/tangent rates",
-        "Estimate rate of change from simple expressions"
+        {
+          "en": "Interpret derivatives as slopes/tangent rates",
+          "ro": "Interpretează derivatele ca pante/rate ale tangentei"
+        },
+        {
+          "en": "Estimate rate of change from simple expressions",
+          "ro": "Estimează rata de schimbare din expresii simple"
+        }
       ],
       "pedagogy": [
         {
           "type": "mnemonic",
-          "title": "Derivative means how fast",
-          "content": "If position changes with time, the derivative tells how fast position changes now."
+          "title": {
+            "en": "Derivative means how fast",
+            "ro": "Derivata înseamnă cât de repede"
+          },
+          "content": {
+            "en": "If position changes with time, the derivative tells how fast position changes now.",
+            "ro": "Dacă poziția se schimbă în timp, derivata spune cât de repede se schimbă poziția acum."
+          }
         },
         {
           "type": "pitfall",
-          "title": "Average vs instantaneous",
-          "content": "Average rate uses two points. Derivative is the instantaneous rate at one point."
+          "title": {
+            "en": "Average vs instantaneous",
+            "ro": "Medie vs instantanee"
+          },
+          "content": {
+            "en": "Average rate uses two points. Derivative is the instantaneous rate at one point.",
+            "ro": "Rata medie folosește două puncte. Derivata este rata instantanee într-un punct."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "The derivative f'(x) gives the instantaneous rate of change of f with respect to x."
+          "content": {
+            "en": "The derivative f'(x) gives the instantaneous rate of change of f with respect to x.",
+            "ro": "Derivata f'(x) dă rata instantanee de schimbare a lui f în raport cu x."
+          }
         },
         {
           "type": "math",
@@ -103,35 +175,62 @@
         },
         {
           "type": "example",
-          "content": "If f(x)=x^2, then f'(x)=2x. At x=3, the rate is 6."
+          "content": {
+            "en": "If f(x)=x^2, then f'(x)=2x. At x=3, the rate is 6.",
+            "ro": "Dacă f(x)=x^2, atunci f'(x)=2x. În x=3, rata este 6."
+          }
         }
       ],
       "exercises": [
         {
           "id": "derivative-value-numeric",
           "type": "numeric",
-          "question": "Given f(x)=x^2 and f'(x)=2x, what is f'(5)?",
+          "question": {
+            "en": "Given f(x)=x^2 and f'(x)=2x, what is f'(5)?",
+            "ro": "Dându-se f(x)=x^2 și f'(x)=2x, cât este f'(5)?"
+          },
           "hints": [
-            "Use the derivative formula f'(x)=2x.",
-            "Substitute x=5."
+            {
+              "en": "Use the derivative formula f'(x)=2x.",
+              "ro": "Folosește formula derivatei f'(x)=2x."
+            },
+            {
+              "en": "Substitute x=5.",
+              "ro": "Înlocuiește x=5."
+            }
           ],
           "answer": 10,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "f'(5)=2*5=10."
+          "solution": {
+            "en": "f'(5)=2*5=10.",
+            "ro": "f'(5)=2*5=10."
+          }
         },
         {
           "id": "derivative-sketch-self-check",
           "type": "drawing",
-          "question": "Sketch y=x^2 and draw a tangent line near x=2. Describe whether slope is positive or negative.",
+          "question": {
+            "en": "Sketch y=x^2 and draw a tangent line near x=2. Describe whether slope is positive or negative.",
+            "ro": "Schițează y=x^2 și desenează o tangentă în apropiere de x=2. Descrie dacă panta este pozitivă sau negativă."
+          },
           "hints": [
-            "The parabola opens upward.",
-            "At x=2, the tangent should rise from left to right."
+            {
+              "en": "The parabola opens upward.",
+              "ro": "Parabola se deschide în sus."
+            },
+            {
+              "en": "At x=2, the tangent should rise from left to right.",
+              "ro": "În x=2, tangenta ar trebui să crească de la stânga la dreapta."
+            }
           ],
           "drawingMode": "graph",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check: tangent near x=2 should have positive slope (about 4)."
+          "solution": {
+            "en": "Self-check: tangent near x=2 should have positive slope (about 4).",
+            "ro": "Autoverificare: tangenta în apropiere de x=2 ar trebui să aibă pantă pozitivă (aproximativ 4)."
+          }
         }
       ]
     }

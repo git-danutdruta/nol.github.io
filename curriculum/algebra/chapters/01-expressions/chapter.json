@@ -4,26 +4,47 @@
     "en": "Expressions",
     "ro": "Expresii"
   },
-  "description": "Write, simplify, and evaluate algebraic expressions.",
+  "description": {
+    "en": "Write, simplify, and evaluate algebraic expressions.",
+    "ro": "Scrie, simplifică și evaluează expresii algebrice."
+  },
   "lessons": [
     {
       "id": "variables",
-      "title": "What is a Variable?",
+      "title": {
+        "en": "What is a Variable?",
+        "ro": "Ce este o Variabilă?"
+      },
       "objectives": [
-        "Understand variables as symbols for unknown values",
-        "Translate phrases into algebraic expressions"
+        {
+          "en": "Understand variables as symbols for unknown values",
+          "ro": "Înțelege variabilele ca simboluri pentru valori necunoscute"
+        },
+        {
+          "en": "Translate phrases into algebraic expressions",
+          "ro": "Traduce expresii în expresii algebrice"
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "A variable is a placeholder",
-          "content": "Think of a variable as a box that can hold any number."
+          "title": {
+            "en": "A variable is a placeholder",
+            "ro": "O variabilă este un substitut"
+          },
+          "content": {
+            "en": "Think of a variable as a box that can hold any number.",
+            "ro": "Gândește-te la o variabilă ca la o cutie care poate conține orice număr."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "A variable is a letter that represents an unknown or changing quantity. If $x$ stands for the number of apples, then $x + 5$ means 5 more apples."
+          "content": {
+            "en": "A variable is a letter that represents an unknown or changing quantity. If $x$ stands for the number of apples, then $x + 5$ means 5 more apples.",
+            "ro": "O variabilă este o literă care reprezintă o cantitate necunoscută sau care se schimbă. Dacă $x$ reprezintă numărul de mere, atunci $x + 5$ înseamnă cu 5 mere mai mult."
+          }
         },
         {
           "type": "math",
@@ -34,9 +55,15 @@
         {
           "id": "translate-sum",
           "type": "expression",
-          "question": "Write an expression for 'a number $n$ increased by 7'.",
+          "question": {
+            "en": "Write an expression for 'a number $n$ increased by 7'.",
+            "ro": "Scrie o expresie pentru 'un număr $n$ mărit cu 7'."
+          },
           "hints": [
-            "'Increased by' means addition."
+            {
+              "en": "'Increased by' means addition.",
+              "ro": "'Mărit cu' înseamnă adunare."
+            }
           ],
           "answer": "n+7",
           "validation": "expression",
@@ -46,9 +73,15 @@
         {
           "id": "translate-product",
           "type": "expression",
-          "question": "Write an expression for 'the product of 4 and a number $x$'.",
+          "question": {
+            "en": "Write an expression for 'the product of 4 and a number $x$'.",
+            "ro": "Scrie o expresie pentru 'produsul dintre 4 și un număr $x$'."
+          },
           "hints": [
-            "'Product' means multiplication."
+            {
+              "en": "'Product' means multiplication.",
+              "ro": "'Produs' înseamnă înmulțire."
+            }
           ],
           "answer": "4x",
           "validation": "expression",
@@ -68,7 +101,10 @@
           "en": "Combine like terms",
           "ro": "Combină termenii asemenea"
         },
-        "Use the distributive property"
+        {
+          "en": "Use the distributive property",
+          "ro": "Folosește proprietatea de distributivitate"
+        }
       ],
       "pedagogy": [
         {
@@ -77,13 +113,19 @@
             "en": "Combine like terms",
             "ro": "Combină termenii asemenea"
           },
-          "content": "Terms with the same variable part can be combined by adding their coefficients."
+          "content": {
+            "en": "Terms with the same variable part can be combined by adding their coefficients.",
+            "ro": "Termenii cu aceeași parte variabilă pot fi combinați adunând coeficienții."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Like terms have the same variable raised to the same power. $3x$ and $5x$ are like terms; $3x$ and $3x^2$ are not."
+          "content": {
+            "en": "Like terms have the same variable raised to the same power. $3x$ and $5x$ are like terms; $3x$ and $3x^2$ are not.",
+            "ro": "Termenii asemenea au aceeași variabilă ridicată la aceeași putere. $3x$ și $5x$ sunt termeni asemenea; $3x$ și $3x^2$ nu sunt."
+          }
         },
         {
           "type": "math",
@@ -94,10 +136,19 @@
         {
           "id": "combine-like-terms",
           "type": "expression",
-          "question": "Simplify $2x + 3y + 5x - y$.",
+          "question": {
+            "en": "Simplify $2x + 3y + 5x - y$.",
+            "ro": "Simplifică $2x + 3y + 5x - y$."
+          },
           "hints": [
-            "Combine the $x$ terms.",
-            "Combine the $y$ terms."
+            {
+              "en": "Combine the $x$ terms.",
+              "ro": "Combină termenii cu $x$."
+            },
+            {
+              "en": "Combine the $y$ terms.",
+              "ro": "Combină termenii cu $y$."
+            }
           ],
           "answer": "7x+2y",
           "validation": "expression",
@@ -107,9 +158,15 @@
         {
           "id": "distribute",
           "type": "expression",
-          "question": "Simplify $3(x + 4)$.",
+          "question": {
+            "en": "Simplify $3(x + 4)$.",
+            "ro": "Simplifică $3(x + 4)$."
+          },
           "hints": [
-            "Multiply 3 by each term inside the parentheses."
+            {
+              "en": "Multiply 3 by each term inside the parentheses.",
+              "ro": "Înmulțește pe 3 cu fiecare termen din paranteză."
+            }
           ],
           "answer": "3x+12",
           "validation": "expression",
@@ -120,21 +177,36 @@
     },
     {
       "id": "evaluate-expressions",
-      "title": "Evaluating Expressions",
+      "title": {
+        "en": "Evaluating Expressions",
+        "ro": "Evaluarea Expresiilor"
+      },
       "objectives": [
-        "Substitute values into expressions and simplify"
+        {
+          "en": "Substitute values into expressions and simplify",
+          "ro": "Înlocuiește valori în expresii și simplifică"
+        }
       ],
       "pedagogy": [
         {
           "type": "trick",
-          "title": "Use parentheses",
-          "content": "When substituting a negative number or a fraction, use parentheses to avoid sign errors."
+          "title": {
+            "en": "Use parentheses",
+            "ro": "Folosește paranteze"
+          },
+          "content": {
+            "en": "When substituting a negative number or a fraction, use parentheses to avoid sign errors.",
+            "ro": "Când înlocuiești un număr negativ sau o fracție, folosește paranteze pentru a evita erorile de semn."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "To evaluate an expression, replace each variable with its given value and simplify."
+          "content": {
+            "en": "To evaluate an expression, replace each variable with its given value and simplify.",
+            "ro": "Pentru a evalua o expresie, înlocuiește fiecare variabilă cu valoarea dată și simplifică."
+          }
         },
         {
           "type": "math",
@@ -145,10 +217,19 @@
         {
           "id": "evaluate-linear",
           "type": "numeric",
-          "question": "Evaluate $2x + 5$ when $x = 3$.",
+          "question": {
+            "en": "Evaluate $2x + 5$ when $x = 3$.",
+            "ro": "Evaluează $2x + 5$ când $x = 3$."
+          },
           "hints": [
-            "Substitute 3 for $x$.",
-            "Calculate $2(3) + 5$."
+            {
+              "en": "Substitute 3 for $x$.",
+              "ro": "Înlocuiește pe $x$ cu 3."
+            },
+            {
+              "en": "Calculate $2(3) + 5$.",
+              "ro": "Calculează $2(3) + 5$."
+            }
           ],
           "answer": 11,
           "validation": "numeric",

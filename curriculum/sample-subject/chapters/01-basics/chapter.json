@@ -11,21 +11,36 @@
   "lessons": [
     {
       "id": "sample-introduction",
-      "title": "Introduction",
+      "title": {
+        "en": "Introduction",
+        "ro": "Introducere"
+      },
       "objectives": [
-        "Understand the exercise types supported by NOL Math."
+        {
+          "en": "Understand the exercise types supported by NOL Math.",
+          "ro": "Înțelege tipurile de exerciții suportate de NOL Math."
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Read carefully",
-          "content": "Always read the full question before choosing an answer."
+          "title": {
+            "en": "Read carefully",
+            "ro": "Citește cu atenție"
+          },
+          "content": {
+            "en": "Always read the full question before choosing an answer.",
+            "ro": "Citește întotdeauna întrebarea completă înainte de a alege un răspuns."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "This sample lesson demonstrates the supported content and exercise blocks."
+          "content": {
+            "en": "This sample lesson demonstrates the supported content and exercise blocks.",
+            "ro": "Această lecție exemplu demonstrează blocurile de conținut și exerciții suportate."
+          }
         },
         {
           "type": "math",
@@ -41,12 +56,30 @@
             "ro": "Cât este 2 + 2?"
           },
           "hints": [
-            "Count on your fingers."
+            {
+              "en": "Count on your fingers.",
+              "ro": "Numără pe degete."
+            }
           ],
           "options": [
-            "3",
-            "4",
-            "5"
+            {
+              "en": "3",
+              "ro": "3"
+            },
+            {
+              "en": {
+                "en": "4",
+                "ro": "4"
+              },
+              "ro": {
+                "en": "4",
+                "ro": "4"
+              }
+            },
+            {
+              "en": "5",
+              "ro": "5"
+            }
           ],
           "correctOptionIndex": 1,
           "maxAttempts": 3,
@@ -60,7 +93,10 @@
           "type": "numeric",
           "question": "What is 5 × 6?",
           "hints": [
-            "Think of 5 groups of 6."
+            {
+              "en": "Think of 5 groups of 6.",
+              "ro": "Gândește-te la 5 grupuri de câte 6."
+            }
           ],
           "answer": 30,
           "validation": "numeric",
@@ -70,9 +106,15 @@
         {
           "id": "sample-expression",
           "type": "expression",
-          "question": "Simplify $2x + 3x$.",
+          "question": {
+            "en": "Simplify $2x + 3x$.",
+            "ro": "Simplifică $2x + 3x$."
+          },
           "hints": [
-            "Combine like terms."
+            {
+              "en": "Combine like terms.",
+              "ro": "Combină termenii asemenea."
+            }
           ],
           "answer": "5x",
           "validation": "expression",

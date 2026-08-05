@@ -4,31 +4,58 @@
     "en": "Probability and Hypothesis Basics",
     "ro": "Bazele Probabilității și Ipotezelor"
   },
-  "description": "Model chance events with sample spaces and tree diagrams, then interpret simple evidence for claims.",
+  "description": {
+    "en": "Model chance events with sample spaces and tree diagrams, then interpret simple evidence for claims.",
+    "ro": "Modelează evenimentele aleatoare cu spații eșantion și diagrame arbore, apoi interpretează dovezi simple pentru afirmații."
+  },
   "lessons": [
     {
       "id": "sample-space-and-theoretical-probability",
-      "title": "Sample Space and Theoretical Probability",
+      "title": {
+        "en": "Sample Space and Theoretical Probability",
+        "ro": "Spațiul Eșantion și Probabilitatea Teoretică"
+      },
       "objectives": [
-        "List outcomes in a sample space for simple experiments",
-        "Compute probability as favorable outcomes divided by total outcomes"
+        {
+          "en": "List outcomes in a sample space for simple experiments",
+          "ro": "Enumeră rezultatele dintr-un spațiu eșantion pentru experimente simple"
+        },
+        {
+          "en": "Compute probability as favorable outcomes divided by total outcomes",
+          "ro": "Calculează probabilitatea ca rezultate favorabile împărțite la rezultate totale"
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Start with an organized list",
-          "content": "Write outcomes in a table or ordered list so you do not miss cases."
+          "title": {
+            "en": "Start with an organized list",
+            "ro": "Începe cu o listă organizată"
+          },
+          "content": {
+            "en": "Write outcomes in a table or ordered list so you do not miss cases.",
+            "ro": "Scrie rezultatele într-un tabel sau listă ordonată pentru a nu rata cazuri."
+          }
         },
         {
           "type": "pitfall",
-          "title": "Equally likely assumption",
-          "content": "Only use simple counting when outcomes are equally likely."
+          "title": {
+            "en": "Equally likely assumption",
+            "ro": "Presupunerea de echiprobabilitate"
+          },
+          "content": {
+            "en": "Only use simple counting when outcomes are equally likely.",
+            "ro": "Folosește numărarea simplă doar când rezultatele sunt echiprobabile."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "The sample space is the set of all possible outcomes. Theoretical probability is favorable outcomes over total outcomes."
+          "content": {
+            "en": "The sample space is the set of all possible outcomes. Theoretical probability is favorable outcomes over total outcomes.",
+            "ro": "Spațiul eșantion este mulțimea tuturor rezultatelor posibile. Probabilitatea teoretică este rezultatele favorabile pe total."
+          }
         },
         {
           "type": "math",
@@ -36,7 +63,10 @@
         },
         {
           "type": "drawing",
-          "prompt": "Build a sample space table for rolling one six-sided die and flipping one coin.",
+          "prompt": {
+            "en": "Build a sample space table for rolling one six-sided die and flipping one coin.",
+            "ro": "Construiește un tabel al spațiului eșantion pentru aruncarea unui zar cu șase fețe și a unei monede."
+          },
           "mode": "freehand"
         }
       ],
@@ -44,56 +74,107 @@
         {
           "id": "sample-space-grid-self-check",
           "type": "drawing",
-          "question": "Draw a sample space diagram for spinner outcomes {Red, Blue, Green} and coin outcomes {H, T}. Then circle outcomes where color is Blue or coin is Heads.",
+          "question": {
+            "en": "Draw a sample space diagram for spinner outcomes {Red, Blue, Green} and coin outcomes {H, T}. Then circle outcomes where color is Blue or coin is Heads.",
+            "ro": "Desenează o diagramă a spațiului eșantion pentru rezultatele spinnerului {Roșu, Albastru, Verde} și ale monedei {S, T}. Apoi încercuiește rezultatele unde culoarea este Albastru sau moneda este Stemă."
+          },
           "hints": [
-            "Make a 3x2 table or a tree with six leaves.",
-            "Label every outcome pair clearly."
+            {
+              "en": "Make a 3x2 table or a tree with six leaves.",
+              "ro": "Fă un tabel 3x2 sau un arbore cu șase frunze."
+            },
+            {
+              "en": "Label every outcome pair clearly.",
+              "ro": "Etichetează fiecare pereche de rezultate clar."
+            }
           ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check sample space: (R,H), (R,T), (B,H), (B,T), (G,H), (G,T). Favorable outcomes for Blue or Heads: 4 of 6."
+          "solution": {
+            "en": "Self-check sample space: (R,H), (R,T), (B,H), (B,T), (G,H), (G,T). Favorable outcomes for Blue or Heads: 4 of 6.",
+            "ro": "Autoverificare spațiu eșantion: (R,S), (R,T), (A,S), (A,T), (V,S), (V,T). Cazuri favorabile pentru Albastru sau Stemă: 4 din 6."
+          }
         },
         {
           "id": "theoretical-probability-mcq",
           "type": "multiple-choice",
-          "question": "A bag has 2 red, 3 blue, and 5 green marbles. What is P(blue)?",
+          "question": {
+            "en": "A bag has 2 red, 3 blue, and 5 green marbles. What is P(blue)?",
+            "ro": "Un sac conține 2 bile roșii, 3 albastre și 5 verzi. Care este P(albastru)?"
+          },
           "options": [
-            "3/10",
-            "1/2",
-            "3/5",
+            {
+              "en": "3/10",
+              "ro": "3/10"
+            },
+            {
+              "en": "1/2",
+              "ro": "1/2"
+            },
+            {
+              "en": "3/5",
+              "ro": "3/5"
+            },
             "2/10"
           ],
           "correctOptionIndex": 0,
           "validation": "exact",
           "maxAttempts": 3,
-          "solution": "Total marbles = 10 and blue marbles = 3, so P(blue)=3/10."
+          "solution": {
+            "en": "Total marbles = 10 and blue marbles = 3, so P(blue)=3/10.",
+            "ro": "Total bile = 10 și bile albastre = 3, deci P(albastru)=3/10."
+          }
         }
       ]
     },
     {
       "id": "probability-trees-and-compound-events",
-      "title": "Probability Trees and Compound Events",
+      "title": {
+        "en": "Probability Trees and Compound Events",
+        "ro": "Arbori de Probabilitate și Evenimente Compuse"
+      },
       "objectives": [
-        "Represent multi-step random experiments with a probability tree",
-        "Find probabilities of compound events by multiplying branch probabilities"
+        {
+          "en": "Represent multi-step random experiments with a probability tree",
+          "ro": "Reprezintă experimente aleatoare în mai mulți pași cu un arbore de probabilitate"
+        },
+        {
+          "en": "Find probabilities of compound events by multiplying branch probabilities",
+          "ro": "Găsește probabilitățile evenimentelor compuse înmulțind probabilitățile ramurilor"
+        }
       ],
       "pedagogy": [
         {
           "type": "strategy",
-          "title": "One stage per branch level",
-          "content": "Each level of the tree should represent one step of the experiment."
+          "title": {
+            "en": "One stage per branch level",
+            "ro": "O etapă pe nivel de ramură"
+          },
+          "content": {
+            "en": "Each level of the tree should represent one step of the experiment.",
+            "ro": "Fiecare nivel al arborelui ar trebui să reprezinte o etapă a experimentului."
+          }
         },
         {
           "type": "why",
-          "title": "Why multiply branches",
-          "content": "For independent stages, each branch narrows outcomes, so multiplying keeps only the overlap."
+          "title": {
+            "en": "Why multiply branches",
+            "ro": "De ce înmulțim ramurile"
+          },
+          "content": {
+            "en": "For independent stages, each branch narrows outcomes, so multiplying keeps only the overlap.",
+            "ro": "Pentru etape independente, fiecare ramură restrânge rezultatele, deci înmulțirea păstrează doar intersecția."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Tree diagrams help track compound events such as two flips or a flip followed by a die roll."
+          "content": {
+            "en": "Tree diagrams help track compound events such as two flips or a flip followed by a die roll.",
+            "ro": "Diagramele arbore ajută la urmărirea evenimentelor compuse, cum ar fi două aruncări sau o aruncare urmată de aruncarea unui zar."
+          }
         },
         {
           "type": "math",
@@ -104,88 +185,169 @@
         {
           "id": "probability-tree-drawing",
           "type": "drawing",
-          "question": "Draw a probability tree for: flip a fair coin, then roll a fair die. Use the tree to find P(Heads and even number).",
+          "question": {
+            "en": "Draw a probability tree for: flip a fair coin, then roll a fair die. Use the tree to find P(Heads and even number).",
+            "ro": "Desenează un arbore de probabilitate pentru: aruncă o monedă corectă, apoi aruncă un zar corect. Folosește arborele pentru a găsi P(Stemă și număr par)."
+          },
           "hints": [
-            "First split into H and T, then from each branch split into 1..6.",
-            "Count outcomes H2, H4, H6."
+            {
+              "en": "First split into H and T, then from each branch split into 1..6.",
+              "ro": "Împarte mai întâi în S și T, apoi din fiecare ramură împarte în 1..6."
+            },
+            {
+              "en": "Count outcomes H2, H4, H6.",
+              "ro": "Numără rezultatele S2, S4, S6."
+            }
           ],
           "drawingMode": "freehand",
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check: 12 equally likely outcomes, favorable are H2, H4, H6 so probability is 3/12 = 1/4."
+          "solution": {
+            "en": "Self-check: 12 equally likely outcomes, favorable are H2, H4, H6 so probability is 3/12 = 1/4.",
+            "ro": "Autoverificare: 12 rezultate echiprobabile, favorabile sunt S2, S4, S6, deci probabilitatea este 3/12 = 1/4."
+          }
         },
         {
           "id": "compound-event-numeric",
           "type": "numeric",
-          "question": "A fair coin is flipped twice. What is the probability of getting exactly one head?",
+          "question": {
+            "en": "A fair coin is flipped twice. What is the probability of getting exactly one head?",
+            "ro": "O monedă corectă este aruncată de două ori. Care este probabilitatea de a obține exact o stemă?"
+          },
           "hints": [
-            "List outcomes: HH, HT, TH, TT.",
-            "Exactly one head occurs in HT and TH."
+            {
+              "en": "List outcomes: HH, HT, TH, TT.",
+              "ro": "Enumeră rezultatele: SS, ST, TS, TT."
+            },
+            {
+              "en": "Exactly one head occurs in HT and TH.",
+              "ro": "Exact o stemă apare în ST și TS."
+            }
           ],
           "answer": 0.5,
           "tolerance": 0.0001,
           "validation": "numeric",
           "maxAttempts": 3,
-          "solution": "2 favorable outcomes out of 4 total, so probability is 1/2 = 0.5."
+          "solution": {
+            "en": "2 favorable outcomes out of 4 total, so probability is 1/2 = 0.5.",
+            "ro": "2 cazuri favorabile din 4 total, deci probabilitatea este 1/2 = 0,5."
+          }
         }
       ]
     },
     {
       "id": "hypothesis-testing-basics",
-      "title": "Hypothesis Testing Basics",
+      "title": {
+        "en": "Hypothesis Testing Basics",
+        "ro": "Bazele Testării Ipotezelor"
+      },
       "objectives": [
-        "State a simple null hypothesis and alternative hypothesis",
-        "Use sample evidence to decide whether results are unusual"
+        {
+          "en": "State a simple null hypothesis and alternative hypothesis",
+          "ro": "Stabilește o ipoteză nulă și o ipoteză alternativă simple"
+        },
+        {
+          "en": "Use sample evidence to decide whether results are unusual",
+          "ro": "Folosește dovezile eșantionului pentru a decide dacă rezultatele sunt neobișnuite"
+        }
       ],
       "pedagogy": [
         {
           "type": "tip",
-          "title": "Null means no change",
-          "content": "The null hypothesis usually represents the current claim or no effect."
+          "title": {
+            "en": "Null means no change",
+            "ro": "Nul înseamnă nicio schimbare"
+          },
+          "content": {
+            "en": "The null hypothesis usually represents the current claim or no effect.",
+            "ro": "Ipoteza nulă reprezintă de obicei afirmația curentă sau lipsa efectului."
+          }
         },
         {
           "type": "pitfall",
-          "title": "Not proof of truth",
-          "content": "Failing to reject the null does not prove it is true; it only means evidence is not strong enough."
+          "title": {
+            "en": "Not proof of truth",
+            "ro": "Nu este dovadă a adevărului"
+          },
+          "content": {
+            "en": "Failing to reject the null does not prove it is true; it only means evidence is not strong enough.",
+            "ro": "Nerespingerea ipotezei nule nu dovedește că este adevărată; înseamnă doar că dovezile nu sunt suficient de puternice."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Hypothesis testing compares observed data to what we would expect under a default claim. If the observation is very unlikely, we reject the default claim."
+          "content": {
+            "en": "Hypothesis testing compares observed data to what we would expect under a default claim. If the observation is very unlikely, we reject the default claim.",
+            "ro": "Testarea ipotezelor compară datele observate cu ceea ce ne-am aștepta sub o afirmație implicită. Dacă observația este foarte puțin probabilă, respingem afirmația implicită."
+          }
         },
         {
           "type": "callout",
-          "content": "In this course, use a simple unusualness rule: if probability under the null is less than 5%, treat the result as unusual."
+          "content": {
+            "en": "In this course, use a simple unusualness rule: if probability under the null is less than 5%, treat the result as unusual.",
+            "ro": "În acest curs, folosește o regulă simplă de neobișnuitate: dacă probabilitatea sub ipoteza nulă este mai mică de 5%, tratează rezultatul ca neobișnuit."
+          }
         }
       ],
       "exercises": [
         {
           "id": "null-vs-alt-mcq",
           "type": "multiple-choice",
-          "question": "A coin is claimed to be fair. Which is an appropriate null hypothesis?",
+          "question": {
+            "en": "A coin is claimed to be fair. Which is an appropriate null hypothesis?",
+            "ro": "Se afirmă că o monedă este corectă. Care este o ipoteză nulă adecvată?"
+          },
           "options": [
-            "The coin lands heads 50% of the time.",
-            "The coin always lands heads.",
-            "The coin lands heads less than 50% of the time.",
-            "The coin is lucky."
+            {
+              "en": "The coin lands heads 50% of the time.",
+              "ro": "Moneda pică stemă 50% din timp."
+            },
+            {
+              "en": "The coin always lands heads.",
+              "ro": "Moneda pică întotdeauna stemă."
+            },
+            {
+              "en": "The coin lands heads less than 50% of the time.",
+              "ro": "Moneda pică stemă mai puțin de 50% din timp."
+            },
+            {
+              "en": "The coin is lucky.",
+              "ro": "Moneda este norocoasă."
+            }
           ],
           "correctOptionIndex": 0,
           "validation": "exact",
           "maxAttempts": 3,
-          "solution": "A fair coin means heads probability is 0.5, so that is the null hypothesis."
+          "solution": {
+            "en": "A fair coin means heads probability is 0.5, so that is the null hypothesis.",
+            "ro": "O monedă corectă înseamnă probabilitatea stemei 0,5, deci aceasta este ipoteza nulă."
+          }
         },
         {
           "id": "unusual-result-free-response",
           "type": "free-response",
-          "question": "Under a fair coin model, a student gets 9 heads in 10 flips. Explain whether this seems unusual and what that suggests about the fairness claim.",
+          "question": {
+            "en": "Under a fair coin model, a student gets 9 heads in 10 flips. Explain whether this seems unusual and what that suggests about the fairness claim.",
+            "ro": "În modelul unei monede corecte, un elev obține 9 steme în 10 aruncări. Explică dacă acest lucru pare neobișnuit și ce sugerează despre afirmația de corectitudine."
+          },
           "hints": [
-            "Estimate or look up P(9 or more heads in 10 fair flips).",
-            "Compare that probability to 5%."
+            {
+              "en": "Estimate or look up P(9 or more heads in 10 fair flips).",
+              "ro": "Estimează sau caută P(9 sau mai multe steme în 10 aruncări corecte)."
+            },
+            {
+              "en": "Compare that probability to 5%.",
+              "ro": "Compară acea probabilitate cu 5%."
+            }
           ],
           "validation": "manual",
           "maxAttempts": 1,
-          "solution": "Self-check: P(9 or 10 heads) = 11/1024 about 1.1%, which is below 5%, so this is unusual under fairness and gives evidence against the fair-coin claim."
+          "solution": {
+            "en": "Self-check: P(9 or 10 heads) = 11/1024 about 1.1%, which is below 5%, so this is unusual under fairness and gives evidence against the fair-coin claim.",
+            "ro": "Autoverificare: P(9 sau 10 steme) = 11/1024, aproximativ 1,1%, ceea ce este sub 5%, deci este neobișnuit pentru o monedă corectă și reprezintă dovezi împotriva afirmației."
+          }
         }
       ]
     }

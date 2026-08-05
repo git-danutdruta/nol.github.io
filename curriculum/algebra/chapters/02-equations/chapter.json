@@ -4,7 +4,10 @@
     "en": "Equations",
     "ro": "Ecuații"
   },
-  "description": "Solve linear equations and inequalities using inverse operations.",
+  "description": {
+    "en": "Solve linear equations and inequalities using inverse operations.",
+    "ro": "Rezolvă ecuații și inecuații liniare folosind operații inverse."
+  },
   "lessons": [
     {
       "id": "one-step-equations",
@@ -15,14 +18,23 @@
       "pedagogy": [
         {
           "type": "strategy",
-          "title": "Undo the operation",
-          "content": "Use the inverse operation to isolate the variable. Addition undoes subtraction; multiplication undoes division."
+          "title": {
+            "en": "Undo the operation",
+            "ro": "Anulează operația"
+          },
+          "content": {
+            "en": "Use the inverse operation to isolate the variable. Addition undoes subtraction; multiplication undoes division.",
+            "ro": "Folosește operația inversă pentru a izola variabila. Adunarea anulează scăderea; înmulțirea anulează împărțirea."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "A one-step equation can be solved in a single step by applying the inverse operation to both sides."
+          "content": {
+            "en": "A one-step equation can be solved in a single step by applying the inverse operation to both sides.",
+            "ro": "O ecuație cu o operație poate fi rezolvată într-un singur pas aplicând operația inversă în ambii membri."
+          }
         },
         {
           "type": "math",
@@ -33,9 +45,15 @@
         {
           "id": "solve-addition-equation",
           "type": "numeric",
-          "question": "Solve $x + 8 = 15$.",
+          "question": {
+            "en": "Solve $x + 8 = 15$.",
+            "ro": "Rezolvă $x + 8 = 15$."
+          },
           "hints": [
-            "Subtract 8 from both sides."
+            {
+              "en": "Subtract 8 from both sides.",
+              "ro": "Scade 8 din ambii membri."
+            }
           ],
           "answer": 7,
           "validation": "numeric",
@@ -45,9 +63,15 @@
         {
           "id": "solve-division-equation",
           "type": "numeric",
-          "question": "Solve $\\frac{x}{4} = 6$.",
+          "question": {
+            "en": "Solve $\\frac{x}{4} = 6$.",
+            "ro": "Rezolvă $\\frac{x}{4} = 6$."
+          },
           "hints": [
-            "Multiply both sides by 4."
+            {
+              "en": "Multiply both sides by 4.",
+              "ro": "Înmulțește ambii membri cu 4."
+            }
           ],
           "answer": 24,
           "validation": "numeric",
@@ -65,14 +89,23 @@
       "pedagogy": [
         {
           "type": "strategy",
-          "title": "Reverse PEMDAS",
-          "content": "Undo addition and subtraction first, then multiplication and division."
+          "title": {
+            "en": "Reverse PEMDAS",
+            "ro": "Inversul ordinii operațiilor"
+          },
+          "content": {
+            "en": "Undo addition and subtraction first, then multiplication and division.",
+            "ro": "Anulează mai întâi adunarea și scăderea, apoi înmulțirea și împărțirea."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Two-step equations require two inverse operations. First isolate the term with the variable, then isolate the variable itself."
+          "content": {
+            "en": "Two-step equations require two inverse operations. First isolate the term with the variable, then isolate the variable itself.",
+            "ro": "Ecuațiile cu două operații necesită două operații inverse. Mai întâi izolează termenul cu variabila, apoi izolează variabila însăși."
+          }
         },
         {
           "type": "math",
@@ -83,10 +116,19 @@
         {
           "id": "solve-two-step",
           "type": "numeric",
-          "question": "Solve $3x - 4 = 11$.",
+          "question": {
+            "en": "Solve $3x - 4 = 11$.",
+            "ro": "Rezolvă $3x - 4 = 11$."
+          },
           "hints": [
-            "Add 4 to both sides.",
-            "Divide both sides by 3."
+            {
+              "en": "Add 4 to both sides.",
+              "ro": "Adună 4 în ambii membri."
+            },
+            {
+              "en": "Divide both sides by 3.",
+              "ro": "Împarte ambii membri la 3."
+            }
           ],
           "answer": 5,
           "validation": "numeric",
@@ -97,21 +139,36 @@
     },
     {
       "id": "equations-with-variables-both-sides",
-      "title": "Variables on Both Sides",
+      "title": {
+        "en": "Variables on Both Sides",
+        "ro": "Variabile în Ambii Membri"
+      },
       "objectives": [
-        "Solve equations with variables on both sides"
+        {
+          "en": "Solve equations with variables on both sides",
+          "ro": "Rezolvă ecuații cu variabile în ambii membri"
+        }
       ],
       "pedagogy": [
         {
           "type": "pitfall",
-          "title": "Watch your signs",
-          "content": "When moving a term to the other side, its sign changes."
+          "title": {
+            "en": "Watch your signs",
+            "ro": "Atenție la semne"
+          },
+          "content": {
+            "en": "When moving a term to the other side, its sign changes.",
+            "ro": "Când muți un termen în celălalt membru, semnul lui se schimbă."
+          }
         }
       ],
       "content": [
         {
           "type": "paragraph",
-          "content": "Collect variable terms on one side and constant terms on the other, then solve."
+          "content": {
+            "en": "Collect variable terms on one side and constant terms on the other, then solve.",
+            "ro": "Adună termenii cu variabila într-un membru și termenii constanți în celălalt, apoi rezolvă."
+          }
         },
         {
           "type": "math",
@@ -122,11 +179,20 @@
         {
           "id": "variables-both-sides",
           "type": "numeric",
-          "question": "Solve $4x + 3 = 2x + 9$.",
+          "question": {
+            "en": "Solve $4x + 3 = 2x + 9$.",
+            "ro": "Rezolvă $4x + 3 = 2x + 9$."
+          },
           "hints": [
-            "Subtract $2x$ from both sides.",
+            {
+              "en": "Subtract $2x$ from both sides.",
+              "ro": "Scade $2x$ din ambii membri."
+            },
             "Subtract 3 from both sides.",
-            "Divide by 2."
+            {
+              "en": "Divide by 2.",
+              "ro": "Împarte la 2."
+            }
           ],
           "answer": 3,
           "validation": "numeric",
