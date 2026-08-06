@@ -23,5 +23,55 @@
         "visualHint": "The result is still made of complete pairs."
       }
     ]
+  },
+  {
+    "id": "commutative-addition",
+    "title": "Why addition is commutative",
+    "summary": "A short proof that rearranging addends does not change the total.",
+    "steps": [
+      {
+        "id": "step-1",
+        "statement": "Start with $a + b$.",
+        "justification": "Addition combines two quantities into one total.",
+        "visualHint": "Imagine a row of $a$ blocks and a row of $b$ blocks."
+      },
+      {
+        "id": "step-2",
+        "statement": "Reorder the blocks to form $b + a$.",
+        "justification": "The same blocks are still present, just arranged in a different order.",
+        "visualHint": "Slide the two rows so the order changes but the number of blocks stays the same."
+      },
+      {
+        "id": "step-3",
+        "statement": "The total number of blocks is unchanged.",
+        "justification": "Counting the same objects in a different order does not change the quantity.",
+        "visualHint": "Count the blocks carefully: the total is still the same."
+      }
+    ]
+  },
+  {
+    "id": "distributive-property",
+    "title": "Why $a(b + c) = ab + ac$",
+    "summary": "A visual proof that shows how multiplication distributes across addition.",
+    "steps": [
+      {
+        "id": "step-1",
+        "statement": "Take $a$ groups of $(b + c)$.",
+        "justification": "The expression $a(b + c)$ means a copies of the combined quantity $b + c$.",
+        "visualHint": "Picture $a$ identical rows of two blocks each."
+      },
+      {
+        "id": "step-2",
+        "statement": "Split each row into $b$ and $c$ parts.",
+        "justification": "Each row contains $b$ pieces and $c$ pieces.",
+        "visualHint": "Separate the row into a left section and a right section."
+      },
+      {
+        "id": "step-3",
+        "statement": "The total is $ab + ac$.",
+        "justification": "You have $a$ copies of $b$ plus $a$ copies of $c$.",
+        "visualHint": "Count the left section and the right section separately."
+      }
+    ]
   }
 ]

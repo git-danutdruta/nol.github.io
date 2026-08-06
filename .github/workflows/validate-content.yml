@@ -5,11 +5,19 @@ on:
     paths:
       - "curriculum/**"
       - "schemas/**"
+      - "web/public/curriculum/**"
+      - "web/scripts/validate-curriculum.cjs"
+      - "web/scripts/validate-public-curriculum.cjs"
+      - "web/package.json"
   push:
     branches: [main]
     paths:
       - "curriculum/**"
       - "schemas/**"
+      - "web/public/curriculum/**"
+      - "web/scripts/validate-curriculum.cjs"
+      - "web/scripts/validate-public-curriculum.cjs"
+      - "web/package.json"
 
 jobs:
   validate:
@@ -31,5 +39,5 @@ jobs:
       - name: Install dependencies
         run: cd web && pnpm install --frozen-lockfile
 
-      - name: Validate curriculum
-        run: cd web && pnpm validate-content
+      - name: Validate public curriculum bundle
+        run: cd web && pnpm validate-public-curriculum

@@ -44,6 +44,7 @@ Before submitting a content PR, ensure:
 cd web
 pnpm install
 pnpm validate-content
+pnpm validate-public-curriculum
 ```
 
 ## Code Contributions

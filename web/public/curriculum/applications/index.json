@@ -53,6 +53,42 @@
       "difficulty": "intermediate",
       "description": "Evaluate expressions to estimate how effort changes with a target heart-rate range.",
       "lessonId": "evaluate-expressions"
+    },
+    {
+      "id": "gardening-areas",
+      "title": "Planning garden beds",
+      "conceptIds": ["expressions", "distributive-property"],
+      "domainTags": ["gardening", "everyday"],
+      "difficulty": "intermediate",
+      "description": "Use expressions and the distributive property to calculate planting space quickly.",
+      "lessonId": "simplify-expressions"
+    },
+    {
+      "id": "shopping-discounts",
+      "title": "Comparing discounts",
+      "conceptIds": ["rounding", "comparison"],
+      "domainTags": ["shopping", "finance"],
+      "difficulty": "beginner",
+      "description": "Round prices and compare offers to pick the better sale.",
+      "lessonId": "rounding"
+    },
+    {
+      "id": "classroom-rows",
+      "title": "Arranging desks evenly",
+      "conceptIds": ["variables", "division"],
+      "domainTags": ["school", "everyday"],
+      "difficulty": "beginner",
+      "description": "Use variables to plan equal rows of desks for a classroom.",
+      "lessonId": "variables"
+    },
+    {
+      "id": "running-pace",
+      "title": "Tracking a running pace",
+      "conceptIds": ["evaluation", "expressions"],
+      "domainTags": ["fitness", "science"],
+      "difficulty": "intermediate",
+      "description": "Evaluate expressions to compare pace, distance, and time during training.",
+      "lessonId": "evaluate-expressions"
     }
   ]
 }

@@ -17,6 +17,7 @@
     "check-csp": "node scripts/check-csp.cjs",
     "check-budgets": "node scripts/check-budgets.cjs",
     "validate-content": "node scripts/validate-curriculum.cjs",
+    "validate-public-curriculum": "node scripts/validate-public-curriculum.cjs",
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui"
   },

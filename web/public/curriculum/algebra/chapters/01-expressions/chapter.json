@@ -97,6 +97,23 @@
           "content": "Like terms have the same variable raised to the same power. $3x$ and $5x$ are like terms; $3x$ and $3x^2$ are not."
         },
         {
+          "type": "story",
+          "title": "The matching boxes",
+          "summary": "A simple story about why only terms with the same variable part can be combined.",
+          "chapters": [
+            {
+              "title": "Chapter 1",
+              "content": "Two boxes each hold the same kind of toy. When the teacher groups them together, the total becomes easier to describe."
+            },
+            {
+              "title": "Chapter 2",
+              "content": "A box of apples and a box of oranges cannot be combined into one simple box because they are different kinds of things."
+            }
+          ],
+          "moral": "Only like terms can be combined because they describe the same kind of quantity.",
+          "readTime": "2 min"
+        },
+        {
           "type": "math",
           "latex": "3x + 5x = 8x"
         }
@@ -122,7 +139,8 @@
           "maxAttempts": 3,
           "solution": "$3(x + 4) = 3x + 12$."
         }
-      ]
+      ],
+      "proofIds": ["commutative-addition"]
     },
     {
       "id": "evaluate-expressions",
@@ -156,7 +174,8 @@
           "maxAttempts": 3,
           "solution": "$2(3) + 5 = 6 + 5 = 11$."
         }
-      ]
+      ],
+      "proofIds": ["commutative-addition"]
     }
   ]
 }

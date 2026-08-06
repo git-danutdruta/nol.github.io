@@ -1,0 +1,54 @@
+[
+  {
+    "id": "story-place-value",
+    "title": "The village market",
+    "summary": "A story that shows how place value helps people compare totals at the market.",
+    "chapters": [
+      {
+        "title": "Chapter 1",
+        "content": "At the market, one vendor kept track of baskets in rows. The row on the left counted hundreds, while the row on the right counted ones."
+      },
+      {
+        "title": "Chapter 2",
+        "content": "When the same number moved to a different row, its value changed, which reminded the vendor that place matters."
+      }
+    ],
+    "moral": "Place value tells us how much a digit is worth, not just what symbol it is.",
+    "readTime": "2 min"
+  },
+  {
+    "id": "story-variables",
+    "title": "The changing box",
+    "summary": "A story that turns a variable into a tool for describing change.",
+    "chapters": [
+      {
+        "title": "Chapter 1",
+        "content": "A teacher used a box to hold a secret number and wrote the letter $x$ on it so the class could talk about it."
+      },
+      {
+        "title": "Chapter 2",
+        "content": "When the box gained 5 more items, the class could describe the new amount with $x + 5$."
+      }
+    ],
+    "moral": "Variables let us describe unknown or changing quantities clearly.",
+    "readTime": "2 min"
+  },
+  {
+    "id": "story-fractions",
+    "title": "The shared pizza",
+    "summary": "A story about sharing a pizza equally and describing parts of a whole.",
+    "chapters": [
+      {
+        "title": "Chapter 1",
+        "content": "Three friends shared a pizza cut into eight equal slices, and each person wanted to know what fraction they received."
+      },
+      {
+        "title": "Chapter 2",
+        "content": "The slices were counted as parts of the whole, which made the fraction $\frac{3}{8}$ easy to explain."
+      }
+    ],
+    "moral": "Fractions describe how much of a whole you have.",
+    "readTime": "2 min"
+  }
+]
+

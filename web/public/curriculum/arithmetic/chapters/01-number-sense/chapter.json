@@ -123,6 +123,23 @@
           "content": "Use the symbols > (greater than), < (less than), and = (equal to) to compare numbers. The open side of the symbol always faces the larger number."
         },
         {
+          "type": "story",
+          "title": "The race to the finish line",
+          "summary": "A short story about comparing numbers by looking at the largest place value first.",
+          "chapters": [
+            {
+              "title": "Chapter 1",
+              "content": "Two runners crossed the finish line at different times. Their numbers were written in the same place-value columns so the comparison could be made fairly."
+            },
+            {
+              "title": "Chapter 2",
+              "content": "The runner with the larger hundreds digit was ahead at the first checkpoint, so the comparison was decided before the final digits were even checked."
+            }
+          ],
+          "moral": "When you compare numbers, start with the place value that matters most.",
+          "readTime": "2 min"
+        },
+        {
           "type": "math",
           "latex": "345 < 354"
         }
@@ -172,7 +189,8 @@
           "maxAttempts": 3,
           "solution": "The tens digit is 5, so 856 rounds up to 900."
         }
-      ]
+      ],
+      "proofIds": ["even-plus-even", "commutative-addition"]
     },
     {
       "id": "intro-fractions",
