@@ -10,18 +10,27 @@ function isProgressExportPayload(value: unknown): value is ProgressExportPayload
   );
 }
 
-export function createProgressExportPayload(data: ProgressPersistedState): ProgressExportPayload {
+export function createProgressExportPayload(
+  data: ProgressPersistedState,
+  notes?: Record<string, string>
+): ProgressExportPayload {
   return {
     app: 'nol-math',
     type: 'progress-export',
     schemaVersion: PROGRESS_SCHEMA_VERSION,
     exportedAt: new Date().toISOString(),
-    data,
+    data: {
+      ...data,
+      notes,
+    },
   };
 }
 
-export function exportProgressToJson(data: ProgressPersistedState): string {
-  return JSON.stringify(createProgressExportPayload(data), null, 2);
+export function exportProgressToJson(
+  data: ProgressPersistedState,
+  notes?: Record<string, string>
+): string {
+  return JSON.stringify(createProgressExportPayload(data, notes), null, 2);
 }
 
 export function parseImportedProgress(json: string): ProgressPersistedState {
@@ -39,8 +48,11 @@ export function parseImportedProgress(json: string): ProgressPersistedState {
   return sanitizeProgressState(parsed.data);
 }
 
-export function downloadProgressBackup(data: ProgressPersistedState): void {
-  const json = exportProgressToJson(data);
+export function downloadProgressBackup(
+  data: ProgressPersistedState,
+  notes?: Record<string, string>
+): void {
+  const json = exportProgressToJson(data, notes);
   const blob = new Blob([json], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement('a');

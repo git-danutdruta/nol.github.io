@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, BookOpen, BarChart3, Settings, Home } from 'lucide-react';
+import { Menu, X, BookOpen, BarChart3, Settings, Home, Compass, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { FocusTrap } from '@/components/FocusTrap';
 
 const NAV_ITEMS = [
   { to: '/', labelKey: 'nav.home', icon: Home },
   { to: '/subjects', labelKey: 'nav.subjects', icon: BookOpen },
+  { to: '/use-cases', labelKey: 'nav.useCases', icon: Compass },
+  { to: '/concept-map', labelKey: 'nav.conceptMap', icon: Sparkles },
+  { to: '/daily-byte', labelKey: 'nav.dailyByte', icon: Sparkles },
   { to: '/progress', labelKey: 'nav.progress', icon: BarChart3 },
   { to: '/settings', labelKey: 'nav.settings', icon: Settings },
 ];
@@ -63,7 +66,7 @@ export function Navigation() {
                   aria-current={active ? 'page' : undefined}
                 >
                   <Icon aria-hidden="true" className="h-4 w-4" />
-                  {t(item.labelKey)}
+                  {t(item.labelKey, item.labelKey)}
                 </Link>
               </li>
             );
@@ -95,7 +98,7 @@ export function Navigation() {
                       aria-current={active ? 'page' : undefined}
                     >
                       <Icon aria-hidden="true" className="h-5 w-5" />
-                      {t(item.labelKey)}
+                      {t(item.labelKey, item.labelKey)}
                     </Link>
                   </li>
                 );

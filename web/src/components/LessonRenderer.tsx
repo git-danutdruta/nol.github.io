@@ -1,12 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import type { Lesson } from '@/types/curriculum';
+import type { Lesson, ProofWalkthrough as ProofWalkthroughType } from '@/types/curriculum';
 import { getLocalizedString } from '@/lib/i18n';
 import { ContentBlock } from '@/components/lesson/ContentBlock';
 import { PedagogyBlock } from '@/components/lesson/PedagogyBlock';
 import { ExerciseRenderer } from '@/components/exercises/ExerciseRenderer';
 import { ReportIssue } from '@/components/ReportIssue';
 import { useProgressStore } from '@/stores/progressStore';
+import { StudyNotes } from '@/components/lesson/StudyNotes';
+import { TeachItBack } from '@/components/lesson/TeachItBack';
+import { ProofWalkthrough } from '@/components/lesson/ProofWalkthrough';
 
 interface LessonRendererProps {
   lesson: Lesson;
@@ -16,10 +19,40 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
   const { i18n, t } = useTranslation();
   const syncLessonStructure = useProgressStore((state) => state.syncLessonStructure);
   const recordExerciseResult = useProgressStore((state) => state.recordExerciseResult);
+  const lessonProgress = useProgressStore((state) => state.lessons[lesson.id]);
+  const [proofs, setProofs] = useState<ProofWalkthroughType[]>([]);
 
   useEffect(() => {
     syncLessonStructure(lesson.id, lesson.exercises.length);
   }, [lesson.id, lesson.exercises.length, syncLessonStructure]);
+
+  useEffect(() => {
+    if (!lesson.proofIds?.length) {
+      setProofs([]);
+      return;
+    }
+
+    let cancelled = false;
+    fetch(`${import.meta.env.BASE_URL}curriculum/proofs/mvp-proofs.json`)
+      .then((response) => response.json())
+      .then((data: ProofWalkthroughType[]) => {
+        if (!cancelled) {
+          const matched = data.filter((proof) => lesson.proofIds?.includes(proof.id));
+          setProofs(matched);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setProofs([]);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [lesson.proofIds]);
+
+  const isLessonCompleted = Boolean(lessonProgress?.completed);
 
   return (
     <article className="mx-auto max-w-3xl">
@@ -57,6 +90,16 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
         ))}
       </section>
 
+      <StudyNotes lessonId={lesson.id} />
+
+      {proofs.length > 0 && (
+        <section aria-label="Proof walkthroughs" className="mb-8">
+          {proofs.map((proof) => (
+            <ProofWalkthrough key={proof.id} proof={proof} />
+          ))}
+        </section>
+      )}
+
       {lesson.exercises.length > 0 && (
         <section aria-label="Exercises">
           <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-white">
@@ -81,6 +124,10 @@ export function LessonRenderer({ lesson }: LessonRendererProps) {
             ))}
           </div>
         </section>
+      )}
+
+      {isLessonCompleted && lesson.teachItBackPoints && lesson.teachItBackPoints.length > 0 && (
+        <TeachItBack lessonId={lesson.id} points={lesson.teachItBackPoints} />
       )}
     </article>
   );

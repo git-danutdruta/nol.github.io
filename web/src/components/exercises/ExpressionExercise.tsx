@@ -36,7 +36,12 @@ export function ExpressionExercise({ exercise, onEvaluated }: ExpressionExercise
         {getLocalizedString(exercise.question, i18n.language)}
       </p>
       {exercise.hints && exercise.hints.length > 0 && <Hints hints={exercise.hints} />}
-      <MathInput value={answer} onChange={setAnswer} id={exercise.id} label={t('exercise.solution')} />
+      <MathInput
+        value={answer}
+        onChange={setAnswer}
+        id={exercise.id}
+        label={t('exercise.solution')}
+      />
       <button
         type="button"
         onClick={handleSubmit}

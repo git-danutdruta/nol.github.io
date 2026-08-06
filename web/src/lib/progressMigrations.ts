@@ -59,6 +59,20 @@ function sanitizeLessonProgress(lessonId: string, value: unknown): LessonProgres
   };
 }
 
+function sanitizeNotes(value: unknown): Record<string, string> | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  const notes = value as Record<string, unknown>;
+  const next: Record<string, string> = {};
+
+  for (const [lessonId, note] of Object.entries(notes)) {
+    if (typeof note === 'string') {
+      next[lessonId] = note;
+    }
+  }
+
+  return Object.keys(next).length > 0 ? next : undefined;
+}
+
 export function sanitizeProgressState(input: unknown): ProgressPersistedState {
   if (!input || typeof input !== 'object') return EMPTY_STATE;
 
@@ -87,6 +101,7 @@ export function sanitizeProgressState(input: unknown): ProgressPersistedState {
     lessons,
     dailyActivity,
     badges: sanitizeBadges(raw.badges),
+    notes: sanitizeNotes(raw.notes),
   };
 }
 

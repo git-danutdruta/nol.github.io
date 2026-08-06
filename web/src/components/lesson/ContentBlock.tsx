@@ -2,6 +2,8 @@ import { getLocalizedString } from '@/lib/i18n';
 import type { ContentBlock as ContentBlockType } from '@/types/curriculum';
 import { useTranslation } from 'react-i18next';
 import { MathBlock } from '@/components/MathBlock';
+import { StoryBlock } from '@/components/lesson/StoryBlock';
+import { UsageCard } from '@/components/pedagogy/UsageCard';
 
 interface ContentBlockProps {
   block: ContentBlockType;
@@ -58,6 +60,10 @@ export function ContentBlock({ block }: ContentBlockProps) {
           <p className="mt-2 text-sm text-slate-500">Drawing mode: {block.mode || 'freehand'}</p>
         </div>
       );
+    case 'story':
+      return <StoryBlock block={block} />;
+    case 'usageCard':
+      return <UsageCard card={block} />;
     default:
       return null;
   }

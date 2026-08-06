@@ -42,7 +42,10 @@ export function DrawingExercise({ exercise, onEvaluated }: DrawingExerciseProps)
 
   const rubric = gradeResult?.rubric ?? [
     t('drawing.rubric.constraints', 'Check key geometric constraints requested in the prompt.'),
-    t('drawing.rubric.compare', 'Compare your construction to the expected method before marking complete.'),
+    t(
+      'drawing.rubric.compare',
+      'Compare your construction to the expected method before marking complete.'
+    ),
   ];
 
   const runAutoCheck = () => {

@@ -6,16 +6,45 @@ export interface PedagogyBlock {
   content: LocalizedString;
 }
 
-export interface ContentBlock {
-  type: 'paragraph' | 'heading' | 'list' | 'callout' | 'example' | 'math' | 'image' | 'drawing';
-  content?: LocalizedString;
-  items?: LocalizedString[];
-  latex?: string;
-  src?: string;
-  alt?: LocalizedString;
-  prompt?: LocalizedString;
-  mode?: 'freehand' | 'graph' | 'geometry';
+export interface StoryChapter {
+  title?: LocalizedString;
+  content: LocalizedString;
 }
+
+export interface StoryContentBlock {
+  type: 'story';
+  title: LocalizedString;
+  summary?: LocalizedString;
+  chapters: StoryChapter[];
+  characters?: LocalizedString[];
+  moral?: LocalizedString;
+  readTime?: string;
+}
+
+export interface UsageCardContentBlock {
+  type: 'usageCard';
+  concept: LocalizedString;
+  domain: string;
+  audience?: LocalizedString;
+  scenario: LocalizedString;
+  whyItMatters: LocalizedString;
+  relatedConcepts?: LocalizedString[];
+  linkTo?: string;
+}
+
+export type ContentBlock =
+  | {
+      type: 'paragraph' | 'heading' | 'list' | 'callout' | 'example' | 'math' | 'image' | 'drawing';
+      content?: LocalizedString;
+      items?: LocalizedString[];
+      latex?: string;
+      src?: string;
+      alt?: LocalizedString;
+      prompt?: LocalizedString;
+      mode?: 'freehand' | 'graph' | 'geometry';
+    }
+  | StoryContentBlock
+  | UsageCardContentBlock;
 
 export interface Exercise {
   id: string;
@@ -32,6 +61,21 @@ export interface Exercise {
   drawingMode?: 'freehand' | 'graph' | 'geometry';
 }
 
+export interface ProofStep {
+  id: string;
+  statement: LocalizedString;
+  justification: LocalizedString;
+  visualHint?: LocalizedString;
+  checkpoint?: boolean;
+}
+
+export interface ProofWalkthrough {
+  id: string;
+  title: LocalizedString;
+  summary?: LocalizedString;
+  steps: ProofStep[];
+}
+
 export interface Lesson {
   id: string;
   title: LocalizedString;
@@ -39,6 +83,9 @@ export interface Lesson {
   pedagogy?: PedagogyBlock[];
   content: ContentBlock[];
   exercises: Exercise[];
+  proofs?: ProofWalkthrough[];
+  proofIds?: string[];
+  teachItBackPoints?: LocalizedString[];
 }
 
 export interface Chapter {

@@ -23,6 +23,7 @@ export interface ProgressPersistedState {
   lessons: Record<string, LessonProgress>;
   dailyActivity: Record<string, number>;
   badges: BadgeId[];
+  notes?: Record<string, string>;
 }
 
 export interface ProgressExportPayload {

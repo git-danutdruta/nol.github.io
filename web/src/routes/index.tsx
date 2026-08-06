@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppShell } from '@/components/AppShell';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { ConceptMap } from '@/components/discovery/ConceptMap';
 
 const HomePage = lazy(() =>
   import('@/pages/HomePage').then((module) => ({ default: module.HomePage }))
@@ -23,6 +24,12 @@ const ProgressPage = lazy(() =>
 );
 const SettingsPage = lazy(() =>
   import('@/pages/SettingsPage').then((module) => ({ default: module.SettingsPage }))
+);
+const UseCasesPage = lazy(() =>
+  import('@/pages/UseCasesPage').then((module) => ({ default: module.UseCasesPage }))
+);
+const DailyBytePage = lazy(() =>
+  import('@/pages/DailyBytePage').then((module) => ({ default: module.DailyBytePage }))
 );
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFoundPage').then((module) => ({ default: module.NotFoundPage }))
@@ -47,6 +54,9 @@ export function AppRoutes() {
             <Route path="/lessons/:lessonId" element={<LessonPage />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/use-cases" element={<UseCasesPage />} />
+            <Route path="/concept-map" element={<ConceptMap />} />
+            <Route path="/daily-byte" element={<DailyBytePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>

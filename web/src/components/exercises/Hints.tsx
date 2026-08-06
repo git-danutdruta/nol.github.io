@@ -21,9 +21,8 @@ export function Hints({ hints }: HintsProps) {
         disabled={visible >= hints.length}
         className="text-sm font-medium text-primary-600 hover:text-primary-700 disabled:opacity-50 dark:text-primary-400 dark:hover:text-primary-300"
       >
-        {hints.length === 1
-          ? t('exercise.hint')
-          : t('exercise.hints')} {visible > 0 ? `(${visible}/${hints.length})` : ''}
+        {hints.length === 1 ? t('exercise.hint') : t('exercise.hints')}{' '}
+        {visible > 0 ? `(${visible}/${hints.length})` : ''}
       </button>
       {visible > 0 && (
         <ul className="list-inside list-disc space-y-1 text-sm text-slate-600 dark:text-slate-400">
@@ -35,4 +34,3 @@ export function Hints({ hints }: HintsProps) {
     </div>
   );
 }
-

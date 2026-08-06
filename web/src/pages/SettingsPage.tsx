@@ -8,6 +8,7 @@ import { Toast } from '@/components/ui/Toast';
 import { downloadProgressBackup, parseImportedProgress } from '@/lib/exportImport';
 import { exportFirstCanvasAsPng, triggerPrintPdf } from '@/lib/exportMedia';
 import { useProgressStore } from '@/stores/progressStore';
+import { useNotesStore } from '@/stores/notesStore';
 
 export function SettingsPage() {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ export function SettingsPage() {
   } | null>(null);
   const importProgress = useProgressStore((state) => state.importProgress);
   const resetProgress = useProgressStore((state) => state.resetProgress);
+  const notesByLesson = useNotesStore((state) => state.notesByLesson);
   const progressData = useProgressStore((state) => ({
     schemaVersion: state.schemaVersion,
     xp: state.xp,
@@ -27,7 +29,7 @@ export function SettingsPage() {
 
   const handleExport = () => {
     if (!window.confirm(t('settings.progress.exportConfirm'))) return;
-    downloadProgressBackup(progressData);
+    downloadProgressBackup(progressData, notesByLesson);
     setToast({ message: t('settings.progress.exportSuccess'), variant: 'success' });
   };
 
@@ -38,6 +40,7 @@ export function SettingsPage() {
       const imported = parseImportedProgress(text);
       if (!window.confirm(t('settings.progress.importConfirm'))) return;
       importProgress(imported);
+      useNotesStore.setState({ notesByLesson: imported.notes ?? {} });
       setToast({ message: t('settings.progress.importSuccess'), variant: 'success' });
     } catch (error) {
       setToast({
@@ -50,6 +53,7 @@ export function SettingsPage() {
   const handleReset = () => {
     if (!window.confirm(t('settings.progress.resetConfirm'))) return;
     resetProgress();
+    useNotesStore.setState({ notesByLesson: {} });
     setToast({ message: t('settings.progress.resetSuccess'), variant: 'success' });
   };
 
@@ -127,7 +131,7 @@ export function SettingsPage() {
             <button
               type="button"
               onClick={handleExportCanvas}
-              className="motion-press rounded-md border border-primary-200 bg-primary-50 px-3 py-2 text-sm font-medium text-primary-800 hover:bg-primary-100 dark:border-primary-800 dark:bg-primary-900/20 dark:text-primary-300"
+              className="motion-press rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
             >
               {t('settings.media.exportImage')}
             </button>
@@ -144,13 +148,7 @@ export function SettingsPage() {
         <SettingsErrorLogPanel />
         <DebugInfoExport />
       </div>
-
-      <Toast
-        open={toast !== null}
-        message={toast?.message ?? ''}
-        variant={toast?.variant ?? 'info'}
-        onClose={() => setToast(null)}
-      />
+      {toast && <Toast open={Boolean(toast)} message={toast.message} variant={toast.variant} onClose={() => setToast(null)} />}
     </section>
   );
 }
