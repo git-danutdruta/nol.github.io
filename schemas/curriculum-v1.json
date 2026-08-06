@@ -29,6 +29,14 @@
       },
       "required": ["type", "content"]
     },
+    "storyChapter": {
+      "type": "object",
+      "properties": {
+        "title": { "$ref": "#/definitions/localizedString" },
+        "content": { "$ref": "#/definitions/localizedString" }
+      },
+      "required": ["content"]
+    },
     "contentBlock": {
       "type": "object",
       "properties": {
@@ -42,7 +50,9 @@
             "example",
             "math",
             "image",
-            "drawing"
+            "drawing",
+            "story",
+            "usageCard"
           ]
         },
         "content": { "$ref": "#/definitions/localizedString" },
@@ -54,7 +64,29 @@
         "src": { "type": "string" },
         "alt": { "$ref": "#/definitions/localizedString" },
         "prompt": { "$ref": "#/definitions/localizedString" },
-        "mode": { "type": "string", "enum": ["freehand", "graph", "geometry"] }
+        "mode": { "type": "string", "enum": ["freehand", "graph", "geometry"] },
+        "title": { "$ref": "#/definitions/localizedString" },
+        "summary": { "$ref": "#/definitions/localizedString" },
+        "chapters": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/storyChapter" }
+        },
+        "characters": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/localizedString" }
+        },
+        "moral": { "$ref": "#/definitions/localizedString" },
+        "readTime": { "type": "string" },
+        "concept": { "$ref": "#/definitions/localizedString" },
+        "domain": { "type": "string" },
+        "audience": { "$ref": "#/definitions/localizedString" },
+        "scenario": { "$ref": "#/definitions/localizedString" },
+        "whyItMatters": { "$ref": "#/definitions/localizedString" },
+        "relatedConcepts": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/localizedString" }
+        },
+        "linkTo": { "type": "string" }
       },
       "required": ["type"]
     },
@@ -123,6 +155,14 @@
         "exercises": {
           "type": "array",
           "items": { "$ref": "#/definitions/exercise" }
+        },
+        "proofIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teachItBackPoints": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/localizedString" }
         }
       },
       "required": ["id", "title", "content", "exercises"]
