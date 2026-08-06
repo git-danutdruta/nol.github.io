@@ -1,0 +1,58 @@
+{
+  "applications": [
+    {
+      "id": "budgeting-place-value",
+      "title": "Budgeting with place value",
+      "conceptIds": ["place-value", "rounding"],
+      "domainTags": ["finance", "everyday"],
+      "difficulty": "beginner",
+      "description": "Compare monthly expenses and estimate totals using place value ideas.",
+      "lessonId": "counting-place-value"
+    },
+    {
+      "id": "cooking-fractions",
+      "title": "Scaling a recipe",
+      "conceptIds": ["fractions"],
+      "domainTags": ["cooking", "everyday"],
+      "difficulty": "beginner",
+      "description": "Use fractions to double or halve a recipe without losing balance.",
+      "lessonId": "intro-fractions"
+    },
+    {
+      "id": "music-rhythm",
+      "title": "Rhythm and fractions",
+      "conceptIds": ["fractions", "equivalent-fractions"],
+      "domainTags": ["music", "art"],
+      "difficulty": "beginner",
+      "description": "Hear how fractions help describe beats and measures.",
+      "lessonId": "intro-fractions"
+    },
+    {
+      "id": "travel-variables",
+      "title": "Planning a trip with variables",
+      "conceptIds": ["variables", "expressions"],
+      "domainTags": ["travel", "everyday"],
+      "difficulty": "beginner",
+      "description": "Use variables to model how travel costs change with distance or time.",
+      "lessonId": "variables"
+    },
+    {
+      "id": "game-score",
+      "title": "Keeping score in a game",
+      "conceptIds": ["variables", "equations"],
+      "domainTags": ["gaming", "sports"],
+      "difficulty": "intermediate",
+      "description": "Use equations to describe a score that changes with each turn.",
+      "lessonId": "variables"
+    },
+    {
+      "id": "health-heart-rate",
+      "title": "Heart-rate targets",
+      "conceptIds": ["evaluation", "expressions"],
+      "domainTags": ["health", "science"],
+      "difficulty": "intermediate",
+      "description": "Evaluate expressions to estimate how effort changes with a target heart-rate range.",
+      "lessonId": "evaluate-expressions"
+    }
+  ]
+}

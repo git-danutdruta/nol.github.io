@@ -1,0 +1,27 @@
+[
+  {
+    "id": "even-plus-even",
+    "title": "Why even + even is even",
+    "summary": "A compact proof that shows how structure helps us reason about numbers.",
+    "steps": [
+      {
+        "id": "step-1",
+        "statement": "Take two even numbers, $2a$ and $2b$.",
+        "justification": "Any even number can be written as two times another integer.",
+        "visualHint": "Think of two pairs of tiles: each pair is a whole group of 2."
+      },
+      {
+        "id": "step-2",
+        "statement": "Add them: $2a + 2b = 2(a + b)$.",
+        "justification": "Factor out the common factor of 2.",
+        "visualHint": "When you combine the groups, you still have groups of 2."
+      },
+      {
+        "id": "step-3",
+        "statement": "Since $a + b$ is an integer, $2(a + b)$ is even.",
+        "justification": "A number of the form $2k$ is even by definition.",
+        "visualHint": "The result is still made of complete pairs."
+      }
+    ]
+  }
+]

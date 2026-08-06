@@ -28,6 +28,32 @@
           "content": "Every digit in a number has a value based on its position. In 4,573, the digit 5 is in the hundreds place, so it represents 500."
         },
         {
+          "type": "story",
+          "title": "The story of place value",
+          "summary": "A small story about why digits change meaning when they move left or right.",
+          "chapters": [
+            {
+              "title": "Chapter 1",
+              "content": "A school club kept track of tickets in a box. When the same number of tickets moved into a new column, its value changed."
+            },
+            {
+              "title": "Chapter 2",
+              "content": "The hundreds column was not just 'more tickets'; it meant a whole stack of ten tens."
+            }
+          ],
+          "moral": "Digits matter because their place tells you how much they are worth.",
+          "readTime": "2 min"
+        },
+        {
+          "type": "usageCard",
+          "concept": "Place value",
+          "domain": "finance",
+          "audience": "Learners who want to compare budgets",
+          "scenario": "A family compares monthly bills and notices that the 4 in $4,200$ changes the meaning of the total when it moves to a new place.",
+          "whyItMatters": "Place value helps you read price tags, budgets, and large totals accurately.",
+          "relatedConcepts": ["Rounding", "Comparing numbers"]
+        },
+        {
           "type": "math",
           "latex": "4573 = 4000 + 500 + 70 + 3"
         },
@@ -70,6 +96,11 @@
           "maxAttempts": 1,
           "solution": "A chart with 5 in thousands, 3 in hundreds, 1 in tens, and 8 in ones."
         }
+      ],
+      "proofIds": ["even-plus-even"],
+      "teachItBackPoints": [
+        "Explain why the place of a digit changes its value.",
+        "Show one example with a 4-digit number."
       ]
     },
     {

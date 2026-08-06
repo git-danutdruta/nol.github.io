@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "id": "place-value",
+      "title": "Place value",
+      "lessonId": "counting-place-value",
+      "description": "Understanding how each digit changes value with position.",
+      "x": 120,
+      "y": 80
+    },
+    {
+      "id": "rounding",
+      "title": "Rounding",
+      "lessonId": "rounding",
+      "description": "Choosing a nearby number that is easier to work with.",
+      "x": 330,
+      "y": 80
+    },
+    {
+      "id": "fractions",
+      "title": "Fractions",
+      "lessonId": "intro-fractions",
+      "description": "Parts of a whole and their relationships.",
+      "x": 120,
+      "y": 220
+    },
+    {
+      "id": "variables",
+      "title": "Variables",
+      "lessonId": "variables",
+      "description": "Symbols used to represent unknown or changing quantities.",
+      "x": 330,
+      "y": 220
+    },
+    {
+      "id": "equations",
+      "title": "Equations",
+      "lessonId": "simplify-expressions",
+      "description": "Statements that show two expressions are equal.",
+      "x": 520,
+      "y": 220
+    }
+  ],
+  "edges": [
+    { "source": "place-value", "target": "rounding", "type": "prerequisite" },
+    { "source": "fractions", "target": "variables", "type": "related" },
+    { "source": "variables", "target": "equations", "type": "prerequisite" }
+  ]
+}

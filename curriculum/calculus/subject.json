@@ -8,7 +8,5 @@
     "en": "Start with rates of change and basic derivatives through intuitive, visual exercises.",
     "ro": "Începe cu ratele de schimbare și derivatele de bază prin exerciții intuitive și vizuale."
   },
-  "chapters": [
-    "chapters/01-limits-derivatives/chapter.json"
-  ]
+  "chapters": ["chapters/01-limits-derivatives/chapter.json"]
 }

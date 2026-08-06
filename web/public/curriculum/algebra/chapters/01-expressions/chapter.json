@@ -23,6 +23,32 @@
           "content": "A variable is a letter that represents an unknown or changing quantity. If $x$ stands for the number of apples, then $x + 5$ means 5 more apples."
         },
         {
+          "type": "story",
+          "title": "The box that can change",
+          "summary": "A short story about how letters in algebra stand in for values that can vary.",
+          "chapters": [
+            {
+              "title": "Chapter 1",
+              "content": "A box is used to hold a secret number. The letter on the box is a reminder that the value can change."
+            },
+            {
+              "title": "Chapter 2",
+              "content": "When the box gains 5 more items, the rule becomes $x + 5$."
+            }
+          ],
+          "moral": "Variables capture the idea of a quantity that is unknown or changing.",
+          "readTime": "2 min"
+        },
+        {
+          "type": "usageCard",
+          "concept": "Variables",
+          "domain": "science",
+          "audience": "Learners modeling change",
+          "scenario": "A scientist uses a variable to describe how a sample grows over time.",
+          "whyItMatters": "Variables let you describe patterns before you know a specific value.",
+          "relatedConcepts": ["Expressions", "Equations"]
+        },
+        {
           "type": "math",
           "latex": "x + 5"
         }
@@ -48,6 +74,10 @@
           "maxAttempts": 3,
           "solution": "$4x$ or $4 \\times x$."
         }
+      ],
+      "teachItBackPoints": [
+        "Explain what a variable represents.",
+        "Translate one phrase into an algebraic expression."
       ]
     },
     {

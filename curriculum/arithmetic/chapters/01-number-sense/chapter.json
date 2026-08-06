@@ -218,11 +218,7 @@
               "ro": "Compară mai întâi sutele, apoi zecile, apoi unitățile."
             }
           ],
-          "options": [
-            "472 > 481",
-            "472 < 481",
-            "472 = 481"
-          ],
+          "options": ["472 > 481", "472 < 481", "472 = 481"],
           "correctOptionIndex": 1,
           "maxAttempts": 3,
           "solution": {
