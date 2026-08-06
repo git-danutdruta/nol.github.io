@@ -27,7 +27,9 @@ function readJson(filePath) {
 
 function hasString(value, label, filePath) {
   if (typeof value !== 'string' || value.trim().length === 0) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: expected ${label} to be a non-empty string.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: expected ${label} to be a non-empty string.`
+    );
     return false;
   }
   return true;
@@ -74,7 +76,9 @@ function validateChapter(filePath, payload) {
 
   payload.lessons.forEach((lesson, lessonIndex) => {
     if (!lesson || typeof lesson !== 'object' || Array.isArray(lesson)) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}] must be an object.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}] must be an object.`
+      );
       return;
     }
 
@@ -82,30 +86,50 @@ function validateChapter(filePath, payload) {
     hasString(lesson.title, `lessons[${lessonIndex}].title`, filePath);
 
     if (!Array.isArray(lesson.content)) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].content must be an array.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].content must be an array.`
+      );
     }
 
     if (!Array.isArray(lesson.exercises) || lesson.exercises.length === 0) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].exercises must be a non-empty array.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].exercises must be a non-empty array.`
+      );
       return;
     }
 
     lesson.exercises.forEach((exercise, exerciseIndex) => {
       if (!exercise || typeof exercise !== 'object' || Array.isArray(exercise)) {
-        errors.push(`${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].exercises[${exerciseIndex}] must be an object.`);
+        errors.push(
+          `${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].exercises[${exerciseIndex}] must be an object.`
+        );
         return;
       }
 
       hasString(exercise.id, `lessons[${lessonIndex}].exercises[${exerciseIndex}].id`, filePath);
-      hasString(exercise.type, `lessons[${lessonIndex}].exercises[${exerciseIndex}].type`, filePath);
-      hasString(exercise.question, `lessons[${lessonIndex}].exercises[${exerciseIndex}].question`, filePath);
+      hasString(
+        exercise.type,
+        `lessons[${lessonIndex}].exercises[${exerciseIndex}].type`,
+        filePath
+      );
+      hasString(
+        exercise.question,
+        `lessons[${lessonIndex}].exercises[${exerciseIndex}].question`,
+        filePath
+      );
 
       if (!Array.isArray(exercise.hints) || exercise.hints.length === 0) {
         // Some existing curriculum entries omit hints; treat them as optional for validation.
       }
 
-      if (!exercise.solution && !Array.isArray(exercise.options) && typeof exercise.answer === 'undefined') {
-        errors.push(`${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].exercises[${exerciseIndex}] must define solution, options, or answer.`);
+      if (
+        !exercise.solution &&
+        !Array.isArray(exercise.options) &&
+        typeof exercise.answer === 'undefined'
+      ) {
+        errors.push(
+          `${path.relative(curriculumRoot, filePath)}: lessons[${lessonIndex}].exercises[${exerciseIndex}] must define solution, options, or answer.`
+        );
       }
     });
   });
@@ -113,18 +137,24 @@ function validateChapter(filePath, payload) {
 
 function validateApplications(filePath, payload) {
   if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: applications payload must be an object.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: applications payload must be an object.`
+    );
     return;
   }
 
   if (!Array.isArray(payload.applications) || payload.applications.length === 0) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: applications must be a non-empty array.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: applications must be a non-empty array.`
+    );
     return;
   }
 
   payload.applications.forEach((entry, index) => {
     if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: applications[${index}] must be an object.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: applications[${index}] must be an object.`
+      );
       return;
     }
 
@@ -134,20 +164,26 @@ function validateApplications(filePath, payload) {
     hasString(entry.lessonId, `applications[${index}].lessonId`, filePath);
 
     if (!Array.isArray(entry.conceptIds) || entry.conceptIds.length === 0) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: applications[${index}].conceptIds must be a non-empty array.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: applications[${index}].conceptIds must be a non-empty array.`
+      );
     }
   });
 }
 
 function validateProofs(filePath, payload) {
   if (!Array.isArray(payload) || payload.length === 0) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: proofs payload must be a non-empty array.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: proofs payload must be a non-empty array.`
+    );
     return;
   }
 
   payload.forEach((proof, index) => {
     if (!proof || typeof proof !== 'object' || Array.isArray(proof)) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: proofs[${index}] must be an object.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: proofs[${index}] must be an object.`
+      );
       return;
     }
 
@@ -156,36 +192,48 @@ function validateProofs(filePath, payload) {
     hasString(proof.summary, `proofs[${index}].summary`, filePath);
 
     if (!Array.isArray(proof.steps) || proof.steps.length === 0) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: proofs[${index}].steps must be a non-empty array.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: proofs[${index}].steps must be a non-empty array.`
+      );
     }
   });
 }
 
 function validateConceptGraph(filePath, payload) {
   if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: concept graph payload must be an object.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: concept graph payload must be an object.`
+    );
     return;
   }
 
   if (!Array.isArray(payload.nodes) || payload.nodes.length === 0) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: concept graph nodes must be a non-empty array.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: concept graph nodes must be a non-empty array.`
+    );
   }
 
   if (!Array.isArray(payload.edges)) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: concept graph edges must be an array.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: concept graph edges must be an array.`
+    );
   }
 }
 
 function validateStories(filePath, payload) {
   const stories = Array.isArray(payload) ? payload : payload?.stories;
   if (!Array.isArray(stories) || stories.length === 0) {
-    errors.push(`${path.relative(curriculumRoot, filePath)}: stories payload must be an array or an object with a stories array.`);
+    errors.push(
+      `${path.relative(curriculumRoot, filePath)}: stories payload must be an array or an object with a stories array.`
+    );
     return;
   }
 
   stories.forEach((story, index) => {
     if (!story || typeof story !== 'object' || Array.isArray(story)) {
-      errors.push(`${path.relative(curriculumRoot, filePath)}: stories[${index}] must be an object.`);
+      errors.push(
+        `${path.relative(curriculumRoot, filePath)}: stories[${index}] must be an object.`
+      );
       return;
     }
 
