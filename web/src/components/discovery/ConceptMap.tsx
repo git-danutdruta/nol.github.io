@@ -155,7 +155,9 @@ export function ConceptMap() {
       <div className="space-y-4">
         {selectedNode && (
           <div className="rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm dark:border-slate-800 dark:bg-slate-950/60">
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Selected concept</h3>
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+              Selected concept
+            </h3>
             <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
               {selectedNode.description}
             </p>
@@ -177,9 +179,12 @@ export function ConceptMap() {
           />
         ) : (
           <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900/60">
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Keyboard-friendly fallback</h3>
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+              Keyboard-friendly fallback
+            </h3>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              Use the toggle above to switch to a plain list if you prefer navigating with a keyboard or screen reader.
+              Use the toggle above to switch to a plain list if you prefer navigating with a
+              keyboard or screen reader.
             </p>
           </div>
         )}
