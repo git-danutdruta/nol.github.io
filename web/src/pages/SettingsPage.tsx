@@ -148,7 +148,14 @@ export function SettingsPage() {
         <SettingsErrorLogPanel />
         <DebugInfoExport />
       </div>
-      {toast && <Toast open={Boolean(toast)} message={toast.message} variant={toast.variant} onClose={() => setToast(null)} />}
+      {toast && (
+        <Toast
+          open={Boolean(toast)}
+          message={toast.message}
+          variant={toast.variant}
+          onClose={() => setToast(null)}
+        />
+      )}
     </section>
   );
 }
