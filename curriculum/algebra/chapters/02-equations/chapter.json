@@ -12,9 +12,7 @@
     {
       "id": "one-step-equations",
       "title": "One-Step Equations",
-      "objectives": [
-        "Solve one-step equations using inverse operations"
-      ],
+      "objectives": ["Solve one-step equations using inverse operations"],
       "pedagogy": [
         {
           "type": "strategy",
@@ -83,9 +81,7 @@
     {
       "id": "two-step-equations",
       "title": "Two-Step Equations",
-      "objectives": [
-        "Solve two-step equations"
-      ],
+      "objectives": ["Solve two-step equations"],
       "pedagogy": [
         {
           "type": "strategy",
